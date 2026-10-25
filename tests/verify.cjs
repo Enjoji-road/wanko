@@ -21,7 +21,12 @@ function derive(q) {
     case 'table': return q.rows.map((row,i)=>row[q.headers.indexOf(q.marks[i])]).join('');
     case 'common': return q.pairs.map(([a,b])=>{const chars=[...new Set([...a].filter(c=>b.includes(c)))];assert.equal(chars.length,1);return chars[0];}).join('');
     case 'stepback': return [...q.source].map(c=>{const row=q.rows.find(r=>r.includes(c));assert.ok(row.indexOf(c)>0);return row[row.indexOf(c)-1];}).join('');
-    case 'kanji': assert.deepEqual(q.pieces,['日','生']);return 'ほし';
+    case 'kanji': {
+      // Elementary glyph recognition is reviewed by a human, not proved by this lookup.
+      const glyphs={'column:日生':'ほし','row:日月':'明'};
+      const key=(q.orientation||'column')+':'+q.pieces.join('');
+      assert.ok(Object.hasOwn(glyphs,key));return glyphs[key];
+    }
     case 'overlap': return q.words.reduce((out,next)=>{assert.equal(out.at(-1),next[0]);return out+next.slice(1);});
     case 'everyother': return [...q.source].filter((_,i)=>i%2===0).join('');
     case 'chain': {
@@ -33,10 +38,65 @@ function derive(q) {
     case 'outside': return q.outside.join('');
     case 'vertical': return q.rows.map(r=>r[1]).join('');
     case 'single': {const chars=q.rows.flat();return chars.filter(c=>chars.filter(v=>v===c).length===1).join('');}
+    case 'ends': return [...q.source][0]+[...q.source].at(-1);
+    case 'pairs': {
+      const chars=[...q.source];assert.equal(chars.length%2,0);
+      return chars.filter((c,i)=>{if(i%2===0)assert.equal(c,chars[i+1]);return i%2===0;}).join('');
+    }
+    case 'sizes': {
+      assert.equal(new Set(q.letters.map(s=>s.size)).size,q.letters.length);
+      return [...q.letters].sort((a,b)=>b.size-a.size).map(s=>s.text).join('');
+    }
+    case 'voice': {
+      const plain='かきくけこさしすせそたちつてとはひふへほう',voiced='がぎぐげござじずぜぞだぢづでどばびぶべぼゔ';
+      return [...q.source].map(c=>plain.includes(c)?voiced[plain.indexOf(c)]:c).join('');
+    }
+    case 'mirror': {
+      const width=q.rows[0].length;assert.equal(width%2,0);
+      assert.ok(q.rows.every(row=>row.length===width));
+      assert.deepEqual(q.marks.map(([r])=>r),q.rows.map((_,r)=>r));
+      return q.marks.map(([r,c])=>q.rows[r][width-1-c]).join('');
+    }
+    case 'shapes': {
+      const corners={circle:0,triangle:3,square:4};
+      assert.equal(new Set(q.shapes.map(s=>corners[s.shape])).size,q.shapes.length);
+      return [...q.shapes].sort((a,b)=>corners[b.shape]-corners[a.shape]).map(s=>s.letter).join('');
+    }
+    case 'weave': {
+      const[a,b]=q.words.map(w=>[...w]);assert.equal(a.length,b.length);
+      return a.map((c,i)=>c+b[i]).join('');
+    }
+    case 'shared_blank': {
+      // The clue-to-word meanings are human-reviewed; check every choice against those words.
+      const candidates=q.choices.filter(c=>q.entries.every(e=>e.template.replace('□',c)===e.word));
+      assert.equal(candidates.length,1);return candidates[0];
+    }
+    case 'corners': {
+      const lastR=q.rows.length-1,lastC=q.rows[0].length-1;
+      assert.deepEqual(q.start,[0,0]);
+      return [[0,0],[0,lastC],[lastR,lastC],[lastR,0]].map(([r,c])=>q.rows[r][c]).join('');
+    }
+    case 'agree': return q.pairs.map(([a,b])=>{
+      const matching=[...a].filter((c,i)=>c===[...b][i]);assert.equal(matching.length,1);return matching[0];
+    }).join('');
+    case 'swap': {
+      assert.equal(new Set(q.marks).size,2);const chars=[...q.source],[a,b]=q.marks;
+      assert.ok(chars[a]&&chars[b]);[chars[a],chars[b]]=[chars[b],chars[a]];return chars.join('');
+    }
+    case 'missing_link': {
+      const candidates=q.choices.filter(c=>c[0]===q.before.at(-1)&&c.at(-1)===q.after[0]);
+      assert.equal(candidates.length,1);return candidates[0];
+    }
+    case 'mask': {
+      assert.equal(new Set(q.holes.map(p=>p.join(','))).size,q.holes.length);
+      assert.ok(q.holes.every(([r,c])=>q.rows[r]?.[c]));
+      return [...q.holes].sort(([r,c],[s,d])=>r-s||c-d).map(([r,c])=>q.rows[r][c]).join('');
+    }
     default: throw new Error('Unverified type: '+q.type);
   }
 }
-check(questions.length===18,'18 authored puzzles');
+check(questions.length===36,'36 authored puzzles');
+for(const level of [1,2,3]) check(questions.filter(q=>q.level===level).length===12,'12 puzzles per estimated difficulty');
 check(new Set(questions.map(q=>q.id)).size===questions.length,'Unique IDs');
 check(new Set(questions.map(q=>M.normalize(q.answer))).size===questions.length,'No repeated canonical answer');
 for(const q of questions) {

@@ -1,13 +1,13 @@
 {
   "result": "passed",
-  "checks": 3286,
-  "puzzles": 18,
+  "checks": 5341,
+  "puzzles": 36,
   "shuffle_runs": 600,
-  "choice_states": 72,
+  "choice_states": 144,
   "answer_positions": [
-    177,
-    142,
-    134,
+    154,
+    146,
+    153,
     147
   ],
   "model_deadline_ms": 90000,

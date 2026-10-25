@@ -1,605 +1,1844 @@
 {
   "mode": "four-choice-sudden-death",
-  "phone360x640": [
+  "puzzles": 36,
+  "date": "2026-10-25",
+  "measurements": [
     {
-      "choicesBottom": 575,
-      "height": 640,
-      "inputs": 0,
-      "leaks": [],
-      "overlap": false,
-      "title": "てんてん、おやすみ",
-      "width": 360,
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 542,
-      "height": 640,
-      "inputs": 0,
-      "leaks": [],
-      "overlap": false,
-      "title": "まんなかのお品書き",
-      "width": 360,
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 532,
-      "height": 640,
-      "inputs": 0,
-      "leaks": [],
-      "overlap": false,
-      "title": "ふたりの共通点",
-      "width": 360,
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 588,
-      "height": 640,
-      "inputs": 0,
-      "leaks": [],
-      "overlap": false,
-      "title": "まんなか、いただきます",
-      "width": 360,
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 575,
-      "height": 640,
-      "inputs": 0,
-      "leaks": [],
-      "overlap": false,
-      "title": "つなぎ目は、ひと口",
-      "width": 360,
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 564,
-      "height": 640,
-      "inputs": 0,
-      "leaks": [],
-      "overlap": false,
-      "title": "みじかい針から",
-      "width": 360,
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 575,
-      "height": 640,
-      "inputs": 0,
-      "leaks": [],
-      "overlap": false,
-      "title": "たぬきのおしごと",
-      "width": 360,
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 575,
-      "height": 640,
-      "inputs": 0,
-      "leaks": [],
-      "overlap": false,
-      "title": "ひと口おきに",
-      "width": 360,
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 595,
-      "height": 640,
-      "inputs": 0,
-      "leaks": [],
-      "overlap": false,
+      "active": true,
+      "choiceBottom": 498,
+      "controlsBottom": 542,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 0,
       "title": "一歩もどって",
-      "width": 360,
-      "xOverflow": false
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
     },
     {
-      "choicesBottom": 531,
-      "height": 640,
-      "inputs": 0,
-      "leaks": [],
-      "overlap": false,
-      "title": "上下、ぴったり",
-      "width": 360,
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 544,
-      "height": 640,
-      "inputs": 0,
-      "leaks": [],
-      "overlap": false,
-      "title": "一本、おあずかり",
-      "width": 360,
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 561,
-      "height": 640,
-      "inputs": 0,
-      "leaks": [],
-      "overlap": false,
-      "title": "ひとりのお客さま",
-      "width": 360,
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 568,
-      "height": 640,
-      "inputs": 0,
-      "leaks": [],
-      "overlap": false,
-      "title": "しるしのお品書き",
-      "width": 360,
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 531,
-      "height": 640,
-      "inputs": 0,
-      "leaks": [],
-      "overlap": false,
-      "title": "うつわの外にも",
-      "width": 360,
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 561,
-      "height": 640,
-      "inputs": 0,
-      "leaks": [],
-      "overlap": false,
-      "title": "こごえの注文",
-      "width": 360,
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 550,
-      "height": 640,
-      "inputs": 0,
-      "leaks": [],
-      "overlap": false,
-      "title": "しりとりの給仕列",
-      "width": 360,
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 575,
-      "height": 640,
-      "inputs": 0,
-      "leaks": [],
-      "overlap": false,
+      "active": true,
+      "choiceBottom": 477,
+      "controlsBottom": 521,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 1,
       "title": "かえりの注文",
-      "width": 360,
-      "xOverflow": false
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
     },
     {
-      "choicesBottom": 561,
-      "height": 640,
-      "inputs": 0,
-      "leaks": [],
-      "overlap": false,
+      "active": true,
+      "choiceBottom": 478,
+      "controlsBottom": 522,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 2,
+      "title": "みじかい針から",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 466,
+      "controlsBottom": 510,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 3,
+      "title": "まんなかのお品書き",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 477,
+      "controlsBottom": 521,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 4,
+      "title": "一本、おあずかり",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 440,
+      "controlsBottom": 484,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 5,
+      "title": "上下、ぴったり",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 433,
+      "controlsBottom": 477,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 6,
+      "title": "左右、ぴったり",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 452,
+      "controlsBottom": 496,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 7,
+      "title": "しりとりの給仕列",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 452,
+      "controlsBottom": 496,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 8,
+      "title": "上下、ひとくちずつ",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 477,
+      "controlsBottom": 521,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 9,
+      "title": "ふたくちで、ひと文字",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 433,
+      "controlsBottom": 477,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 10,
+      "title": "しりとりの空席",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 477,
+      "controlsBottom": 521,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 11,
+      "title": "つなぎ目は、ひと口",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 477,
+      "controlsBottom": 521,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 12,
+      "title": "ひと口おきに",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 477,
+      "controlsBottom": 521,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 13,
+      "title": "たぬきのおしごと",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 466,
+      "controlsBottom": 510,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 14,
+      "title": "ふたり組は、退席",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 463,
+      "controlsBottom": 507,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 15,
+      "title": "同じ席で、待ち合わせ",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 433,
+      "controlsBottom": 477,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 16,
+      "title": "大きなお客さまから",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 433,
+      "controlsBottom": 477,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 17,
+      "title": "かどのあるお客さま",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 459,
+      "controlsBottom": 503,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 18,
+      "title": "しりとり、もう一列",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 447,
+      "controlsBottom": 491,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 19,
+      "title": "四すみのお席",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 490,
+      "controlsBottom": 534,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 20,
+      "title": "まんなか、いただきます",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 482,
+      "controlsBottom": 526,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 21,
+      "title": "しるしのお品書き",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 477,
+      "controlsBottom": 521,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 22,
+      "title": "てんてん、おいで",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 433,
+      "controlsBottom": 477,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 23,
+      "title": "ふたりだけ、席替え",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 433,
+      "controlsBottom": 477,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 24,
+      "title": "うつわの外にも",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 477,
+      "controlsBottom": 521,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 25,
+      "title": "はしから、ぱくり",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 448,
+      "controlsBottom": 492,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 26,
+      "title": "３つの穴は、同じ味",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 466,
+      "controlsBottom": 510,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 27,
+      "title": "こごえの注文",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 466,
+      "controlsBottom": 510,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 28,
       "title": "おはしの道",
-      "width": 360,
-      "xOverflow": false
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 466,
+      "controlsBottom": 510,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 29,
+      "title": "ひとりのお客さま",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 473,
+      "controlsBottom": 517,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 30,
+      "title": "穴あきのお品書き",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 477,
+      "controlsBottom": 521,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 31,
+      "title": "てんてん、おやすみ",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 459,
+      "controlsBottom": 503,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 32,
+      "title": "鏡の向こうの注文",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 477,
+      "controlsBottom": 521,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 33,
+      "title": "もどって読めば",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 446,
+      "controlsBottom": 490,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 34,
+      "title": "ふたりの共通点",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 433,
+      "controlsBottom": 477,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 35,
+      "title": "くるり、折り返し",
+      "width": 320,
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 574,
+      "controlsBottom": 618,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 0,
+      "title": "しるしのお品書き",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 592,
+      "controlsBottom": 636,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 1,
+      "title": "たぬきのおしごと",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 590,
+      "controlsBottom": 634,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 2,
+      "title": "みじかい針から",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 568,
+      "controlsBottom": 612,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 3,
+      "title": "上下、ひとくちずつ",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 548,
+      "controlsBottom": 592,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 4,
+      "title": "しりとりの空席",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 592,
+      "controlsBottom": 636,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 5,
+      "title": "もどって読めば",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 617,
+      "controlsBottom": 661,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 6,
+      "title": "一歩もどって",
+      "width": 375,
+      "usableWidth": 375,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 592,
+      "controlsBottom": 636,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 7,
+      "title": "ふたくちで、ひと文字",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 548,
+      "controlsBottom": 592,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 8,
+      "title": "ふたりだけ、席替え",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 592,
+      "controlsBottom": 636,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 9,
+      "title": "かえりの注文",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 548,
+      "controlsBottom": 592,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 10,
+      "title": "くるり、折り返し",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 568,
+      "controlsBottom": 612,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 11,
+      "title": "しりとり、もう一列",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 549,
+      "controlsBottom": 593,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 12,
+      "title": "ふたりの共通点",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 592,
+      "controlsBottom": 636,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 13,
+      "title": "はしから、ぱくり",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 570,
+      "controlsBottom": 614,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 14,
+      "title": "穴あきのお品書き",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 592,
+      "controlsBottom": 636,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 15,
+      "title": "てんてん、おいで",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 569,
+      "controlsBottom": 613,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 16,
+      "title": "鏡の向こうの注文",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 568,
+      "controlsBottom": 612,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 17,
+      "title": "しりとりの給仕列",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 579,
+      "controlsBottom": 623,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 18,
+      "title": "ふたり組は、退席",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 548,
+      "controlsBottom": 592,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 19,
+      "title": "左右、ぴったり",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 558,
+      "controlsBottom": 602,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 20,
+      "title": "まんなかのお品書き",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 548,
+      "controlsBottom": 592,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 21,
+      "title": "上下、ぴったり",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 566,
+      "controlsBottom": 610,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 22,
+      "title": "一本、おあずかり",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 592,
+      "controlsBottom": 636,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 23,
+      "title": "ひと口おきに",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 568,
+      "controlsBottom": 612,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 24,
+      "title": "同じ席で、待ち合わせ",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 595,
+      "controlsBottom": 639,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 25,
+      "title": "まんなか、いただきます",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 579,
+      "controlsBottom": 623,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 26,
+      "title": "おはしの道",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 579,
+      "controlsBottom": 623,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 27,
+      "title": "ひとりのお客さま",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 548,
+      "controlsBottom": 592,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 28,
+      "title": "大きなお客さまから",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 548,
+      "controlsBottom": 592,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 29,
+      "title": "かどのあるお客さま",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 592,
+      "controlsBottom": 636,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 30,
+      "title": "つなぎ目は、ひと口",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 548,
+      "controlsBottom": 592,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 31,
+      "title": "うつわの外にも",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 579,
+      "controlsBottom": 623,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 32,
+      "title": "こごえの注文",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 558,
+      "controlsBottom": 602,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 33,
+      "title": "四すみのお席",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 548,
+      "controlsBottom": 592,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 34,
+      "title": "３つの穴は、同じ味",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 592,
+      "controlsBottom": 636,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 35,
+      "title": "てんてん、おやすみ",
+      "width": 390,
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 637,
+      "controlsBottom": 686,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "ひとりのお客さま",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "３つの穴は、同じ味",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 680,
+      "controlsBottom": 729,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "たぬきのおしごと",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "同じ席で、待ち合わせ",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 643,
+      "controlsBottom": 692,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "一本、おあずかり",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 637,
+      "controlsBottom": 686,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "ふたり組は、退席",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 680,
+      "controlsBottom": 729,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "ふたくちで、ひと文字",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 680,
+      "controlsBottom": 729,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "つなぎ目は、ひと口",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 637,
+      "controlsBottom": 686,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "まんなかのお品書き",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "うつわの外にも",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "上下、ぴったり",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 680,
+      "controlsBottom": 729,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "はしから、ぱくり",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 699,
+      "controlsBottom": 748,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "一歩もどって",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 680,
+      "controlsBottom": 729,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "まんなか、いただきます",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "穴あきのお品書き",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "上下、ひとくちずつ",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "しりとりの空席",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 637,
+      "controlsBottom": 686,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "こごえの注文",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 680,
+      "controlsBottom": 729,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "てんてん、おいで",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 647,
+      "controlsBottom": 696,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "しるしのお品書き",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "しりとりの給仕列",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "かどのあるお客さま",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "左右、ぴったり",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "くるり、折り返し",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 680,
+      "controlsBottom": 729,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "もどって読めば",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 637,
+      "controlsBottom": 686,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "おはしの道",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 672,
+      "controlsBottom": 721,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "みじかい針から",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "大きなお客さまから",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "ふたりの共通点",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 637,
+      "controlsBottom": 686,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "四すみのお席",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 680,
+      "controlsBottom": 729,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "ひと口おきに",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 680,
+      "controlsBottom": 729,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "てんてん、おやすみ",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "鏡の向こうの注文",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "ふたりだけ、席替え",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 680,
+      "controlsBottom": 729,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "かえりの注文",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "inside": true,
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "title": "しりとり、もう一列",
+      "width": 1280,
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
     }
   ],
-  "phone390x660": [
-    {
-      "choicesBottom": 613,
-      "controlBottom": 656,
-      "leaks": false,
-      "overlap": false,
-      "title": "かえりの注文",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 579,
-      "controlBottom": 622,
-      "leaks": false,
-      "overlap": false,
-      "title": "まんなかのお品書き",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 595,
-      "controlBottom": 638,
-      "leaks": false,
-      "overlap": false,
-      "title": "しるしのお品書き",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 613,
-      "controlBottom": 656,
-      "leaks": false,
-      "overlap": false,
-      "title": "ひと口おきに",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 613,
-      "controlBottom": 656,
-      "leaks": false,
-      "overlap": false,
-      "title": "つなぎ目は、ひと口",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 616,
-      "controlBottom": 659,
-      "leaks": false,
-      "overlap": false,
-      "title": "まんなか、いただきます",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 600,
-      "controlBottom": 643,
-      "leaks": false,
-      "overlap": false,
-      "title": "こごえの注文",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 570,
-      "controlBottom": 613,
-      "leaks": false,
-      "overlap": false,
-      "title": "ふたりの共通点",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 611,
-      "controlBottom": 654,
-      "leaks": false,
-      "overlap": false,
-      "title": "みじかい針から",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 569,
-      "controlBottom": 612,
-      "leaks": false,
-      "overlap": false,
-      "title": "うつわの外にも",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 587,
-      "controlBottom": 630,
-      "leaks": false,
-      "overlap": false,
-      "title": "一本、おあずかり",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 638,
-      "controlBottom": 681,
-      "leaks": false,
-      "overlap": false,
-      "title": "一歩もどって",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 613,
-      "controlBottom": 656,
-      "leaks": false,
-      "overlap": false,
-      "title": "たぬきのおしごと",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 569,
-      "controlBottom": 612,
-      "leaks": false,
-      "overlap": false,
-      "title": "上下、ぴったり",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 589,
-      "controlBottom": 632,
-      "leaks": false,
-      "overlap": false,
-      "title": "しりとりの給仕列",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 600,
-      "controlBottom": 643,
-      "leaks": false,
-      "overlap": false,
-      "title": "おはしの道",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 600,
-      "controlBottom": 643,
-      "leaks": false,
-      "overlap": false,
-      "title": "ひとりのお客さま",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 613,
-      "controlBottom": 656,
-      "leaks": false,
-      "overlap": false,
-      "title": "てんてん、おやすみ",
-      "xOverflow": false
-    }
-  ],
-  "phone320x568": [
-    {
-      "choicesBottom": 477,
-      "controlBottom": 520,
-      "leaks": false,
-      "overlap": false,
-      "title": "一本、おあずかり",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 466,
-      "controlBottom": 509,
-      "leaks": false,
-      "overlap": false,
-      "title": "ひとりのお客さま",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 466,
-      "controlBottom": 509,
-      "leaks": false,
-      "overlap": false,
-      "title": "おはしの道",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 490,
-      "controlBottom": 533,
-      "leaks": false,
-      "overlap": false,
-      "title": "まんなか、いただきます",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 446,
-      "controlBottom": 489,
-      "leaks": false,
-      "overlap": false,
-      "title": "ふたりの共通点",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 433,
-      "controlBottom": 476,
-      "leaks": false,
-      "overlap": false,
-      "title": "うつわの外にも",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 466,
-      "controlBottom": 509,
-      "leaks": false,
-      "overlap": false,
-      "title": "まんなかのお品書き",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 498,
-      "controlBottom": 541,
-      "leaks": false,
-      "overlap": false,
-      "title": "一歩もどって",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 466,
-      "controlBottom": 509,
-      "leaks": false,
-      "overlap": false,
-      "title": "こごえの注文",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 440,
-      "controlBottom": 483,
-      "leaks": false,
-      "overlap": false,
-      "title": "上下、ぴったり",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 452,
-      "controlBottom": 495,
-      "leaks": false,
-      "overlap": false,
-      "title": "しりとりの給仕列",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 477,
-      "controlBottom": 520,
-      "leaks": false,
-      "overlap": false,
-      "title": "かえりの注文",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 477,
-      "controlBottom": 520,
-      "leaks": false,
-      "overlap": false,
-      "title": "たぬきのおしごと",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 482,
-      "controlBottom": 525,
-      "leaks": false,
-      "overlap": false,
-      "title": "しるしのお品書き",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 477,
-      "controlBottom": 520,
-      "leaks": false,
-      "overlap": false,
-      "title": "ひと口おきに",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 477,
-      "controlBottom": 520,
-      "leaks": false,
-      "overlap": false,
-      "title": "つなぎ目は、ひと口",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 477,
-      "controlBottom": 520,
-      "leaks": false,
-      "overlap": false,
-      "title": "てんてん、おやすみ",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 478,
-      "controlBottom": 521,
-      "leaks": false,
-      "overlap": false,
-      "title": "みじかい針から",
-      "xOverflow": false
-    }
-  ],
-  "landscape844x390": [
-    {
-      "choicesBottom": 280,
-      "leaks": false,
-      "overlap": false,
-      "title": "上下、ぴったり",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 314,
-      "leaks": false,
-      "overlap": false,
-      "title": "まんなかのお品書き",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 314,
-      "leaks": false,
-      "overlap": false,
-      "title": "まんなか、いただきます",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 314,
-      "leaks": false,
-      "overlap": false,
-      "title": "しりとりの給仕列",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 314,
-      "leaks": false,
-      "overlap": false,
-      "title": "かえりの注文",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 314,
-      "leaks": false,
-      "overlap": false,
-      "title": "ふたりの共通点",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 314,
-      "leaks": false,
-      "overlap": false,
-      "title": "こごえの注文",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 314,
-      "leaks": false,
-      "overlap": false,
-      "title": "おはしの道",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 314,
-      "leaks": false,
-      "overlap": false,
-      "title": "ひと口おきに",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 280,
-      "leaks": false,
-      "overlap": false,
-      "title": "一本、おあずかり",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 314,
-      "leaks": false,
-      "overlap": false,
-      "title": "うつわの外にも",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 314,
-      "leaks": false,
-      "overlap": false,
-      "title": "しるしのお品書き",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 314,
-      "leaks": false,
-      "overlap": false,
-      "title": "たぬきのおしごと",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 314,
-      "leaks": false,
-      "overlap": false,
-      "title": "一歩もどって",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 314,
-      "leaks": false,
-      "overlap": false,
-      "title": "みじかい針から",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 314,
-      "leaks": false,
-      "overlap": false,
-      "title": "つなぎ目は、ひと口",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 314,
-      "leaks": false,
-      "overlap": false,
-      "title": "てんてん、おやすみ",
-      "xOverflow": false
-    },
-    {
-      "choicesBottom": 314,
-      "leaks": false,
-      "overlap": false,
-      "title": "ひとりのお客さま",
-      "xOverflow": false
-    }
-  ]
+  "note": "width is body.clientWidth, which may be narrower than the iframe when a vertical scrollbar is present; viewport records the selected iframe size."
 }
