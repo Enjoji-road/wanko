@@ -1,10 +1,44 @@
-<!doctype html><html lang="ja"><meta charset="utf-8"><title>わんこそば・ローカル表示検証</title><style>body{font:12px sans-serif;background:#e6e6e6;margin:0}header{padding:8px;display:flex;gap:12px;align-items:center;position:sticky;top:0;background:#eee;z-index:2}iframe{display:block;border:0;margin:8px auto;background:white;box-shadow:0 0 0 1px #777}button,select{padding:6px}</style><header><label>画面 <select id="size"><option value="390,844">390×844</option><option value="320,568">320×568</option><option value="390,500">390×500（キーボード相当）</option><option value="844,390">844×390 横向き</option><option value="1280,900">1280×900</option></select></label><button id="keyboard">キーボード相当：OFF</button><button id="motion">動きを減らす：OFF</button><button id="corrupt">検証用保存を破損させて再読込</button><button id="jump">時計を91秒進める（検証専用）</button><output id="status">dist/qa.htmlへ一時コピーして使う検証専用ページ</output></header><iframe id="game" title="検証中のゲーム" src="./" width="390" height="844"></iframe><script>
-const game=document.getElementById('game');let keyboard=false,reduced=false;
+<!doctype html>
+<html lang="ja"><meta charset="utf-8"><title>わんこそば・４択表示検証</title>
+<style>body{font:12px sans-serif;background:#e6e6e6;margin:0}header{padding:8px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;position:sticky;top:0;background:#eee;z-index:2}iframe{display:block;border:0;margin:8px auto;background:white;box-shadow:0 0 0 1px #777}button,select{padding:6px}#status{max-width:350px;font-size:11px}</style>
+<header><label>画面 <select id="size"><option value="390,844">390×844</option><option value="390,660">390×660</option><option value="360,640">360×640</option><option value="320,568">320×568</option><option value="390,500">390×500</option><option value="844,390">844×390 横向き</option><option value="1280,900">1280×900</option></select></label>
+<label><input type="checkbox" id="motion">動きを減らす（模擬）</label>
+<button id="reload">再読込</button><button id="corrupt">保存を破損して再読込</button><button id="jump">時計＋91秒</button><button id="stale">古い選択ボタンを再発火</button><button id="held">キー押しっぱなし</button><button id="measure">表示検査</button><output id="status">dist/qa.htmlへ一時コピーして使う、公開しない検証ページ</output></header>
+<iframe id="game" title="検証中の４択ゲーム" src="./" width="390" height="844"></iframe>
+<script>
+const game=document.getElementById('game'), status=document.getElementById('status');
 document.getElementById('size').onchange=e=>{const[w,h]=e.target.value.split(',');game.width=w;game.height=h;};
-document.getElementById('keyboard').onclick=e=>{keyboard=!keyboard;game.contentDocument.body.classList.toggle('keyboard-open',keyboard);e.target.textContent='キーボード相当：'+(keyboard?'ON':'OFF');};
-document.getElementById('motion').onclick=e=>{reduced=!reduced;game.contentWindow.matchMedia=()=>({matches:reduced,addEventListener(){}});e.target.textContent='動きを減らす：'+(reduced?'ON':'OFF');game.contentWindow.location.reload();game.onload=()=>{if(reduced){const style=game.contentDocument.createElement('style');style.textContent='*,*:before,*:after{animation:none!important;transition:none!important}';game.contentDocument.head.append(style);}};};
-document.getElementById('corrupt').onclick=()=>{game.contentWindow.localStorage.setItem('wanko-local-records-v1','{broken-json');game.contentWindow.location.reload();};
-document.getElementById('jump').onclick=()=>{const win=game.contentWindow,now=win.Date.now;win.Date.now=()=>now()+91000;document.getElementById('status').textContent='時計を91秒進めました';};
-const ime=document.createElement('button');ime.id='ime';ime.textContent='IME変換中の送信テスト';document.querySelector('header').append(ime);
-ime.onclick=()=>{const win=game.contentWindow,doc=game.contentDocument,input=doc.getElementById('answerInput'),before=doc.getElementById('score').textContent;input.dispatchEvent(new win.CompositionEvent('compositionstart',{bubbles:true}));doc.getElementById('answerForm').requestSubmit();const after=doc.getElementById('score').textContent;input.dispatchEvent(new win.CompositionEvent('compositionend',{bubbles:true}));document.getElementById('status').textContent=before===after?'IME変換中：得点も問題も変化なし':'IME不具合';};
+async function reload(){
+  const reduced=document.getElementById('motion').checked;
+  if(!reduced){game.removeAttribute('srcdoc');game.src='./';return;}
+  const html=await (await fetch('./index.html')).text();
+  const setup='<base href="'+new URL('./',location.href).href+'"><script>const nativeMatch=window.matchMedia.bind(window);window.matchMedia=q=>q==="(prefers-reduced-motion: reduce)"?{matches:true,media:q,addEventListener(){},removeEventListener(){}}:nativeMatch(q);<\/script><style>*,*:before,*:after{animation:none!important;transition:none!important}</style>';
+  game.srcdoc=html.replace('<head>','<head>'+setup);
+}
+document.getElementById('reload').onclick=reload;
+document.getElementById('motion').onchange=reload;
+document.getElementById('corrupt').onclick=()=>{game.contentWindow.localStorage.setItem('wanko-choice-suddendeath-records-v1','{broken-json');reload();};
+document.getElementById('jump').onclick=()=>{const win=game.contentWindow,now=win.Date.now;win.Date.now=()=>now()+91000;status.textContent='時計を91秒進めました';};
+function current(){
+  const win=game.contentWindow,doc=game.contentDocument;
+  const q=win.WankoQuestions.find(q=>q.title===doc.getElementById('questionTitle').textContent);
+  const buttons=[...doc.querySelectorAll('.choice-button')];
+  const correct=buttons.findIndex(b=>win.WankoModel.accepts(q,b.querySelector('.choice-word').textContent));
+  return{win,doc,buttons,correct};
+}
+document.getElementById('stale').onclick=()=>{
+  const{doc,buttons,correct}=current();const before=+doc.getElementById('score').textContent,old=buttons[correct];
+  old.click();old.click();status.textContent=+doc.getElementById('score').textContent===before+1&&!doc.getElementById('playScreen').hidden?'古いボタン：１杯だけ加点、終了せず':'古いボタン：要確認';
+};
+document.getElementById('held').onclick=()=>{
+  const{win,doc,correct}=current();const before=+doc.getElementById('score').textContent,key=String(correct+1);
+  doc.dispatchEvent(new win.KeyboardEvent('keydown',{key,bubbles:true}));
+  doc.dispatchEvent(new win.KeyboardEvent('keydown',{key,bubbles:true,repeat:true}));
+  status.textContent=+doc.getElementById('score').textContent===before+1&&!doc.getElementById('playScreen').hidden?'長押し：１杯だけ加点、終了せず':'長押し：要確認';
+};
+document.getElementById('measure').onclick=()=>{
+  const doc=game.contentDocument,q=doc.getElementById('questionBowl').getBoundingClientRect(),p=doc.querySelector('.puzzle-visual').getBoundingClientRect(),instruction=doc.getElementById('questionInstruction').getBoundingClientRect(),answers=doc.getElementById('choiceButtons').getBoundingClientRect();
+  const children=[...doc.querySelectorAll('.puzzle-visual > *, .puzzle-examples')].map(e=>e.getBoundingClientRect());
+  status.textContent=JSON.stringify({w:game.contentWindow.innerWidth,h:game.contentWindow.innerHeight,contentInside:children.every(r=>r.top>=q.top&&r.bottom<=q.bottom+1&&r.left>=q.left&&r.right<=q.right+1),noOverlap:p.top>=instruction.bottom&&answers.top>=q.bottom,choiceBottom:Math.ceil(answers.bottom),scroll:doc.documentElement.scrollWidth>doc.documentElement.clientWidth});
+};
 </script></html>

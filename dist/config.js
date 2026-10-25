@@ -6,7 +6,7 @@ window.WankoConfig = Object.freeze({
   lidConfirmMs: 2800, // 蓋ボタンをこの時間内にもう一度押すと終了
   extraBowlDelayMs: 1700,
   publicUrl: '', // 実在する公開URLを確認してから設定。空欄でもゲームは遊べます。
-  shareText: '謎解きわんこそば、{seconds}秒で{score}杯完食！🥢\n小謎のおかわり、いかがですか？',
+  shareText: '謎解きわんこそば【４択・ドボン式】\n{seconds}秒チャレンジで{score}杯完食！🥢\n小謎のおかわり、いかがですか？',
   cheers: ['はい、じゃんじゃん！', 'はい、どんどん！', 'お見事！ もう一杯！', 'いい食べっぷり！', 'まだまだいけますよ〜！', 'つるっと、大正解！'],
-  storageKey: 'wanko-local-records-v1'
+  storageKey: 'wanko-choice-suddendeath-records-v1' // 入力式の旧記録は削除せず、そのまま残す
 });

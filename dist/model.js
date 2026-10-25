@@ -16,6 +16,13 @@
     for (let i = out.length - 1; i > 0; i--) { const j = Math.floor(rng() * (i + 1)); [out[i], out[j]] = [out[j], out[i]]; }
     return out;
   }
+  function choicesFor(question, rng = random) {
+    const choices = question.choices;
+    if (!Array.isArray(choices) || choices.length !== 4 || choices.some(v => typeof v !== 'string' || !normalize(v)) || new Set(choices.map(normalize)).size !== 4 || choices.filter(v => accepts(question,v)).length !== 1) {
+      throw new Error(`４つの異なる選択肢と、正解を１つ用意してください: ${question.id}`);
+    }
+    return shuffle(choices,rng);
+  }
   class Deck {
     constructor(questions, mode = 'balanced', rng = random) {
       if (!questions.length) throw new Error('問題を１問以上用意してください。');
@@ -37,16 +44,22 @@
     constructor(questions, options = {}) {
       this.now = options.now || (() => performance.now()); this.durationMs = options.durationMs || 90000;
       this.deck = new Deck(questions, options.mode, options.rng); this.phase = 'idle'; this.score = 0; this.passed = 0; this.history = []; this.serial = 0;
+      this.rng = options.rng || random;
     }
     start() { if (this.phase !== 'idle') return false; this.phase = 'playing'; this.deadline = this.now() + this.durationMs; this.next(); return true; }
-    next() { this.current = this.deck.draw(); this.serial++; }
+    next() { this.current = this.deck.draw(); this.choices = choicesFor(this.current,this.rng); this.serial++; }
     remaining() { return this.phase === 'playing' ? Math.max(0, this.deadline - this.now()) : 0; }
     expire() { if (this.phase === 'playing' && this.remaining() <= 0) { this.finish('time'); return true; } return false; }
-    submit(input, serial = this.serial) {
+    choose(index, serial = this.serial) {
       if (this.expire() || this.phase !== 'playing' || serial !== this.serial) return 'inactive';
-      if (!normalize(input)) return 'empty';
-      if (!accepts(this.current, input)) return 'wrong';
-      this.history.push({ id:this.current.id, outcome:'solved' }); this.score++; this.next(); return 'correct';
+      if (!Number.isInteger(index) || index < 0 || index >= this.choices.length) return 'invalid';
+      const selected = this.choices[index];
+      if (!accepts(this.current, selected)) {
+        this.history.push({ id:this.current.id, outcome:'wrong', selected });
+        this.finish('wrong');
+        return 'wrong';
+      }
+      this.history.push({ id:this.current.id, outcome:'solved', selected }); this.score++; this.next(); return 'correct';
     }
     pass() {
       if (this.expire() || this.phase !== 'playing') return false;
@@ -81,7 +94,7 @@
     const text=template.replaceAll('{seconds}',String(seconds)).replaceAll('{score}',String(score));
     return 'https://twitter.com/intent/tweet?'+new URLSearchParams({text,url:url.href});
   }
-  const api = {normalize, accepts, shuffle, Deck, Session, readRecords, saveBest, shareUrl};
+  const api = {normalize, accepts, shuffle, choicesFor, Deck, Session, readRecords, saveBest, shareUrl};
   root.WankoModel = api;
   if (typeof module === 'object' && module.exports) module.exports = api;
 })(typeof window === 'object' ? window : globalThis);

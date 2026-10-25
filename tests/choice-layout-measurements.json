@@ -1,0 +1,605 @@
+{
+  "mode": "four-choice-sudden-death",
+  "phone360x640": [
+    {
+      "choicesBottom": 575,
+      "height": 640,
+      "inputs": 0,
+      "leaks": [],
+      "overlap": false,
+      "title": "てんてん、おやすみ",
+      "width": 360,
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 542,
+      "height": 640,
+      "inputs": 0,
+      "leaks": [],
+      "overlap": false,
+      "title": "まんなかのお品書き",
+      "width": 360,
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 532,
+      "height": 640,
+      "inputs": 0,
+      "leaks": [],
+      "overlap": false,
+      "title": "ふたりの共通点",
+      "width": 360,
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 588,
+      "height": 640,
+      "inputs": 0,
+      "leaks": [],
+      "overlap": false,
+      "title": "まんなか、いただきます",
+      "width": 360,
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 575,
+      "height": 640,
+      "inputs": 0,
+      "leaks": [],
+      "overlap": false,
+      "title": "つなぎ目は、ひと口",
+      "width": 360,
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 564,
+      "height": 640,
+      "inputs": 0,
+      "leaks": [],
+      "overlap": false,
+      "title": "みじかい針から",
+      "width": 360,
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 575,
+      "height": 640,
+      "inputs": 0,
+      "leaks": [],
+      "overlap": false,
+      "title": "たぬきのおしごと",
+      "width": 360,
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 575,
+      "height": 640,
+      "inputs": 0,
+      "leaks": [],
+      "overlap": false,
+      "title": "ひと口おきに",
+      "width": 360,
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 595,
+      "height": 640,
+      "inputs": 0,
+      "leaks": [],
+      "overlap": false,
+      "title": "一歩もどって",
+      "width": 360,
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 531,
+      "height": 640,
+      "inputs": 0,
+      "leaks": [],
+      "overlap": false,
+      "title": "上下、ぴったり",
+      "width": 360,
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 544,
+      "height": 640,
+      "inputs": 0,
+      "leaks": [],
+      "overlap": false,
+      "title": "一本、おあずかり",
+      "width": 360,
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 561,
+      "height": 640,
+      "inputs": 0,
+      "leaks": [],
+      "overlap": false,
+      "title": "ひとりのお客さま",
+      "width": 360,
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 568,
+      "height": 640,
+      "inputs": 0,
+      "leaks": [],
+      "overlap": false,
+      "title": "しるしのお品書き",
+      "width": 360,
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 531,
+      "height": 640,
+      "inputs": 0,
+      "leaks": [],
+      "overlap": false,
+      "title": "うつわの外にも",
+      "width": 360,
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 561,
+      "height": 640,
+      "inputs": 0,
+      "leaks": [],
+      "overlap": false,
+      "title": "こごえの注文",
+      "width": 360,
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 550,
+      "height": 640,
+      "inputs": 0,
+      "leaks": [],
+      "overlap": false,
+      "title": "しりとりの給仕列",
+      "width": 360,
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 575,
+      "height": 640,
+      "inputs": 0,
+      "leaks": [],
+      "overlap": false,
+      "title": "かえりの注文",
+      "width": 360,
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 561,
+      "height": 640,
+      "inputs": 0,
+      "leaks": [],
+      "overlap": false,
+      "title": "おはしの道",
+      "width": 360,
+      "xOverflow": false
+    }
+  ],
+  "phone390x660": [
+    {
+      "choicesBottom": 613,
+      "controlBottom": 656,
+      "leaks": false,
+      "overlap": false,
+      "title": "かえりの注文",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 579,
+      "controlBottom": 622,
+      "leaks": false,
+      "overlap": false,
+      "title": "まんなかのお品書き",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 595,
+      "controlBottom": 638,
+      "leaks": false,
+      "overlap": false,
+      "title": "しるしのお品書き",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 613,
+      "controlBottom": 656,
+      "leaks": false,
+      "overlap": false,
+      "title": "ひと口おきに",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 613,
+      "controlBottom": 656,
+      "leaks": false,
+      "overlap": false,
+      "title": "つなぎ目は、ひと口",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 616,
+      "controlBottom": 659,
+      "leaks": false,
+      "overlap": false,
+      "title": "まんなか、いただきます",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 600,
+      "controlBottom": 643,
+      "leaks": false,
+      "overlap": false,
+      "title": "こごえの注文",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 570,
+      "controlBottom": 613,
+      "leaks": false,
+      "overlap": false,
+      "title": "ふたりの共通点",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 611,
+      "controlBottom": 654,
+      "leaks": false,
+      "overlap": false,
+      "title": "みじかい針から",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 569,
+      "controlBottom": 612,
+      "leaks": false,
+      "overlap": false,
+      "title": "うつわの外にも",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 587,
+      "controlBottom": 630,
+      "leaks": false,
+      "overlap": false,
+      "title": "一本、おあずかり",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 638,
+      "controlBottom": 681,
+      "leaks": false,
+      "overlap": false,
+      "title": "一歩もどって",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 613,
+      "controlBottom": 656,
+      "leaks": false,
+      "overlap": false,
+      "title": "たぬきのおしごと",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 569,
+      "controlBottom": 612,
+      "leaks": false,
+      "overlap": false,
+      "title": "上下、ぴったり",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 589,
+      "controlBottom": 632,
+      "leaks": false,
+      "overlap": false,
+      "title": "しりとりの給仕列",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 600,
+      "controlBottom": 643,
+      "leaks": false,
+      "overlap": false,
+      "title": "おはしの道",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 600,
+      "controlBottom": 643,
+      "leaks": false,
+      "overlap": false,
+      "title": "ひとりのお客さま",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 613,
+      "controlBottom": 656,
+      "leaks": false,
+      "overlap": false,
+      "title": "てんてん、おやすみ",
+      "xOverflow": false
+    }
+  ],
+  "phone320x568": [
+    {
+      "choicesBottom": 477,
+      "controlBottom": 520,
+      "leaks": false,
+      "overlap": false,
+      "title": "一本、おあずかり",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 466,
+      "controlBottom": 509,
+      "leaks": false,
+      "overlap": false,
+      "title": "ひとりのお客さま",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 466,
+      "controlBottom": 509,
+      "leaks": false,
+      "overlap": false,
+      "title": "おはしの道",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 490,
+      "controlBottom": 533,
+      "leaks": false,
+      "overlap": false,
+      "title": "まんなか、いただきます",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 446,
+      "controlBottom": 489,
+      "leaks": false,
+      "overlap": false,
+      "title": "ふたりの共通点",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 433,
+      "controlBottom": 476,
+      "leaks": false,
+      "overlap": false,
+      "title": "うつわの外にも",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 466,
+      "controlBottom": 509,
+      "leaks": false,
+      "overlap": false,
+      "title": "まんなかのお品書き",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 498,
+      "controlBottom": 541,
+      "leaks": false,
+      "overlap": false,
+      "title": "一歩もどって",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 466,
+      "controlBottom": 509,
+      "leaks": false,
+      "overlap": false,
+      "title": "こごえの注文",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 440,
+      "controlBottom": 483,
+      "leaks": false,
+      "overlap": false,
+      "title": "上下、ぴったり",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 452,
+      "controlBottom": 495,
+      "leaks": false,
+      "overlap": false,
+      "title": "しりとりの給仕列",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 477,
+      "controlBottom": 520,
+      "leaks": false,
+      "overlap": false,
+      "title": "かえりの注文",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 477,
+      "controlBottom": 520,
+      "leaks": false,
+      "overlap": false,
+      "title": "たぬきのおしごと",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 482,
+      "controlBottom": 525,
+      "leaks": false,
+      "overlap": false,
+      "title": "しるしのお品書き",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 477,
+      "controlBottom": 520,
+      "leaks": false,
+      "overlap": false,
+      "title": "ひと口おきに",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 477,
+      "controlBottom": 520,
+      "leaks": false,
+      "overlap": false,
+      "title": "つなぎ目は、ひと口",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 477,
+      "controlBottom": 520,
+      "leaks": false,
+      "overlap": false,
+      "title": "てんてん、おやすみ",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 478,
+      "controlBottom": 521,
+      "leaks": false,
+      "overlap": false,
+      "title": "みじかい針から",
+      "xOverflow": false
+    }
+  ],
+  "landscape844x390": [
+    {
+      "choicesBottom": 280,
+      "leaks": false,
+      "overlap": false,
+      "title": "上下、ぴったり",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 314,
+      "leaks": false,
+      "overlap": false,
+      "title": "まんなかのお品書き",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 314,
+      "leaks": false,
+      "overlap": false,
+      "title": "まんなか、いただきます",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 314,
+      "leaks": false,
+      "overlap": false,
+      "title": "しりとりの給仕列",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 314,
+      "leaks": false,
+      "overlap": false,
+      "title": "かえりの注文",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 314,
+      "leaks": false,
+      "overlap": false,
+      "title": "ふたりの共通点",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 314,
+      "leaks": false,
+      "overlap": false,
+      "title": "こごえの注文",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 314,
+      "leaks": false,
+      "overlap": false,
+      "title": "おはしの道",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 314,
+      "leaks": false,
+      "overlap": false,
+      "title": "ひと口おきに",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 280,
+      "leaks": false,
+      "overlap": false,
+      "title": "一本、おあずかり",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 314,
+      "leaks": false,
+      "overlap": false,
+      "title": "うつわの外にも",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 314,
+      "leaks": false,
+      "overlap": false,
+      "title": "しるしのお品書き",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 314,
+      "leaks": false,
+      "overlap": false,
+      "title": "たぬきのおしごと",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 314,
+      "leaks": false,
+      "overlap": false,
+      "title": "一歩もどって",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 314,
+      "leaks": false,
+      "overlap": false,
+      "title": "みじかい針から",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 314,
+      "leaks": false,
+      "overlap": false,
+      "title": "つなぎ目は、ひと口",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 314,
+      "leaks": false,
+      "overlap": false,
+      "title": "てんてん、おやすみ",
+      "xOverflow": false
+    },
+    {
+      "choicesBottom": 314,
+      "leaks": false,
+      "overlap": false,
+      "title": "ひとりのお客さま",
+      "xOverflow": false
+    }
+  ]
+}

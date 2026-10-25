@@ -4,7 +4,7 @@
   const $ = id => document.getElementById(id);
   const seconds = Number.isSafeInteger(C.durationSeconds) && C.durationSeconds > 0 ? C.durationSeconds : 90;
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
-  let session = null, ticker = null, lidTimer = null, lidArmed = false, composing = false, composedAt = -Infinity, best = 0, cheerIndex = -1, finishPending = false;
+  let session = null, ticker = null, lidTimer = null, lidArmed = false, best = 0, cheerIndex = -1, finishPending = false;
   const clock = () => Math.max(performance.timeOrigin + performance.now(), Date.now());
   function storage() { try { return localStorage; } catch { return null; } }
   const store = storage();
@@ -13,20 +13,12 @@
   $('introBest').textContent = best; $('playBest').textContent = best;
   if (!store) $('storageNotice').hidden = false;
 
-  function updateViewport() {
-    const height = window.visualViewport?.height || innerHeight;
-    document.documentElement.style.setProperty('--app-height', `${Math.round(height)}px`);
-    document.body.classList.toggle('keyboard-open', innerHeight - height > 120);
-  }
-  window.visualViewport?.addEventListener('resize', updateViewport);
-  window.addEventListener('resize', updateViewport); updateViewport();
-
   function screen(name) {
     ['intro','play','result'].forEach(id => { $(id + 'Screen').hidden = id !== name; });
     document.body.classList.toggle('is-playing', name === 'play');
     document.body.classList.toggle('is-result', name === 'result');
   }
-  function focusAnswer() { if (session?.phase === 'playing' && !$('helpDialog').open) $('answerInput').focus({preventScroll:true}); }
+  function focusChoices() { if (session?.phase === 'playing' && !$('helpDialog').open) $('choiceButtons').querySelector('button')?.focus({preventScroll:true}); }
   function feedback(message, kind = '') { $('answerFeedback').textContent = message; $('answerFeedback').dataset.kind = kind; }
   function disarmLid() { clearTimeout(lidTimer); lidArmed = false; $('lidButton').classList.remove('armed'); $('lidText').textContent = '蓋をして終わる'; }
   function animateServing() {
@@ -39,11 +31,19 @@
     $('questionCount').textContent = `${session.serial}杯目`;
     $('questionTitle').textContent = q.title;
     $('questionInstruction').textContent = q.instruction;
-    $('answerLength').textContent = `ひらがな ${q.answerLength}文字${q.type === 'kanji' || q.type === 'stroke' ? ' ／ 漢字もOK' : ''}`;
     $('puzzleContent').innerHTML = window.WankoPuzzleView.render(q);
-    $('answerInput').value = ''; $('answerInput').removeAttribute('aria-invalid');
+    const serial = session.serial;
+    const buttons = session.choices.map((label,index)=>{
+      const button=document.createElement('button'); button.type='button'; button.className='choice-button';
+      button.dataset.choiceIndex=String(index); button.dataset.serving=String(serial);
+      const number=document.createElement('span'); number.className='choice-number'; number.textContent=String(index+1); number.setAttribute('aria-hidden','true');
+      const word=document.createElement('span'); word.className='choice-word'; word.textContent=label;
+      button.append(number,word);button.setAttribute('aria-keyshortcuts',String(index+1));
+      button.addEventListener('click',event=>{if(event.detail>1)return;choose(index,serial);});
+      return button;
+    });
+    $('choiceButtons').replaceChildren(...buttons);
     if (animate) animateServing();
-    focusAnswer();
   }
   function stacks() {
     $('score').textContent = session.score;
@@ -70,37 +70,37 @@
     document.querySelector('.timer-stat').classList.toggle('urgent', remaining <= 10000);
   }
   function start() {
-    if (session?.phase === 'playing') return;
+    if (session?.phase === 'playing' || finishPending) return;
     clearInterval(ticker); disarmLid();
     window.WankoExtraBowl.hide($('extraBowl'));
     $('questionBowl').classList.remove('lid-closed');
     $('review').open = false; $('reviewList').replaceChildren();
     session = new M.Session(questions,{durationMs:seconds*1000,mode:C.shuffleMode,now:clock});
     session.start(); screen('play');
-    $('answerInput').disabled = false; $('answerButton').disabled = false; $('passButton').disabled = false; $('lidButton').disabled = false;
-    composing = false; composedAt = -Infinity;
+    $('passButton').disabled = false; $('lidButton').disabled = false;
     $('cheer').textContent = 'さあ、一杯目どうぞ！';
-    $('playBest').textContent = best; feedback('ひらめきを、どうぞ！');
+    $('playBest').textContent = best; feedback('答えをひとつ、選んでね。');
     stacks(); showQuestion(); tick(); ticker = setInterval(tick,80);
-    window.scrollTo({top:0,behavior:'instant'});
+    window.scrollTo({top:0,behavior:'auto'}); focusChoices();
   }
-  function submit(event) {
-    event.preventDefault();
-    if (composing || performance.now() - composedAt < 80 || session?.phase !== 'playing') return;
-    const result = session.submit($('answerInput').value,session.serial);
+  function choose(index,serial) {
+    if (session?.phase !== 'playing') return;
+    const keyboard = $('choiceButtons').contains(document.activeElement) && document.activeElement.matches(':focus-visible');
+    const result = session.choose(index,serial);
     if (session.phase === 'finished') { finishView(); return; }
-    if (result === 'correct') { disarmLid(); stacks(); cheer(); showQuestion(true); feedback('一杯完食！ 次もどうぞ。','correct'); }
-    else if (result === 'wrong') { $('answerInput').setAttribute('aria-invalid','true'); feedback('ちがうみたい。もうひと口！','wrong'); focusAnswer(); $('answerInput').select(); }
-    else if (result === 'empty') { feedback('こたえを入れてから、どうぞ！'); focusAnswer(); }
+    if (result === 'correct') {
+      disarmLid(); stacks(); cheer(); showQuestion(true); feedback('一杯完食！ 次もどうぞ。','correct');
+      if (keyboard) focusChoices();
+    }
     tick();
   }
-  $('answerForm').addEventListener('submit',submit);
-  $('answerInput').addEventListener('compositionstart',()=>{composing=true;});
-  $('answerInput').addEventListener('compositionend',()=>{composing=false;composedAt=performance.now();});
-  $('answerInput').addEventListener('keydown',event=>{if(event.key==='Enter' && (event.isComposing || composing || event.keyCode===229 || event.repeat || performance.now()-composedAt<80)) event.preventDefault();});
-  $('answerInput').addEventListener('input',()=>{$('answerInput').removeAttribute('aria-invalid');});
+  document.addEventListener('keydown',event=>{
+    if (session?.phase !== 'playing' || $('helpDialog').open || event.ctrlKey || event.metaKey || event.altKey || event.isComposing) return;
+    if (event.repeat && ['Enter',' ','1','2','3','4'].includes(event.key)) { event.preventDefault(); return; }
+    if (/^[1-4]$/.test(event.key)) { event.preventDefault(); choose(Number(event.key)-1,session.serial); focusChoices(); }
+  });
   $('passButton').addEventListener('click',()=>{
-    if (session?.pass()) { disarmLid(); composing=false; showQuestion(true); feedback('パスして、次の一杯へ！'); $('cheer').textContent='そういう日もあります！ 次どうぞ。'; }
+    if (session?.pass()) { disarmLid(); showQuestion(true); feedback('パスして、次の一杯へ！'); $('cheer').textContent='そういう日もあります！ 次どうぞ。'; }
     else if (session?.phase === 'finished') finishView();
     tick();
   });
@@ -122,8 +122,9 @@
     if ($('resultScreen').hidden === false) return;
     if (finishPending && !skipLid) return;
     clearInterval(ticker); disarmLid();
-    $('answerInput').blur();
-    ['answerInput','answerButton','passButton','lidButton'].forEach(id=>{$(id).disabled=true;});
+    document.activeElement?.blur();
+    $('choiceButtons').querySelectorAll('button').forEach(button=>{button.disabled=true;});
+    ['passButton','lidButton'].forEach(id=>{$(id).disabled=true;});
     if ($('helpDialog').open) $('helpDialog').close();
     if (session.reason === 'lid' && !motion.matches && !skipLid) {
       finishPending = true;
@@ -135,18 +136,21 @@
     const previous=best; best=Math.max(best,record.best);
     $('newBest').hidden=!(session.score>previous);
     $('resultStorageNotice').hidden=record.saved;
-    $('finishReason').textContent=session.reason==='time'?'お時間です！':'ぱたん。お椀に蓋。';
+    $('resultScreen').dataset.reason=session.reason;
+    $('resultTitle').textContent=session.reason==='wrong'?'ドボン！':'ごちそうさまでした！';
+    $('finishReason').textContent={time:'お時間です！',lid:'ぱたん。お椀に蓋。',wrong:'その一杯は、不正解！'}[session.reason];
     $('resultScore').textContent=session.score; $('resultBest').textContent=best;
-    $('introBest').textContent=best; $('resultSpeech').textContent=session.score?'いい食べっぷりでした！':'またのお越しを、お待ちしてます！';
+    $('introBest').textContent=best; $('resultSpeech').textContent=session.reason==='wrong'?'おっと、ここまで！ またどうぞ！':session.score?'いい食べっぷりでした！':'またのお越しを、お待ちしてます！';
     for (const item of session.history) {
       const q=questions.find(q=>q.id===item.id), li=document.createElement('li');
-      const badge=document.createElement('span'); badge.className='review-badge';badge.textContent=item.outcome==='solved'?'完食':'パス';
+      const badge=document.createElement('span'); badge.className='review-badge';badge.textContent={solved:'完食',passed:'パス',wrong:'ドボン'}[item.outcome];
       const title=document.createElement('strong');title.textContent=q.title+' → '+q.answer;
       const detail=document.createElement('p');detail.textContent=q.explanation;
       li.append(badge,title,detail);$('reviewList').append(li);
+      if (item.outcome==='wrong') {const selected=document.createElement('p');selected.textContent='選んだ答え：'+item.selected;li.append(selected);}
     }
     if (!session.history.length) $('reviewList').innerHTML='<li>まだ一杯目でした。またお待ちしています！</li>';
-    share(session.score); screen('result'); window.scrollTo({top:0,behavior:'instant'});
+    share(session.score); screen('result'); window.scrollTo({top:0,behavior:'auto'});
     $('resultTitle').focus({preventScroll:true});
     if (!motion.matches) $('resultScore').animate([{transform:'scale(.8)',opacity:.2},{transform:'scale(1.06)',opacity:1},{transform:'scale(1)'}],{duration:350});
     window.WankoExtraBowl.show($('extraBowl'),C.extraBowlDelayMs);
@@ -157,5 +161,5 @@
   const help=$('helpDialog');let helpFocus;
   $('helpButton').addEventListener('click',()=>{helpFocus=document.activeElement;help.showModal();});
   ['closeHelp','helpOkay'].forEach(id=>$(id).addEventListener('click',()=>help.close()));
-  help.addEventListener('close',()=>{if(session?.phase==='playing')focusAnswer();else helpFocus?.focus({preventScroll:true});});
+  help.addEventListener('close',()=>{if(session?.phase==='playing')focusChoices();else helpFocus?.focus({preventScroll:true});});
 })();

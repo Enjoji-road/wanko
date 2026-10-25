@@ -1,0 +1,167 @@
+/* Four-choice service. Content determines the bowl's height, so diagrams never shrink into text. */
+.mode-caption { margin-top:7px; font-size:10px; color:var(--muted); letter-spacing:.08em; }
+.choice-mode-label { font-size:10px; color:var(--muted); white-space:nowrap; }
+body.is-playing { height:auto; min-height:100svh; overflow:auto; }
+.is-playing .site-shell { height:auto; min-height:100svh; }
+.is-playing .site-header { min-height:62px; }
+.is-playing main { display:block; min-height:auto; }
+.is-playing .play-screen { display:block; flex:none; min-height:auto; padding:18px 0 22px; }
+.is-playing .hud { position:sticky; top:0; z-index:10; background:var(--paper); margin:0 0 18px; padding:8px 0 14px; }
+.is-playing .play-layout { grid-template-columns:minmax(0,1fr) 225px; grid-template-rows:auto; gap:30px; align-items:start; }
+.is-playing .puzzle-station { display:flex; flex-direction:column; height:auto; min-height:auto; gap:0; }
+.is-playing .question-bowl { flex:none; height:auto; min-height:0; max-height:none; padding:18px 24px 15px; }
+.is-playing .question-topline { margin-bottom:9px; }
+.is-playing .question-bowl h2 { font-size:21px; line-height:1.4; }
+.is-playing .question-instruction { font-size:13px; line-height:1.65; margin:8px 0 6px; }
+.is-playing .puzzle-content { flex:none; min-height:auto; height:auto; }
+.is-playing .example-area:empty { display:none; }
+.is-playing .puzzle-examples { font-size:15px; margin:6px 0; padding:7px; }
+.is-playing .puzzle-visual { flex:none; min-height:162px; height:auto; padding:9px 0; font-size:29px; }
+.is-playing .source-word { font-size:29px; }
+.is-playing .letter-grid { width:222px; font-size:30px; }
+.is-playing .letter-cell { padding:8px; }
+.is-playing .kana-grid { width:100%; max-width:300px; font-size:23px; }
+.is-playing .kana-grid .letter-cell { padding:5px 9px; }
+.is-playing .type-stepback { gap:12px; }
+.is-playing .common-pairs { font-size:28px; gap:10px; }
+.is-playing .symbol-table { font-size:27px; min-width:230px; }
+.is-playing .symbol-table th,.is-playing .symbol-table td { height:37px; }
+.is-playing .kanji-pieces { font-size:49px; }
+.is-playing .hands-puzzle { height:186px; min-height:186px; max-height:none; }
+.is-playing .stroke-puzzle { height:157px; min-height:157px; max-height:none; }
+.is-playing .chain-cards { font-size:25px; }
+.is-playing .word-list.overlap { font-size:29px; }
+.is-playing .serving-side { display:flex; height:auto; min-height:0; margin:12px 0 0; overflow:visible; }
+.is-playing .play-server { width:225px; height:auto; max-height:none; margin:18px 0 0; }
+.is-playing .stack-area { height:130px; margin-top:15px; }
+.is-playing .answer-area { flex:none; align-self:stretch; padding-top:15px; }
+.is-playing .answer-feedback { margin:0 0 8px; height:auto; min-height:17px; font-size:11px; line-height:1.5; }
+.choice-buttons { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+.choice-button { display:flex; align-items:center; gap:10px; min-height:62px; padding:10px 15px; border:2px solid #ad8f68; border-radius:10px; background:#fffbf2; color:var(--ink); box-shadow:0 3px 0 #d6c09c; text-align:left; font-size:20px; font-weight:800; line-height:1.35; }
+.choice-button:hover { background:#f6e6c9; border-color:var(--red); }
+.choice-button:active { transform:translateY(2px); box-shadow:0 1px 0 #d6c09c; }
+.choice-button:focus-visible { outline:3px solid #6e8c79; outline-offset:3px; background:#f6e6c9; }
+.choice-button:disabled { opacity:.6; pointer-events:none; }
+.choice-number { flex:none; display:grid; place-items:center; width:24px; height:24px; border-radius:50%; background:#ead8b5; color:#6b4e34; font:700 12px/1 Georgia,serif; }
+.choice-word { min-width:0; overflow-wrap:anywhere; letter-spacing:.1em; }
+.is-playing .play-actions { flex-direction:row; align-items:center; margin-top:9px; min-height:40px; }
+.is-playing .pass-button,.is-playing .lid-button { min-height:40px; font-size:11px; }
+.result-screen[data-reason="wrong"] .result-eyebrow { color:#28687b; border-color:#28687b; }
+.result-screen[data-reason="wrong"] #resultTitle { color:#28687b; font-size:42px; letter-spacing:.08em; }
+.result-screen[data-reason="wrong"] #resultTitle:before,.result-screen[data-reason="wrong"] #resultTitle:after { content:"•"; display:inline-block; color:#81b6bf; font-size:23px; transform:translateY(-11px); margin:0 8px; }
+@media(max-width:760px) {
+  .is-playing .site-header { min-height:44px; }
+  .is-playing .play-screen { padding:8px 0 max(9px,env(safe-area-inset-bottom)); }
+  .is-playing .hud { padding:7px 0 10px; margin-bottom:10px; gap:16px; }
+  .is-playing .timer-stat strong { font-size:31px; min-width:37px; }
+  .is-playing .score-stat strong { font-size:29px; }
+  .is-playing .play-layout { grid-template-columns:1fr; grid-template-rows:auto auto; gap:0; }
+  .is-playing .serving-side { display:grid; grid-template-columns:59px minmax(0,1fr) 76px; grid-template-rows:minmax(0,1fr); order:-1; align-items:center; height:48px; margin:0 0 10px; gap:8px; overflow:hidden; }
+  .is-playing .play-server { grid-column:1; grid-row:1; width:60px; height:68px; max-height:none; margin:0; align-self:start; }
+  .is-playing .play-speech { grid-column:2; grid-row:1; font-size:11px; padding:8px 4px; min-height:32px; }
+  .is-playing .stack-area { grid-column:3; grid-row:1; height:45px; margin:0; gap:0; }
+  .is-playing .bowl-stacks { height:31px; }
+  .is-playing #stackCaption { font-size:9px; margin-bottom:2px; }
+  .is-playing .question-bowl { height:auto; padding:12px 16px 13px; border-radius:11px 11px 24px 24px; }
+  .is-playing .question-topline { margin-bottom:6px; }
+  .is-playing .question-bowl h2 { font-size:18px; line-height:1.35; }
+  .is-playing .question-instruction { font-size:13px; line-height:1.6; margin:6px 0 4px; }
+  .is-playing .puzzle-examples { font-size:14px; padding:5px; margin:5px 0; gap:5px 14px; }
+  .is-playing .puzzle-visual { min-height:136px; padding:7px 0; font-size:27px; }
+  .is-playing .source-word { font-size:27px; gap:3px; }
+  .is-playing .type-everyother .source-word { font-size:25px; }
+  .is-playing .letter-grid { width:198px; font-size:28px; }
+  .is-playing .letter-cell { padding:6px 8px; }
+  .is-playing .kana-grid { width:100%; max-width:275px; font-size:22px; }
+  .is-playing .kana-grid .letter-cell { padding:4px 7px; }
+  .is-playing .type-stepback { gap:9px; }
+  .is-playing .symbol-table { font-size:25px; min-width:210px; }
+  .is-playing .symbol-table td,.is-playing .symbol-table th { height:31px; }
+  .is-playing .common-pairs { font-size:26px; min-width:210px; gap:7px; }
+  .is-playing .kanji-pieces { font-size:43px; }
+  .is-playing .hands-puzzle { height:164px; min-height:164px; }
+  .is-playing .stroke-puzzle { height:140px; min-height:140px; }
+  .is-playing .chain-cards { font-size:22px; gap:8px; }
+  .is-playing .chain-cards>span { padding:9px 6px; }
+  .is-playing .word-list.overlap { font-size:26px; }
+  .is-playing .answer-area { padding-top:14px; }
+  .choice-button { min-height:54px; padding:9px 12px; gap:9px; font-size:19px; border-radius:9px; }
+  .choice-number { width:21px; height:21px; font-size:11px; }
+  .is-playing .answer-feedback { font-size:10px; min-height:15px; margin-bottom:6px; }
+  .is-playing .play-actions { margin-top:6px; min-height:36px; }
+  .is-playing .pass-button,.is-playing .lid-button { font-size:10px; min-height:36px; }
+}
+@media(max-width:760px) and (max-height:650px) {
+  .is-playing .site-header { min-height:36px; }
+  .is-playing .hud { padding-top:4px; }
+  .is-playing .serving-side { height:40px; margin-bottom:8px; }
+  .is-playing .play-server { width:51px; height:58px; }
+  .is-playing .stack-area { height:39px; }
+  .is-playing .bowl-stacks { height:25px; }
+  .is-playing .question-bowl { padding:11px 14px 12px; }
+  .is-playing .question-instruction { font-size:12px; }
+  .is-playing .puzzle-visual { min-height:124px; padding:6px 0; }
+  .is-playing .puzzle-examples { font-size:13px; }
+  .is-playing .letter-grid { font-size:27px; width:180px; }
+  .is-playing .letter-cell { padding:5px; }
+  .is-playing .kana-grid { font-size:20px; width:100%; }
+  .is-playing .kana-grid .letter-cell { padding:3px 6px; }
+  .is-playing .hands-puzzle { height:145px; min-height:145px; }
+  .is-playing .stroke-puzzle { height:125px; min-height:125px; }
+  .is-playing .common-pairs { gap:6px; font-size:24px; }
+  .is-playing .kanji-pieces { font-size:38px; }
+  .is-playing .type-stepback { gap:6px; }
+  .is-playing .answer-area { padding-top:13px; }
+  .choice-button { min-height:50px; font-size:18px; }
+}
+@media(max-width:359px) {
+  .is-playing .hud { gap:11px; }
+  .is-playing .question-bowl { padding-left:13px; padding-right:13px; }
+  .is-playing .choice-mode-label { font-size:9px; }
+  .is-playing .source-word { font-size:24px; }
+  .is-playing .type-everyother .source-word { font-size:22px; }
+  .is-playing .chain-cards { font-size:19px; gap:6px; }
+  .is-playing .word-list.overlap { font-size:23px; }
+  .choice-button { font-size:17px; padding:9px 10px; gap:7px; }
+}
+@media(max-width:760px) and (max-height:600px) {
+  .is-playing .site-header { display:none; }
+  .is-playing .serving-side { height:28px; margin-bottom:6px; grid-template-columns:minmax(0,1fr) 63px; }
+  .is-playing .play-server { display:none; }
+  .is-playing .play-speech { grid-column:1; min-height:24px; padding:3px 6px; font-size:10px; }
+  .is-playing .play-speech:after { display:none; }
+  .is-playing .stack-area { grid-column:2; height:26px; }
+  .is-playing .bowl-stacks { height:14px; padding-top:1px; }
+  .is-playing #stackCaption { font-size:8px; margin:0; }
+  .is-playing .puzzle-visual { min-height:112px; }
+  .is-playing .word-list.middle { font-size:25px; gap:4px; }
+  .is-playing .letter-grid { font-size:26px; }
+  .is-playing .letter-cell { padding:4px; }
+  .is-playing .kana-grid { font-size:18px; }
+  .is-playing .kana-grid .letter-cell { padding:3px 6px; }
+  .is-playing .symbol-table th,.is-playing .symbol-table td { height:29px; }
+  .is-playing .choice-buttons { gap:8px; }
+  .choice-button { min-height:48px; padding-top:7px; padding-bottom:7px; }
+}
+@media(max-width:760px) {
+  .is-playing .answer-feedback { position:absolute; width:1px; height:1px; min-height:0; margin:0; padding:0; overflow:hidden; clip:rect(0,0,0,0); clip-path:inset(50%); white-space:nowrap; }
+}
+@media(min-width:680px) and (max-height:500px) {
+  .is-playing .site-header { min-height:36px; }
+  .is-playing .play-layout { grid-template-columns:1fr; grid-template-rows:auto; }
+  .is-playing .serving-side { display:none; }
+  .is-playing .puzzle-station { display:grid; grid-template-columns:minmax(0,1fr) 260px; grid-template-rows:auto; gap:22px; align-items:center; }
+  .is-playing .answer-area { padding-top:0; }
+  .is-playing .question-bowl { padding:10px 17px 13px; }
+  .is-playing .question-bowl h2 { font-size:18px; }
+  .is-playing .question-instruction { font-size:11px; }
+  .is-playing .puzzle-examples { font-size:13px; padding:5px; margin:5px 0; }
+  .is-playing .puzzle-visual { min-height:130px; }
+  .is-playing .letter-grid { font-size:25px; width:180px; }
+  .is-playing .letter-cell { padding:5px; }
+  .is-playing .kana-grid { font-size:19px; width:100%; }
+  .is-playing .kana-grid .letter-cell { padding:3px 7px; }
+  .is-playing .hands-puzzle { height:145px; min-height:145px; }
+  .is-playing .stroke-puzzle { height:130px; min-height:130px; }
+  .choice-button { min-height:56px; font-size:18px; }
+}

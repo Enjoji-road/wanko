@@ -1,8 +1,15 @@
 {
   "result": "passed",
-  "checks": 3121,
+  "checks": 3286,
   "puzzles": 18,
   "shuffle_runs": 600,
+  "choice_states": 72,
+  "answer_positions": [
+    177,
+    142,
+    134,
+    147
+  ],
   "model_deadline_ms": 90000,
-  "scope": "Deterministic authored transformations, queue invariants, deadline, stale input, record recovery. Visual kanji recognition, alternative unrestricted language rules, and human enjoyment require human testing."
+  "scope": "Authored transformations, four choices with exactly one valid answer, instant loss, queue invariants, deadline, stale buttons, separate records. Visual reading and human enjoyment require human testing."
 }

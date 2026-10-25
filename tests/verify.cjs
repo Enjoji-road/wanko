@@ -41,12 +41,24 @@ check(new Set(questions.map(q=>q.id)).size===questions.length,'Unique IDs');
 check(new Set(questions.map(q=>M.normalize(q.answer))).size===questions.length,'No repeated canonical answer');
 for(const q of questions) {
   check(M.normalize(derive(q))===M.normalize(q.answer),q.id+': authored data derives the specified answer');
-  check([...q.answer].length===q.answerLength,q.id+': answer length label');
+  check([...q.answer].length===q.answerLength,q.id+': canonical answer length');
   check(M.accepts(q,q.answer),q.id+': canonical accepted');
   const kata=q.answer.replace(/[ぁ-ゖ]/g,c=>String.fromCharCode(c.charCodeAt(0)+0x60));
   check(M.accepts(q,'　'+kata.split('').join(' ')+'　'),q.id+': kana and spacing variants');
   for(const alias of q.aliases||[]) check(M.accepts(q,alias),q.id+': reading alias');
   check(!M.accepts(q,'')&&!M.accepts(q,'ふせいかい'),q.id+': empty and wrong answers rejected');
+  const choices=M.choicesFor(q,()=>.5);
+  check(choices.length===4&&new Set(choices.map(M.normalize)).size===4,q.id+': four distinct choices');
+  check(choices.filter(c=>M.accepts(q,c)).length===1,q.id+': exactly one choice matches the derived answer');
+  for(const label of q.choices) {
+    const run=new M.Session([q],{durationMs:90000,now:()=>0}); run.start();
+    const index=run.choices.indexOf(label),result=run.choose(index);
+    if(M.accepts(q,label)) check(result==='correct'&&run.phase==='playing'&&run.score===1,q.id+': correct choice serves the next bowl');
+    else {
+      check(result==='wrong'&&run.phase==='finished'&&run.reason==='wrong'&&run.score===0,q.id+': wrong choice ends immediately without a point');
+      check(run.choose(0)==='inactive'&&!run.pass(),q.id+': input after the wrong choice cannot revive or score');
+    }
+  }
 }
 // Exhaust the actual deck repeatedly: no within-round duplicates, and no immediate boundary repeat.
 let seed=12;const rng=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;};
@@ -63,25 +75,33 @@ for(const mode of ['balanced','random']) {
 }
 let now=0;const s=new M.Session(questions,{durationMs:90000,now:()=>now,rng});
 check(s.start()&&!s.start(),'Single start');const first=s.current.id;
-check(s.submit('no')==='wrong'&&s.current.id===first&&s.score===0,'Wrong answer changes neither puzzle nor score');
+check(s.choose(-1)==='invalid'&&s.choose(4)==='invalid'&&s.choose('0')==='invalid'&&s.score===0&&s.phase==='playing','Invalid indices are not user choices');
 check(s.pass()&&s.passed===1&&s.score===0&&s.current.id!==first,'Pass advances without score or time penalty');
-now=200;const serial=s.serial;check(s.submit(s.current.answer)==='correct'&&s.score===1,'Correct advances and scores');
-check(s.submit(s.current.answer,serial)==='inactive'&&s.score===1,'Stale submission cannot score');
+const correctIndex=run=>run.choices.findIndex(c=>M.accepts(run.current,c));
+now=200;const serial=s.serial;check(s.choose(correctIndex(s))==='correct'&&s.score===1,'Correct advances and scores');
+check(s.choose(correctIndex(s),serial)==='inactive'&&s.score===1&&s.phase==='playing','Stale button cannot score or cause a loss');
 now=89999;check(s.remaining()===1,'Clock runs through serving');
-now=90000;check(s.submit(s.current.answer)==='inactive'&&s.score===1&&s.phase==='finished','Exact deadline rejects input');
+now=90000;check(s.choose(correctIndex(s))==='inactive'&&s.score===1&&s.phase==='finished','Exact deadline rejects input');
 check(!s.pass()&&!s.finish()&&s.score===1,'Finished state is immutable');
-now=0;const lid=new M.Session(questions,{durationMs:1000,now:()=>now});lid.start();lid.finish('lid');now=500;check(lid.phase==='finished'&&lid.submit(lid.current.answer)==='inactive','Lid ends the run');
+now=0;const lid=new M.Session(questions,{durationMs:1000,now:()=>now});lid.start();lid.finish('lid');now=500;check(lid.phase==='finished'&&lid.choose(0)==='inactive','Lid ends the run');
+now=0;const loss=new M.Session(questions,{now:()=>now});loss.start();loss.choose(correctIndex(loss));
+check(loss.choose(loss.choices.findIndex(c=>!M.accepts(loss.current,c)))==='wrong'&&loss.score===1&&loss.reason==='wrong','A wrong choice preserves previously completed bowls');
+const positions=[0,0,0,0];for(let i=0;i<600;i++){const q=questions[i%questions.length];positions[M.choicesFor(q,rng).findIndex(c=>M.accepts(q,c))]++;}
+check(positions.every(n=>n>90&&n<210),'All four answer positions are used in the seeded shuffle sample');
 const memory=new Map();const store={getItem:k=>memory.get(k)||null,setItem:(k,v)=>memory.set(k,v)};
 memory.set('test','{broken');check(Object.keys(M.readRecords(store,'test').bests).length===0,'Corrupt save recovers');
 check(M.saveBest(store,'test',90,8).isNew,'New best saved');
 check(M.saveBest(store,'test',90,3).best===8,'Lower retry keeps best');
 check(M.saveBest(store,'test',60,2).best===2,'Duration-specific records');
 check(M.readRecords(store,'test').bests['90']===8,'Reload preserves best');
+memory.set('wanko-local-records-v1',JSON.stringify({version:1,bests:{90:23}}));
+M.saveBest(store,'wanko-choice-suddendeath-records-v1',90,4);
+check(M.readRecords(store,'wanko-local-records-v1').bests['90']===23&&M.readRecords(store,'wanko-choice-suddendeath-records-v1').bests['90']===4,'Input-mode records are retained, four-choice records are separate');
 check(M.saveBest({getItem(){throw Error();},setItem(){throw Error();}},'test',90,4).saved===false,'Storage failure is nonfatal');
 const intent=new URL(M.shareUrl('https://example.com/test/','🥢 {seconds}秒で{score}杯！\nおかわり？',90,12));
 check(intent.origin==='https://twitter.com'&&intent.pathname==='/intent/tweet','Official X intent');
 check(intent.searchParams.get('text')==='🥢 90秒で12杯！\nおかわり？','Japanese, emoji, newline and record encoded');
 check(intent.searchParams.get('url')==='https://example.com/test/','Configured URL preserved');
 check(M.shareUrl('','{score}',90,0)===null&&M.shareUrl('javascript:alert(1)','{score}',90,0)===null,'Unconfigured and unsafe links never shared');
-const report={result:'passed',checks,puzzles:questions.length,shuffle_runs:600,model_deadline_ms:90000,scope:'Deterministic authored transformations, queue invariants, deadline, stale input, record recovery. Visual kanji recognition, alternative unrestricted language rules, and human enjoyment require human testing.'};
+const report={result:'passed',checks,puzzles:questions.length,shuffle_runs:600,choice_states:questions.length*4,answer_positions:positions,model_deadline_ms:90000,scope:'Authored transformations, four choices with exactly one valid answer, instant loss, queue invariants, deadline, stale buttons, separate records. Visual reading and human enjoyment require human testing.'};
 fs.writeFileSync(path.join(__dirname,'model-verification.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));
