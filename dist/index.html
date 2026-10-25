@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#fcf3e0">
+  <meta name="description" content="ひらめいたら、もう一杯。90秒で小謎をいくつ解ける？ さくさく遊べる、謎解きわんこそば。">
+  <title>謎解きわんこそば｜ひらめいたら、もう一杯。</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="config.js" defer></script>
+  <script src="questions.js" defer></script>
+  <script src="model.js" defer></script>
+  <script src="puzzle-view.js" defer></script>
+  <script src="extra-bowl.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+<div class="site-shell">
+  <header class="site-header">
+    <a class="shop-logo" href="./" aria-label="謎解きわんこそばの最初の画面"><span class="shop-seal" aria-hidden="true">謎</span><span>一杯一謎<span class="shop-name">謎処 おかわり</span></span></a>
+    <button class="text-button" id="helpButton" type="button">遊び方 <span aria-hidden="true">?</span></button>
+  </header>
+  <main id="app">
+    <section id="introScreen" class="intro-screen" aria-labelledby="gameTitle">
+      <div class="intro-copy">
+        <p class="eyebrow">制限時間は<span data-duration>90</span>秒。ひらめき、食べ放題。</p>
+        <h1 id="gameTitle"><span>謎解き</span>わんこそば<span class="title-dot" aria-hidden="true">。</span></h1>
+        <p class="intro-tagline">ひらめいたら、<br class="mobile-only">もう一杯。</p>
+        <p class="intro-description">運ばれてくるのは、おいしい小謎。<br>つるっと解いて、お椀を積もう。</p>
+        <button id="startButton" class="primary-button start-button" type="button"><span>いただきます！</span><b aria-hidden="true">→</b></button>
+        <p class="intro-best">自己ベスト <strong id="introBest">0</strong> 杯 <span>／<span data-duration>90</span>秒</span></p>
+        <p id="storageNotice" class="storage-notice" hidden>このブラウザでは記録を保存できません。ゲームはそのまま遊べます。</p>
+      </div>
+      <div class="intro-art" aria-label="お椀を持った、元気なお給仕さん">
+        <div class="art-circle"></div><div class="hanging-tag">小謎、<br>おかわり自由。</div>
+        <div class="speech-bubble intro-speech">はい、じゃんじゃん！</div>
+        <img class="hero-server" src="assets/okyuuji.svg" alt="笑顔でお椀を運ぶお給仕さん" width="360" height="410">
+        <div class="hero-stack" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="art-stamp"><span>脳の</span>満腹御礼</div>
+      </div>
+      <div class="intro-rules"><span><b>01</b> ひらめいたら答える</span><i aria-hidden="true">→</i><span><b>02</b> すぐ次のお椀へ</span><i aria-hidden="true">→</i><span><b>03</b> 何杯いける？</span><p>パスは何度でも。やめたいときは、お椀に蓋を。</p></div>
+    </section>
+
+    <section id="playScreen" class="play-screen" aria-label="小謎タイムアタック" hidden>
+      <div class="hud">
+        <div class="timer-stat"><span>のこり</span><strong id="timer">90</strong><span>秒</span></div>
+        <div class="score-stat"><span>完食</span><strong id="score">0</strong><span>杯</span></div>
+        <div class="best-stat"><span>自己ベスト</span><b id="playBest">0</b><span>杯</span></div>
+        <div class="timer-track" aria-hidden="true"><i id="timerFill"></i></div>
+      </div>
+      <div class="play-layout">
+        <div class="puzzle-station">
+          <article class="question-bowl" id="questionBowl" aria-labelledby="questionTitle">
+            <div class="question-topline"><span class="question-count" id="questionCount">一杯目</span><span class="answer-length" id="answerLength"></span></div>
+            <h2 id="questionTitle"></h2>
+            <p id="questionInstruction" class="question-instruction"></p>
+            <div id="puzzleContent" class="puzzle-content"></div>
+            <span class="bowl-foot" aria-hidden="true"></span><span class="closing-lid" aria-hidden="true"></span>
+          </article>
+          <div class="answer-area">
+            <p id="answerFeedback" class="answer-feedback" role="status" aria-live="polite">ひらめきを、どうぞ！</p>
+            <form id="answerForm" autocomplete="off" novalidate>
+              <label class="sr-only" for="answerInput">小謎の答え</label>
+              <input id="answerInput" name="answer" type="text" enterkeyhint="send" placeholder="こたえを入力" maxlength="32" autocapitalize="off" spellcheck="false" autocomplete="off">
+              <button class="primary-button answer-button" id="answerButton" type="submit">答える</button>
+            </form>
+            <div class="play-actions"><button id="passButton" class="pass-button" type="button">この一杯はパス <span aria-hidden="true">↗</span></button><button id="lidButton" class="lid-button" type="button"><span class="lid-icon" aria-hidden="true"></span><span id="lidText">蓋をして終わる</span></button></div>
+          </div>
+        </div>
+        <aside class="serving-side" aria-label="お給仕さんと完食のお椀">
+          <div class="speech-bubble play-speech" id="cheer" aria-live="polite">さあ、一杯目どうぞ！</div>
+          <img class="play-server" src="assets/okyuuji.svg" alt="次のお椀を持つお給仕さん" width="360" height="410">
+          <div class="stack-area"><div id="bowlStacks" class="bowl-stacks" aria-hidden="true"></div><span id="stackCaption">お椀は、ここへ。</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="resultScreen" class="result-screen" aria-labelledby="resultTitle" hidden>
+      <div class="result-content">
+        <span class="result-eyebrow" id="finishReason">お時間です！</span>
+        <h2 id="resultTitle" tabindex="-1">ごちそうさまでした！</h2>
+        <p class="record-label">今回の記録</p>
+        <div class="result-number"><strong id="resultScore">0</strong><span>杯</span></div>
+        <p id="newBest" class="new-best" hidden>✦ 自己ベスト更新！ ✦</p>
+        <p class="result-best">自己ベスト <strong id="resultBest">0</strong> 杯 <span>／<span data-duration>90</span>秒</span></p>
+        <div class="result-actions"><button id="retryButton" type="button" class="primary-button">もう一杯、挑戦！ <span aria-hidden="true">↻</span></button><a id="shareButton" class="share-button" target="_blank" rel="noopener noreferrer">𝕏 で完食記録を共有</a></div>
+        <p id="shareNotice" class="share-notice" hidden>公開URLは準備中です。共有機能は公開後に利用できます。</p>
+        <p id="resultStorageNotice" class="storage-notice" hidden>今回は記録を保存できませんでした。</p>
+        <details id="review" class="review"><summary>今回の小謎を振り返る <small>答えあり</small></summary><ol id="reviewList"></ol></details>
+      </div>
+      <div class="result-art">
+        <div class="speech-bubble result-speech" id="resultSpeech">いい食べっぷりでした！</div>
+        <img src="assets/okyuuji.svg" alt="まだ一杯のお椀を持っているお給仕さん" width="360" height="410">
+        <div id="extraBowl" class="extra-bowl-note" hidden><span aria-hidden="true">✳</span><p>あ、まだ一杯ありますよ？</p><small>特別な一杯は、ただいま仕込み中。<br>今回の試作では、ここまでです。</small></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><span>おなかより、あたまがいっぱい。</span><span>謎解きわんこそば <small>試作一号</small></span></footer>
+</div>
+<dialog id="helpDialog" class="help-dialog" aria-labelledby="helpTitle">
+  <div class="dialog-top"><h2 id="helpTitle">おいしい遊び方</h2><button id="closeHelp" type="button" class="text-button">閉じる ×</button></div>
+  <p><strong><span data-duration>90</span>秒で、小謎を何杯解ける？</strong></p>
+  <ol><li>スタートしたら、時計が動きます。</li><li>答えを入力して「答える」。PCはEnterでもOK。</li><li>正解すると１杯完食。すぐ次が出ます。</li><li>難しい一杯はパス。追加ペナルティはありません。</li></ol>
+  <p>やめるときは「蓋をして終わる」を２回。<br>入力は、ひらがな・カタカナどちらでもどうぞ。</p>
+  <p class="help-small">遊んでいる間も時間は進みます。記録はこのブラウザに保存されます。問題は毎回シャッフル。１巡するまで重複せず、全部出たら並べ直します。</p>
+  <button id="helpOkay" class="primary-button" type="button">わかりました！</button>
+</dialog>
+<noscript>このゲームを遊ぶには、JavaScriptを有効にしてください。</noscript>
+</body>
+</html>

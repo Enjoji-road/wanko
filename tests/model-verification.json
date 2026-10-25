@@ -1,0 +1,8 @@
+{
+  "result": "passed",
+  "checks": 3121,
+  "puzzles": 18,
+  "shuffle_runs": 600,
+  "model_deadline_ms": 90000,
+  "scope": "Deterministic authored transformations, queue invariants, deadline, stale input, record recovery. Visual kanji recognition, alternative unrestricted language rules, and human enjoyment require human testing."
+}

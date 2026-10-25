@@ -1,0 +1,37 @@
+{
+  "result": "passed_with_limits",
+  "date": "2026-10-25",
+  "browser": "Cloud Chromium via cua_repl",
+  "viewports": ["desktop 1363x936", "390x844 iframe", "320x568 iframe", "390x500 iframe with compact keyboard layout", "844x390 iframe"],
+  "verified": [
+    "Start, answer, result and retry operate on one HTML page",
+    "18 canonical answers accepted using the visible answer field and Enter",
+    "The first 18 questions have 18 distinct titles",
+    "The next question appears immediately, without a Next button",
+    "Wrong answer preserves the current question and score",
+    "Pass advances without adding to the score",
+    "Composition-start blocks form submission until composition-end",
+    "Katakana input is accepted for the corresponding hiragana answer",
+    "An actual 90-second run expires automatically",
+    "Simulated clock jump also expires the run",
+    "Answer input and buttons are disabled after expiration",
+    "The first lid activation arms the button; the second ends the run",
+    "Retry restores 90 seconds, zero score and the first serving number",
+    "A new best is displayed and retained after navigation/reload",
+    "A lower-scoring run retains the previous best",
+    "Broken JSON in the isolated preview save recovers to the intro and can start",
+    "All 18 puzzle visuals and answer controls fit in the compact 390x500 layout",
+    "All 18 puzzle visuals and answer controls fit in 844x390 landscape",
+    "390x844 intro and play screen have no horizontal overflow",
+    "320x568 play screen keeps the timer, puzzle and answer controls visible",
+    "The server remains at the result with the extra bowl message",
+    "An unset public URL disables sharing and explains why"
+  ],
+  "limits": [
+    "Phone-sized frames are layout checks, not iPhone/Android hardware tests",
+    "Japanese IME composition was simulated by the development fixture, not a native phone keyboard",
+    "Reduced-motion code paths and CSS are present; actual OS preference switching was not performed",
+    "X intent encoding is independently unit-tested; no real post was sent",
+    "Initial-player enjoyment, solve times and difficulty distribution need creator playtesting"
+  ]
+}
