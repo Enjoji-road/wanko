@@ -42,7 +42,7 @@
   }
   class Session {
     constructor(questions, options = {}) {
-      this.now = options.now || (() => performance.now()); this.durationMs = options.durationMs || 90000;
+      this.now = options.now || (() => performance.now()); this.durationMs = options.durationMs || 60000;
       this.deck = new Deck(questions, options.mode, options.rng); this.phase = 'idle'; this.score = 0; this.passed = 0; this.history = []; this.serial = 0;
       this.rng = options.rng || random;
     }

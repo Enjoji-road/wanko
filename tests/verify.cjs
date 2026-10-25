@@ -4,8 +4,13 @@ const fs = require('node:fs');
 const path = require('node:path');
 const questions = require('../dist/questions.js');
 const M = require('../dist/model.js');
+const configScope={window:{}};
+require('node:vm').runInNewContext(fs.readFileSync(path.join(__dirname,'../dist/config.js'),'utf8'),configScope);
+const seconds=configScope.window.WankoConfig.durationSeconds, durationMs=seconds*1000;
 let checks = 0;
 function check(value, message) { assert.ok(value,message); checks++; }
+check(seconds===60,'The actual game configuration uses 60 seconds');
+check(new M.Session(questions).durationMs===durationMs,'Default session agrees with the game configuration');
 function derive(q) {
   switch(q.type) {
     case 'middle': return q.words.map(w=>[...w][Math.floor([...w].length/2)]).join('');
@@ -111,7 +116,7 @@ for(const q of questions) {
   check(choices.length===4&&new Set(choices.map(M.normalize)).size===4,q.id+': four distinct choices');
   check(choices.filter(c=>M.accepts(q,c)).length===1,q.id+': exactly one choice matches the derived answer');
   for(const label of q.choices) {
-    const run=new M.Session([q],{durationMs:90000,now:()=>0}); run.start();
+    const run=new M.Session([q],{durationMs,now:()=>0}); run.start();
     const index=run.choices.indexOf(label),result=run.choose(index);
     if(M.accepts(q,label)) check(result==='correct'&&run.phase==='playing'&&run.score===1,q.id+': correct choice serves the next bowl');
     else {
@@ -133,15 +138,15 @@ for(const mode of ['balanced','random']) {
   }
   check(signatures.size>295,'Independent shuffled runs');
 }
-let now=0;const s=new M.Session(questions,{durationMs:90000,now:()=>now,rng});
+let now=0;const s=new M.Session(questions,{durationMs,now:()=>now,rng});
 check(s.start()&&!s.start(),'Single start');const first=s.current.id;
 check(s.choose(-1)==='invalid'&&s.choose(4)==='invalid'&&s.choose('0')==='invalid'&&s.score===0&&s.phase==='playing','Invalid indices are not user choices');
 check(s.pass()&&s.passed===1&&s.score===0&&s.current.id!==first,'Pass advances without score or time penalty');
 const correctIndex=run=>run.choices.findIndex(c=>M.accepts(run.current,c));
 now=200;const serial=s.serial;check(s.choose(correctIndex(s))==='correct'&&s.score===1,'Correct advances and scores');
 check(s.choose(correctIndex(s),serial)==='inactive'&&s.score===1&&s.phase==='playing','Stale button cannot score or cause a loss');
-now=89999;check(s.remaining()===1,'Clock runs through serving');
-now=90000;check(s.choose(correctIndex(s))==='inactive'&&s.score===1&&s.phase==='finished','Exact deadline rejects input');
+now=durationMs-1;check(s.remaining()===1,'Clock runs through serving');
+now=durationMs;check(s.choose(correctIndex(s))==='inactive'&&s.score===1&&s.phase==='finished','Exact deadline rejects input');
 check(!s.pass()&&!s.finish()&&s.score===1,'Finished state is immutable');
 now=0;const lid=new M.Session(questions,{durationMs:1000,now:()=>now});lid.start();lid.finish('lid');now=500;check(lid.phase==='finished'&&lid.choose(0)==='inactive','Lid ends the run');
 now=0;const loss=new M.Session(questions,{now:()=>now});loss.start();loss.choose(correctIndex(loss));
@@ -158,10 +163,10 @@ memory.set('wanko-local-records-v1',JSON.stringify({version:1,bests:{90:23}}));
 M.saveBest(store,'wanko-choice-suddendeath-records-v1',90,4);
 check(M.readRecords(store,'wanko-local-records-v1').bests['90']===23&&M.readRecords(store,'wanko-choice-suddendeath-records-v1').bests['90']===4,'Input-mode records are retained, four-choice records are separate');
 check(M.saveBest({getItem(){throw Error();},setItem(){throw Error();}},'test',90,4).saved===false,'Storage failure is nonfatal');
-const intent=new URL(M.shareUrl('https://example.com/test/','🥢 {seconds}秒で{score}杯！\nおかわり？',90,12));
+const intent=new URL(M.shareUrl('https://example.com/test/','🥢 {seconds}秒で{score}杯！\nおかわり？',seconds,12));
 check(intent.origin==='https://twitter.com'&&intent.pathname==='/intent/tweet','Official X intent');
-check(intent.searchParams.get('text')==='🥢 90秒で12杯！\nおかわり？','Japanese, emoji, newline and record encoded');
+check(intent.searchParams.get('text')==='🥢 60秒で12杯！\nおかわり？','Japanese, emoji, newline and record encoded');
 check(intent.searchParams.get('url')==='https://example.com/test/','Configured URL preserved');
 check(M.shareUrl('','{score}',90,0)===null&&M.shareUrl('javascript:alert(1)','{score}',90,0)===null,'Unconfigured and unsafe links never shared');
-const report={result:'passed',checks,puzzles:questions.length,shuffle_runs:600,choice_states:questions.length*4,answer_positions:positions,model_deadline_ms:90000,scope:'Authored transformations, four choices with exactly one valid answer, instant loss, queue invariants, deadline, stale buttons, separate records. Visual reading and human enjoyment require human testing.'};
+const report={result:'passed',checks,puzzles:questions.length,shuffle_runs:600,choice_states:questions.length*4,answer_positions:positions,model_deadline_ms:durationMs,scope:'Authored transformations, four choices with exactly one valid answer, instant loss, queue invariants, deadline, stale buttons, separate records. Visual reading and human enjoyment require human testing.'};
 fs.writeFileSync(path.join(__dirname,'model-verification.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));

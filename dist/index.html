@@ -4,18 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#fcf3e0">
-  <meta name="description" content="ひらめいたら、もう一杯。90秒で小謎をいくつ解ける？ さくさく遊べる、謎解きわんこそば。">
+  <meta name="description" content="ひらめいたら、もう一杯。60秒で小謎をいくつ解ける？ さくさく遊べる、謎解きわんこそば。">
   <title>謎解きわんこそば｜ひらめいたら、もう一杯。</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="choices.css?v=2">
   <link rel="stylesheet" href="puzzles-extra.css?v=3">
-  <script src="config.js?v=2" defer></script>
+  <script src="config.js?v=4" defer></script>
   <script src="questions.js?v=3" defer></script>
-  <script src="model.js?v=2" defer></script>
+  <script src="model.js?v=4" defer></script>
   <script src="puzzle-view.js?v=3" defer></script>
   <script src="extra-bowl.js" defer></script>
-  <script src="app.js?v=2" defer></script>
+  <script src="app.js?v=4" defer></script>
 </head>
 <body>
 <div class="site-shell">
@@ -26,12 +26,12 @@
   <main id="app">
     <section id="introScreen" class="intro-screen" aria-labelledby="gameTitle">
       <div class="intro-copy">
-        <p class="eyebrow">制限時間は<span data-duration>90</span>秒。ひらめき、食べ放題。</p>
+        <p class="eyebrow">制限時間は<span data-duration>60</span>秒。ひらめき、食べ放題。</p>
         <h1 id="gameTitle"><span>謎解き</span>わんこそば<span class="title-dot" aria-hidden="true">。</span></h1>
         <p class="intro-tagline">ひらめいたら、<br class="mobile-only">もう一杯。</p>
         <p class="intro-description">４択から、ひらめきの一杯を。<br>間違えたらドボン、その場で終了！</p>
         <button id="startButton" class="primary-button start-button" type="button"><span>いただきます！</span><b aria-hidden="true">→</b></button>
-        <p class="intro-best">自己ベスト <strong id="introBest">0</strong> 杯 <span>／<span data-duration>90</span>秒</span></p>
+        <p class="intro-best">自己ベスト <strong id="introBest">0</strong> 杯 <span>／<span data-duration>60</span>秒</span></p>
         <p class="mode-caption">４択・ドボン式</p>
         <p id="storageNotice" class="storage-notice" hidden>このブラウザでは記録を保存できません。ゲームはそのまま遊べます。</p>
       </div>
@@ -47,7 +47,7 @@
 
     <section id="playScreen" class="play-screen" aria-label="小謎タイムアタック" hidden>
       <div class="hud">
-        <div class="timer-stat"><span>のこり</span><strong id="timer">90</strong><span>秒</span></div>
+        <div class="timer-stat"><span>のこり</span><strong id="timer">60</strong><span>秒</span></div>
         <div class="score-stat"><span>完食</span><strong id="score">0</strong><span>杯</span></div>
         <div class="best-stat"><span>自己ベスト</span><b id="playBest">0</b><span>杯</span></div>
         <div class="timer-track" aria-hidden="true"><i id="timerFill"></i></div>
@@ -82,7 +82,7 @@
         <p class="record-label">今回の記録</p>
         <div class="result-number"><strong id="resultScore">0</strong><span>杯</span></div>
         <p id="newBest" class="new-best" hidden>✦ 自己ベスト更新！ ✦</p>
-        <p class="result-best">自己ベスト <strong id="resultBest">0</strong> 杯 <span>／<span data-duration>90</span>秒・４択式</span></p>
+        <p class="result-best">自己ベスト <strong id="resultBest">0</strong> 杯 <span>／<span data-duration>60</span>秒・４択式</span></p>
         <div class="result-actions"><button id="retryButton" type="button" class="primary-button">もう一杯、挑戦！ <span aria-hidden="true">↻</span></button><a id="shareButton" class="share-button" target="_blank" rel="noopener noreferrer">𝕏 で完食記録を共有</a></div>
         <p id="shareNotice" class="share-notice" hidden>公開URLは準備中です。共有機能は公開後に利用できます。</p>
         <p id="resultStorageNotice" class="storage-notice" hidden>今回は記録を保存できませんでした。</p>
@@ -99,7 +99,7 @@
 </div>
 <dialog id="helpDialog" class="help-dialog" aria-labelledby="helpTitle">
   <div class="dialog-top"><h2 id="helpTitle">おいしい遊び方</h2><button id="closeHelp" type="button" class="text-button">閉じる ×</button></div>
-  <p><strong><span data-duration>90</span>秒で、小謎を何杯解ける？</strong></p>
+  <p><strong><span data-duration>60</span>秒で、小謎を何杯解ける？</strong></p>
   <ol><li>スタートしたら、時計が動きます。</li><li>４つの選択肢から、答えをひとつ選びます。</li><li>正解すると１杯完食。すぐ次のお椀へ。</li><li><strong>間違えたらドボン！ その時点で終了です。</strong></li><li>難しい一杯はパス。追加ペナルティはありません。</li></ol>
   <p>やめるときは「蓋をして終わる」を２回。<br>PCは数字の1〜4、またはTabとEnterでも選べます。</p>
   <p class="help-small">遊んでいる間も時間は進みます。記録はこのブラウザに保存されます。問題は毎回シャッフル。１巡するまで重複せず、全部出たら並べ直します。</p>

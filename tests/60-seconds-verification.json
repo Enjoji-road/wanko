@@ -1,0 +1,27 @@
+{
+  "result": "passed_with_limits",
+  "date": "2026-10-25",
+  "duration_seconds": 60,
+  "regular_puzzles": 36,
+  "future_regular_puzzle_target": 90,
+  "extra_bowl_in_regular_count": false,
+  "browser": "Cloud Chromium via cua_repl",
+  "viewport": "390x660 iframe",
+  "verified": [
+    "Intro, help, timer on start, result and retry show 60 seconds",
+    "A simulated 61-second clock jump finishes the game with the time-expired result",
+    "All answer buttons are disabled after the deadline",
+    "Retry resets the countdown to 60 and the score to zero",
+    "A new 60-second best persists after reload",
+    "The previous 90-second best is retained separately in the same save key",
+    "The extra bowl remains an independent result-screen feature"
+  ],
+  "observed_records_before": {"version": 1, "bests": {"90": 36}},
+  "observed_records_after": {"version": 1, "bests": {"60": 2, "90": 36}},
+  "limits": [
+    "Deadline was advanced through the isolated test fixture; an actual 60-second wall-clock wait was not used",
+    "Phone-size iframe verification is not an iPhone or Android hardware test",
+    "The existing 36-question layout measurements were collected for the prior 90-second version; layout and puzzle data were not changed"
+  ],
+  "screenshot": "docs/60-seconds-preview.jpg"
+}

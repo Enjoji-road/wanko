@@ -2,7 +2,7 @@
   'use strict';
   const C = window.WankoConfig, M = window.WankoModel, questions = window.WankoQuestions;
   const $ = id => document.getElementById(id);
-  const seconds = Number.isSafeInteger(C.durationSeconds) && C.durationSeconds > 0 ? C.durationSeconds : 90;
+  const seconds = Number.isSafeInteger(C.durationSeconds) && C.durationSeconds > 0 ? C.durationSeconds : 60;
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
   let session = null, ticker = null, lidTimer = null, lidArmed = false, best = 0, cheerIndex = -1, finishPending = false;
   const clock = () => Math.max(performance.timeOrigin + performance.now(), Date.now());

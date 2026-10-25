@@ -3,7 +3,7 @@
 <style>body{font:12px sans-serif;background:#e6e6e6;margin:0}header{padding:8px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;position:sticky;top:0;background:#eee;z-index:2}iframe{display:block;border:0;margin:8px auto;background:white;box-shadow:0 0 0 1px #777}button,select{padding:6px}#status{max-width:350px;font-size:11px}</style>
 <header><label>画面 <select id="size"><option value="390,844">390×844</option><option value="390,660">390×660</option><option value="360,640">360×640</option><option value="320,568">320×568</option><option value="390,500">390×500</option><option value="844,390">844×390 横向き</option><option value="1280,900">1280×900</option></select></label>
 <label><input type="checkbox" id="motion">動きを減らす（模擬）</label>
-<button id="reload">再読込</button><button id="corrupt">保存を破損して再読込</button><button id="jump">時計＋91秒</button><button id="stale">古い選択ボタンを再発火</button><button id="held">キー押しっぱなし</button><button id="measure">表示検査</button><output id="status">dist/qa.htmlへ一時コピーして使う、公開しない検証ページ</output></header>
+<button id="reload">再読込</button><button id="corrupt">保存を破損して再読込</button><button id="jump">時計＋61秒</button><button id="records">記録を確認</button><button id="stale">古い選択ボタンを再発火</button><button id="held">キー押しっぱなし</button><button id="measure">表示検査</button><output id="status">dist/qa.htmlへ一時コピーして使う、公開しない検証ページ</output></header>
 <iframe id="game" title="検証中の４択ゲーム" src="./" width="390" height="844"></iframe>
 <script>
 const game=document.getElementById('game'), status=document.getElementById('status');
@@ -18,7 +18,8 @@ async function reload(){
 document.getElementById('reload').onclick=reload;
 document.getElementById('motion').onchange=reload;
 document.getElementById('corrupt').onclick=()=>{game.contentWindow.localStorage.setItem('wanko-choice-suddendeath-records-v1','{broken-json');reload();};
-document.getElementById('jump').onclick=()=>{const win=game.contentWindow,now=win.Date.now;win.Date.now=()=>now()+91000;status.textContent='時計を91秒進めました';};
+document.getElementById('jump').onclick=()=>{const win=game.contentWindow,now=win.Date.now;win.Date.now=()=>now()+61000;status.textContent='時計を61秒進めました';};
+document.getElementById('records').onclick=()=>{status.textContent=game.contentWindow.localStorage.getItem('wanko-choice-suddendeath-records-v1')||'記録なし';};
 function current(){
   const win=game.contentWindow,doc=game.contentDocument;
   const q=win.WankoQuestions.find(q=>q.title===doc.getElementById('questionTitle').textContent);

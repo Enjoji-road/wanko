@@ -1,6 +1,6 @@
 {
   "result": "passed",
-  "checks": 5341,
+  "checks": 5343,
   "puzzles": 36,
   "shuffle_runs": 600,
   "choice_states": 144,
@@ -10,6 +10,6 @@
     153,
     147
   ],
-  "model_deadline_ms": 90000,
+  "model_deadline_ms": 60000,
   "scope": "Authored transformations, four choices with exactly one valid answer, instant loss, queue invariants, deadline, stale buttons, separate records. Visual reading and human enjoyment require human testing."
 }
