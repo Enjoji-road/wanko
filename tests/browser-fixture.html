@@ -39,7 +39,8 @@ document.getElementById('held').onclick=()=>{
 };
 document.getElementById('measure').onclick=()=>{
   const doc=game.contentDocument,q=doc.getElementById('questionBowl').getBoundingClientRect(),p=doc.querySelector('.puzzle-visual').getBoundingClientRect(),instruction=doc.getElementById('questionInstruction').getBoundingClientRect(),answers=doc.getElementById('choiceButtons').getBoundingClientRect();
-  const children=[...doc.querySelectorAll('.puzzle-visual > *, .puzzle-examples')].map(e=>e.getBoundingClientRect());
-  status.textContent=JSON.stringify({w:game.contentWindow.innerWidth,h:game.contentWindow.innerHeight,contentInside:children.every(r=>r.top>=q.top&&r.bottom<=q.bottom+1&&r.left>=q.left&&r.right<=q.right+1),noOverlap:p.top>=instruction.bottom&&answers.top>=q.bottom,choiceBottom:Math.ceil(answers.bottom),scroll:doc.documentElement.scrollWidth>doc.documentElement.clientWidth});
+  const children=[...doc.querySelectorAll('.puzzle-visual *, .puzzle-examples')].map(e=>e.getBoundingClientRect()).filter(r=>r.width>0);
+  const apart=answers.top>=q.bottom-1||answers.left>=q.right-1||answers.right<=q.left+1||answers.bottom<=q.top+1;
+  status.textContent=JSON.stringify({w:game.contentWindow.innerWidth,h:game.contentWindow.innerHeight,contentInside:children.every(r=>r.top>=q.top-1&&r.bottom<=q.bottom+1&&r.left>=q.left-1&&r.right<=q.right+1),noOverlap:p.top>=instruction.bottom-1&&apart,choiceBottom:Math.ceil(answers.bottom),scroll:doc.documentElement.scrollWidth>doc.documentElement.clientWidth});
 };
 </script></html>

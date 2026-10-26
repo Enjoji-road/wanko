@@ -32,8 +32,10 @@
       let next;
       if (this.mode === 'balanced') {
         const groups = [...new Set(this.questions.map(q => q.level))].map(level => shuffle(this.questions.filter(q => q.level === level), this.rng));
-        next = [];
-        while (groups.some(g => g.length)) next.push(...shuffle(groups.filter(g => g.length).map(g => g.shift()), this.rng));
+        // Spread each difficulty across the whole round, including unequal group sizes.
+        // Equal sizes still produce one of each difficulty in every three-question block.
+        next = groups.flatMap(group => group.map((question,index) => ({question,position:(index+this.rng())/group.length})))
+          .sort((a,b) => a.position-b.position).map(item => item.question);
       } else next = shuffle(this.questions, this.rng);
       if (next.length > 1 && next[0].id === this.lastId) [next[0], next[1]] = [next[1], next[0]];
       this.queue = next; this.round++;

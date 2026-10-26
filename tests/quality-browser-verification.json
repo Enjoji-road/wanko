@@ -1,0 +1,96 @@
+{
+  "result": "passed_with_limits",
+  "date": "2026-10-26",
+  "browser": "Cloud Chromium via cua_repl",
+  "regularPuzzles": 36,
+  "durationSeconds": 60,
+  "flow": {
+    "keyboardScore": "1",
+    "stale": "古いボタン：１杯だけ加点、終了せず",
+    "held": "長押し：１杯だけ加点、終了せず",
+    "wrongScore": "3",
+    "bestAfterWrong": "36",
+    "retryTimer": "60",
+    "firstLid": "もう一度で、ごちそうさま",
+    "lidReason": "ぱたん。お椀に蓋。",
+    "extraBowl": "✳あ、まだ一杯ありますよ？特別な一杯は、ただいま仕込み中。今回の試作では、ここまでです。",
+    "bestAfterReload": "36",
+    "timeReason": "お時間です！",
+    "disabledAfterTime": true,
+    "corruptRecovered": true
+  },
+  "layouts": [
+    {
+      "viewport": [
+        320,
+        568
+      ],
+      "questions": 36,
+      "unique": 36,
+      "usableWidths": [
+        320
+      ],
+      "maxChoiceBottom": 498,
+      "maxControlsBottom": 542,
+      "issues": []
+    },
+    {
+      "viewport": [
+        390,
+        660
+      ],
+      "questions": 36,
+      "unique": 36,
+      "usableWidths": [
+        390,
+        375
+      ],
+      "maxChoiceBottom": 617,
+      "maxControlsBottom": 661,
+      "issues": []
+    },
+    {
+      "viewport": [
+        844,
+        390
+      ],
+      "questions": 36,
+      "unique": 36,
+      "usableWidths": [
+        829
+      ],
+      "maxChoiceBottom": 314,
+      "maxControlsBottom": 363,
+      "issues": []
+    },
+    {
+      "viewport": [
+        1280,
+        900
+      ],
+      "questions": 36,
+      "unique": 36,
+      "usableWidths": [
+        1280
+      ],
+      "maxChoiceBottom": 699,
+      "maxControlsBottom": 748,
+      "issues": []
+    }
+  ],
+  "screenshots": [
+    "phone-hands.jpg",
+    "phone-cube.jpg",
+    "phone-ladder.jpg",
+    "phone-lines.jpg"
+  ],
+  "limits": [
+    "Phone-sized iframes are not iPhone/Android hardware tests",
+    "Reduced motion for the 144 layout measurements was simulated before initialization; screenshots and the final flow used normal motion",
+    "The 61-second clock jump was simulated through the isolated fixture; an earlier normal 60-second run also expired naturally",
+    "At 390x660, the existing stepback controls can reach y=661; vertical scrolling remains allowed",
+    "Initial-player solve time, enjoyment, cube-folding difficulty and perceived fairness remain unmeasured"
+  ],
+  "mainUpdated": false,
+  "productionPublished": false
+}

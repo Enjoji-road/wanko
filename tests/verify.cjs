@@ -10,7 +10,32 @@ const seconds=configScope.window.WankoConfig.durationSeconds, durationMs=seconds
 let checks = 0;
 function check(value, message) { assert.ok(value,message); checks++; }
 check(seconds===60,'The actual game configuration uses 60 seconds');
+check(configScope.window.WankoConfig.storageKey==='wanko-choice-suddendeath-records-v1','The existing best-record key is retained');
 check(new M.Session(questions).durationMs===durationMs,'Default session agrees with the game configuration');
+function overlap(a,b) {
+  const [x,y,u,v]=a,dx=u-x,dy=v-y,[p,q,r,s]=b,cross=(a,b,c,d)=>a*d-b*c;
+  if(cross(dx,dy,r-p,s-q)!==0||cross(dx,dy,p-x,q-y)!==0)return null;
+  const length=dx*dx+dy*dy,t0=((p-x)*dx+(q-y)*dy)/length,t1=((r-x)*dx+(s-y)*dy)/length;
+  const lo=Math.max(0,Math.min(t0,t1)),hi=Math.min(1,Math.max(t0,t1));
+  if(hi<=lo)return null;
+  return [x+lo*dx,y+lo*dy,x+hi*dx,y+hi*dy];
+}
+function foldedFaces(rows) {
+  const cells=rows.flatMap((row,r)=>row.flatMap((mark,c)=>mark?[{mark,at:[r,c]}]:[]));
+  assert.equal(cells.length,6);const neg=v=>v.map(n=>-n),key=at=>at.join(',');
+  const first=cells[0],poses=new Map([[key(first.at),{n:[0,0,1],u:[0,1,0],r:[1,0,0]}]]),queue=[first];
+  while(queue.length) {
+    const cell=queue.shift(),p=poses.get(key(cell.at)),[r,c]=cell.at;
+    const neighbors=[[[r,c+1],{n:p.r,r:neg(p.n),u:p.u}],[[r,c-1],{n:neg(p.r),r:p.n,u:p.u}],[[r-1,c],{n:p.u,r:p.r,u:neg(p.n)}],[[r+1,c],{n:neg(p.u),r:p.r,u:p.n}]];
+    for(const [at,pose] of neighbors) {
+      const next=cells.find(cell=>key(cell.at)===key(at));if(!next)continue;
+      if(poses.has(key(at)))assert.deepEqual(poses.get(key(at)),pose);
+      else{poses.set(key(at),pose);queue.push(next);}
+    }
+  }
+  assert.equal(poses.size,6);assert.equal(new Set([...poses.values()].map(p=>p.n.join(','))).size,6);
+  return cells.map(cell=>({...cell,normal:poses.get(key(cell.at)).n}));
+}
 function derive(q) {
   switch(q.type) {
     case 'middle': return q.words.map(w=>[...w][Math.floor([...w].length/2)]).join('');
@@ -39,7 +64,11 @@ function derive(q) {
       while(card) {out+=card.word[card.marked];remaining.splice(remaining.indexOf(card),1);const next=remaining.filter(c=>c.word[0]===card.word.at(-1));assert.ok(next.length<=1);card=next[0];}
       assert.equal(remaining.length,0);return out;
     }
-    case 'hands': return q.hands.slice().sort((a,b)=>a.length-b.length).map(h=>q.letters[h.index]).join('');
+    case 'hands': {
+      assert.equal(new Set(q.hands.map(h=>h.length)).size,q.hands.length);
+      assert.equal(new Set(q.hands.map(h=>h.index)).size,q.hands.length);
+      return q.hands.slice().sort((a,b)=>a.length-b.length).map(h=>q.letters[h.index]).join('');
+    }
     case 'outside': return q.outside.join('');
     case 'vertical': return q.rows.map(r=>r[1]).join('');
     case 'single': {const chars=q.rows.flat();return chars.filter(c=>chars.filter(v=>v===c).length===1).join('');}
@@ -97,11 +126,29 @@ function derive(q) {
       assert.ok(q.holes.every(([r,c])=>q.rows[r]?.[c]));
       return [...q.holes].sort(([r,c],[s,d])=>r-s||c-d).map(([r,c])=>q.rows[r][c]).join('');
     }
+    case 'shared_lines': {
+      const intersections=q.diagrams[0].segments.flatMap(a=>q.diagrams[1].segments.map(b=>overlap(a,b))).filter(Boolean);
+      assert.equal(intersections.length,2);
+      assert.ok(intersections.some(([x,y,u,v])=>y===50&&v===50&&Math.min(x,u)<50&&Math.max(x,u)>50));
+      assert.ok(intersections.some(([x,y,u,v])=>x===50&&u===50&&Math.min(y,v)<50&&Math.max(y,v)>50));
+      return '＋';
+    }
+    case 'ladder': {
+      let at=q.startColumn;
+      assert.deepEqual(new Set(q.labels),new Set(q.choices));
+      for(const [a,b] of q.rails){assert.equal(b-a,1);assert.ok(a>=0&&b<q.labels.length);if(at===a)at=b;else if(at===b)at=a;}
+      return q.labels[at];
+    }
+    case 'cube_net': {
+      const faces=foldedFaces(q.rows),source=faces.find(f=>f.mark===q.target);
+      const opposites=faces.filter(f=>f.normal.every((n,i)=>n===-source.normal[i]));
+      assert.equal(opposites.length,1);return opposites[0].mark;
+    }
     default: throw new Error('Unverified type: '+q.type);
   }
 }
 check(questions.length===36,'36 authored puzzles');
-for(const level of [1,2,3]) check(questions.filter(q=>q.level===level).length===12,'12 puzzles per estimated difficulty');
+for(const level of [1,2,3]) check(questions.some(q=>q.level===level),'Each estimated difficulty is represented');
 check(new Set(questions.map(q=>q.id)).size===questions.length,'Unique IDs');
 check(new Set(questions.map(q=>M.normalize(q.answer))).size===questions.length,'No repeated canonical answer');
 for(const q of questions) {
@@ -132,12 +179,41 @@ for(const mode of ['balanced','random']) {
   for(let run=0;run<300;run++) {
     const d=new M.Deck(questions,mode,rng),round=questions.map(()=>d.draw());
     check(new Set(round.map(q=>q.id)).size===questions.length,mode+': every puzzle once');
-    if(mode==='balanced') for(let i=0;i<round.length;i+=3) check(new Set(round.slice(i,i+3).map(q=>q.level)).size===3,'Balanced three-question blocks');
+    if(mode==='balanced') for(const level of [1,2,3]) {
+      const weight=questions.filter(q=>q.level===level).length/questions.length;
+      for(let end=1;end<=round.length;end++) check(Math.abs(round.slice(0,end).filter(q=>q.level===level).length-end*weight)<3,'Unequal difficulties remain distributed across the round');
+    }
     signatures.add(round.map(q=>q.id).join(','));
     check(d.draw().id!==round.at(-1).id,'No adjacent repeat at reshuffle');
   }
   check(signatures.size>295,'Independent shuffled runs');
 }
+const equalGroups=[1,2,3].flatMap(level=>questions.filter(q=>q.level===level).slice(0,5));
+for(let run=0;run<100;run++) {
+  const d=new M.Deck(equalGroups,'balanced',rng),round=equalGroups.map(()=>d.draw());
+  for(let i=0;i<round.length;i+=3)check(new Set(round.slice(i,i+3).map(q=>q.level)).size===3,'Equal group sizes retain three-question blocks');
+}
+// Regression: a scarce hard group must not disappear from the whole second half.
+const legacyOrder=[];const groups=[1,2,3].map(level=>questions.filter(q=>q.level===level).slice());
+while(groups.some(g=>g.length))legacyOrder.push(...groups.filter(g=>g.length).map(g=>g.shift()));
+check(!legacyOrder.slice(18).some(q=>q.level===3),'The old draining schedule demonstrates the uneven-count tail problem');
+for(let run=0;run<100;run++) {
+  const d=new M.Deck(questions,'balanced',rng),round=questions.map(()=>d.draw());
+  check(round.slice(18).some(q=>q.level===3)&&round.slice(0,18).some(q=>q.level===3),'Hard puzzles are present in both halves of the round');
+}
+for(const id of ['sizes','corners_shapes']) {
+  const q=questions.find(q=>q.id===id),letters=id==='sizes'?q.letters.map(s=>s.text):q.shapes.map(s=>s.letter);
+  const bag=letters.slice().sort().join('');
+  check(q.choices.every(c=>[...c].sort().join('')===bag),id+': every choice uses the same letters, so order is necessary');
+}
+const missing=questions.find(q=>q.id==='missing_camel');
+check(missing.choices.filter(c=>c[0]===missing.before.at(-1)).length===2&&missing.choices.filter(c=>c.at(-1)===missing.after[0]).length===2,'Both ends of the missing-link clue eliminate candidates');
+const alternate=questions.find(q=>q.id==='everyother');
+check(alternate.choices.includes([...alternate.source].filter((_,i)=>i%2===1).join('')),'The alternate starting position yields a plausible distractor');
+const viewScope={window:{}};require('node:vm').runInNewContext(fs.readFileSync(path.join(__dirname,'../dist/puzzle-view.js'),'utf8'),viewScope);
+for(const q of questions)check(!viewScope.window.WankoPuzzleView.render(q).endsWith(`type-${q.type}\"></div>`),q.id+': renderer supplies an actual diagram');
+const clockMarkup=viewScope.window.WankoPuzzleView.render(questions.find(q=>q.id==='hands'));
+check((clockMarkup.match(/data-guide=/g)||[]).length===6&&(clockMarkup.match(/data-hand=/g)||[]).length===3,'Clock has neutral guides for all six directions and exactly three needles');
 let now=0;const s=new M.Session(questions,{durationMs,now:()=>now,rng});
 check(s.start()&&!s.start(),'Single start');const first=s.current.id;
 check(s.choose(-1)==='invalid'&&s.choose(4)==='invalid'&&s.choose('0')==='invalid'&&s.score===0&&s.phase==='playing','Invalid indices are not user choices');
@@ -168,5 +244,5 @@ check(intent.origin==='https://twitter.com'&&intent.pathname==='/intent/tweet','
 check(intent.searchParams.get('text')==='🥢 60秒で12杯！\nおかわり？','Japanese, emoji, newline and record encoded');
 check(intent.searchParams.get('url')==='https://example.com/test/','Configured URL preserved');
 check(M.shareUrl('','{score}',90,0)===null&&M.shareUrl('javascript:alert(1)','{score}',90,0)===null,'Unconfigured and unsafe links never shared');
-const report={result:'passed',checks,puzzles:questions.length,shuffle_runs:600,choice_states:questions.length*4,answer_positions:positions,model_deadline_ms:durationMs,scope:'Authored transformations, four choices with exactly one valid answer, instant loss, queue invariants, deadline, stale buttons, separate records. Visual reading and human enjoyment require human testing.'};
+const report={result:'passed',checks,puzzles:questions.length,difficulty_counts:Object.fromEntries([1,2,3].map(level=>[level,questions.filter(q=>q.level===level).length])),shuffle_runs:600,choice_states:questions.length*4,answer_positions:positions,model_deadline_ms:durationMs,scope:'Authored transformations including segment intersections, ladder connections and cube folding; one valid choice, instant loss, balanced unequal groups, deadline and preserved records. Naturalness, solve times and human enjoyment require first-play testing.'};
 fs.writeFileSync(path.join(__dirname,'model-verification.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));
