@@ -1,9 +1,26 @@
 /* Additional puzzle diagrams; existing bowls keep their approved layout. */
+.is-playing .serving-diagram { display:block; flex:none; width:250px; max-width:100%; height:auto; overflow:visible; }
+.serving-diagram text { fill:var(--ink); font-family:inherit; font-weight:700; letter-spacing:0; }
+.is-playing .comparison-diagram { width:270px; }
+.is-playing .space-diagram { width:140px; }
+.is-playing .type-missing_corner .serving-diagram { width:170px; }
+.is-playing .type-plate_turn .serving-diagram { width:205px; }
+.is-playing .type-join_marks .serving-diagram { width:200px; }
+.puzzle-station:has(.type-missing_corner) .choice-word { font:700 28px/1 monospace; }
+.puzzle-station:has(.type-plate_turn) .choice-word { font-size:26px; line-height:1; }
 .is-playing .kanji-pieces.pieces-row { flex-direction:row; gap:18px; }
 .size-letters { display:flex; align-items:center; justify-content:center; gap:28px; min-height:70px; }
 .is-playing .mirror-grid { position:relative; width:244px; max-width:100%; font-size:27px; }
 .mirror-grid:after { content:""; position:absolute; top:-5px; bottom:-5px; left:50%; border-left:2px dashed var(--red); pointer-events:none; }
 .circled-cell:after { content:""; position:absolute; inset:3px; border:2px solid var(--red); border-radius:50%; pointer-events:none; }
+.fold-caption { display:block; text-align:center; font-size:11px; font-weight:500; color:var(--muted); margin-bottom:7px; letter-spacing:0; }
+.shared-line-pair { display:flex; justify-content:center; gap:18px; width:100%; max-width:254px; }
+.shared-line-pair svg { display:block; width:calc((100% - 18px)/2); height:auto; }
+.is-playing .ladder-puzzle { display:block; width:270px; max-width:100%; height:auto; }
+.ladder-puzzle text { font:700 21px sans-serif; fill:var(--ink); letter-spacing:0; }
+.is-playing .cube-grid { width:184px; border:0; background:transparent; gap:0; font-size:27px; line-height:1; }
+.is-playing .cube-grid .letter-cell { aspect-ratio:1; height:auto; padding:0; border:1px solid #ad8f68; }
+.cube-grid .net-empty { visibility:hidden; }
 .shape-trio { display:flex; justify-content:center; width:100%; max-width:285px; gap:7px; }
 .shape-trio svg { display:block; flex:1; min-width:0; width:30%; max-width:95px; }
 .shape-trio text { fill:var(--ink); font:700 26px sans-serif; letter-spacing:0; }
@@ -38,6 +55,7 @@
 .stencil-cell { position:relative; background:#6a5142; height:36px; min-height:36px; }
 .stencil-cell.is-hole:after { content:""; position:absolute; width:70%; height:70%; top:15%; left:15%; border-radius:50%; background:#fffaf0; box-shadow:inset 0 0 0 1px #d6c29d; }
 @media(max-width:760px) {
+  .is-playing .cube-grid { width:164px; font-size:25px; }
   .is-playing .mirror-grid { width:228px; font-size:25px; }
   .blank-rows { max-width:255px; gap:3px; }
   .blank-rows small { font-size:12px; }
@@ -49,6 +67,7 @@
   .is-playing .mask-panels .letter-cell,.stencil-cell { height:33px; min-height:33px; }
 }
 @media(max-width:359px) {
+  .is-playing .cube-grid { width:156px; font-size:24px; }
   .is-playing .mirror-grid { width:215px; font-size:24px; }
   .compare-word { font-size:23px; }
   .agree-rows>div { gap:8px; }

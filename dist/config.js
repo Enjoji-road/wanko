@@ -1,7 +1,7 @@
 /* 調整はここから。時間を変えると自己ベストも時間別に保存されます。 */
 window.WankoConfig = Object.freeze({
   durationSeconds: 60,
-  shuffleMode: 'balanced', // balanced: 3問ごとに難度を混ぜる / random: 全体を均等シャッフル
+  shuffleMode: 'balanced', // balanced: 各難度を一巡全体へ分散 / random: 全体を均等シャッフル
   serveAnimationMs: 180,  // 見た目だけ。次の解答は待たずに入力できます。
   lidConfirmMs: 2800, // 蓋ボタンをこの時間内にもう一度押すと終了
   extraBowlDelayMs: 1700,

@@ -1,0 +1,85 @@
+{
+  "result": "passed_with_limits",
+  "date": "2026-10-30",
+  "browser": "Cloud Chromium via cua_repl, managed Sites preview",
+  "regularPuzzles": 45,
+  "durationSeconds": 60,
+  "flow": {
+    "bestBefore": "45",
+    "keyboardScore": "1",
+    "stale": "古いボタン：１杯だけ加点、終了せず",
+    "held": "長押し：１杯だけ加点、終了せず",
+    "wrongTitle": "ドボン！",
+    "wrongScore": "3",
+    "bestAfterWrong": "45",
+    "retryTimer": "60",
+    "firstLid": "もう一度で、ごちそうさま",
+    "lidReason": "ぱたん。お椀に蓋。",
+    "extraBowl": "✳あ、まだ一杯ありますよ？特別な一杯は、ただいま仕込み中。今回の試作では、ここまでです。",
+    "bestAfterReload": "45",
+    "timeReason": "お時間です！",
+    "disabledAfterTime": true,
+    "corruptRecovered": true
+  },
+  "layouts": [
+    {
+      "viewport": [
+        320,
+        568
+      ],
+      "questions": 45,
+      "unique": 45,
+      "mode": "correct",
+      "score": 45,
+      "maxChoiceBottom": 503,
+      "maxControlsBottom": 546,
+      "issues": []
+    },
+    {
+      "viewport": [
+        390,
+        660
+      ],
+      "questions": 45,
+      "unique": 45,
+      "mode": "correct",
+      "score": 45,
+      "maxChoiceBottom": 617,
+      "maxControlsBottom": 660,
+      "issues": []
+    },
+    {
+      "viewport": [
+        844,
+        390
+      ],
+      "questions": 45,
+      "unique": 45,
+      "mode": "pass",
+      "score": 0,
+      "maxChoiceBottom": 314,
+      "maxControlsBottom": 363,
+      "issues": []
+    },
+    {
+      "viewport": [
+        1280,
+        900
+      ],
+      "questions": 45,
+      "unique": 45,
+      "mode": "pass",
+      "score": 0,
+      "maxChoiceBottom": 699,
+      "maxControlsBottom": 748,
+      "issues": []
+    }
+  ],
+  "new_diagrams_visually_reviewed": 9,
+  "limits": [
+    "一巡の表示測定は実際のDOMでの計測。正解またはパスの実ボタンのclickハンドラを検証ページから動かす。180回のネイティブタップを行ったという意味ではない。",
+    "数字キー・誤答・蓋などはブラウザ操作でも確認。追加図は採点なしの開発用一覧でも目視。",
+    "実機Safariと初見プレイヤーの実測は未実施。",
+    "難度は設計上の見積もり。短い画面では既存問題のごく小さい縦スクロールを許容する。"
+  ]
+}

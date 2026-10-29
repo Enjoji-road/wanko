@@ -1,15 +1,20 @@
 {
   "result": "passed",
-  "checks": 5343,
-  "puzzles": 36,
+  "checks": 43021,
+  "puzzles": 45,
+  "difficulty_counts": {
+    "1": 21,
+    "2": 17,
+    "3": 7
+  },
   "shuffle_runs": 600,
-  "choice_states": 144,
+  "choice_states": 180,
   "answer_positions": [
-    154,
-    146,
-    153,
-    147
+    159,
+    144,
+    134,
+    163
   ],
   "model_deadline_ms": 60000,
-  "scope": "Authored transformations, four choices with exactly one valid answer, instant loss, queue invariants, deadline, stale buttons, separate records. Visual reading and human enjoyment require human testing."
+  "scope": "Authored transformations including segment intersections, ladder connections, cube folding, plate rotation, missing corners, region membership, occlusion, unfolded holes, negative space, crossing threads, matching marks and rotated pieces; one valid choice, instant loss, balanced unequal groups, deadline and preserved records. Naturalness, solve times and human enjoyment require first-play testing."
 }

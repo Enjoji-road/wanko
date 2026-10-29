@@ -1,0 +1,2514 @@
+{
+  "date": "2026-10-26",
+  "branch": "quality/review-36-puzzles-20261026",
+  "scope": "All 36 questions in each iframe. Viewport sizes follow the explicit iframe size selected for each run; usableWidth and rectangles are read from the actual rendered body.",
+  "summary": [
+    {
+      "viewport": [
+        320,
+        568
+      ],
+      "questions": 36,
+      "unique": 36,
+      "usableWidths": [
+        320
+      ],
+      "maxChoiceBottom": 498,
+      "maxControlsBottom": 542,
+      "issues": []
+    },
+    {
+      "viewport": [
+        390,
+        660
+      ],
+      "questions": 36,
+      "unique": 36,
+      "usableWidths": [
+        390,
+        375
+      ],
+      "maxChoiceBottom": 617,
+      "maxControlsBottom": 661,
+      "issues": []
+    },
+    {
+      "viewport": [
+        844,
+        390
+      ],
+      "questions": 36,
+      "unique": 36,
+      "usableWidths": [
+        829
+      ],
+      "maxChoiceBottom": 314,
+      "maxControlsBottom": 363,
+      "issues": []
+    },
+    {
+      "viewport": [
+        1280,
+        900
+      ],
+      "questions": 36,
+      "unique": 36,
+      "usableWidths": [
+        1280
+      ],
+      "maxChoiceBottom": 699,
+      "maxControlsBottom": 748,
+      "issues": []
+    }
+  ],
+  "measurements": [
+    {
+      "active": true,
+      "choiceBottom": 446,
+      "controlsBottom": 490,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "1杯目",
+      "title": "ふたりの共通点",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 477,
+      "controlsBottom": 521,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 1,
+      "serving": "2杯目",
+      "title": "てんてん、おいで",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 433,
+      "controlsBottom": 477,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 2,
+      "serving": "3杯目",
+      "title": "左右、ぴったり",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 450,
+      "controlsBottom": 494,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 3,
+      "serving": "4杯目",
+      "title": "箱のむこう側",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 440,
+      "controlsBottom": 484,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 4,
+      "serving": "5杯目",
+      "title": "上下、ぴったり",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 478,
+      "controlsBottom": 522,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 5,
+      "serving": "6杯目",
+      "title": "みじかい針から",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 477,
+      "controlsBottom": 521,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 6,
+      "serving": "7杯目",
+      "title": "一本、おあずかり",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 478,
+      "controlsBottom": 522,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 7,
+      "serving": "8杯目",
+      "title": "横入りのお客さま",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 466,
+      "controlsBottom": 510,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 8,
+      "serving": "9杯目",
+      "title": "まんなかのお品書き",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 433,
+      "controlsBottom": 477,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 9,
+      "serving": "10杯目",
+      "title": "ふたりだけ、席替え",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 473,
+      "controlsBottom": 517,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 10,
+      "serving": "11杯目",
+      "title": "穴あきのお品書き",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 466,
+      "controlsBottom": 510,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 11,
+      "serving": "12杯目",
+      "title": "こごえの注文",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 433,
+      "controlsBottom": 477,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 12,
+      "serving": "13杯目",
+      "title": "くるり、折り返し",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 490,
+      "controlsBottom": 534,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 13,
+      "serving": "14杯目",
+      "title": "まんなか、いただきます",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 463,
+      "controlsBottom": 507,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 14,
+      "serving": "15杯目",
+      "title": "同じ席で、待ち合わせ",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 466,
+      "controlsBottom": 510,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 15,
+      "serving": "16杯目",
+      "title": "おはしの道",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 477,
+      "controlsBottom": 521,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 16,
+      "serving": "17杯目",
+      "title": "かえりの注文",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 477,
+      "controlsBottom": 521,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 17,
+      "serving": "18杯目",
+      "title": "つなぎ目は、ひと口",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 477,
+      "controlsBottom": 521,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 18,
+      "serving": "19杯目",
+      "title": "はしから、ぱくり",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 482,
+      "controlsBottom": 526,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 19,
+      "serving": "20杯目",
+      "title": "鏡の向こうの注文",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 433,
+      "controlsBottom": 477,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 20,
+      "serving": "21杯目",
+      "title": "しりとりの空席",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 482,
+      "controlsBottom": 526,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 21,
+      "serving": "22杯目",
+      "title": "しるしのお品書き",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 451,
+      "controlsBottom": 495,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 22,
+      "serving": "23杯目",
+      "title": "ふた皿の共通点",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 433,
+      "controlsBottom": 477,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 23,
+      "serving": "24杯目",
+      "title": "大きなお客さまから",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 477,
+      "controlsBottom": 521,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 24,
+      "serving": "25杯目",
+      "title": "ふたくちで、ひと文字",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 452,
+      "controlsBottom": 496,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 25,
+      "serving": "26杯目",
+      "title": "しりとりの給仕列",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 498,
+      "controlsBottom": 542,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 26,
+      "serving": "27杯目",
+      "title": "一歩もどって",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 477,
+      "controlsBottom": 521,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 27,
+      "serving": "28杯目",
+      "title": "てんてん、おやすみ",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 477,
+      "controlsBottom": 521,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 28,
+      "serving": "29杯目",
+      "title": "たぬきのおしごと",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 452,
+      "controlsBottom": 496,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 29,
+      "serving": "30杯目",
+      "title": "上下、ひとくちずつ",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 433,
+      "controlsBottom": 477,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 30,
+      "serving": "31杯目",
+      "title": "うつわの外にも",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 477,
+      "controlsBottom": 521,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 31,
+      "serving": "32杯目",
+      "title": "ひと口おきに",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 433,
+      "controlsBottom": 477,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 32,
+      "serving": "33杯目",
+      "title": "かどのあるお客さま",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 448,
+      "controlsBottom": 492,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 33,
+      "serving": "34杯目",
+      "title": "３つの穴は、同じ味",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 447,
+      "controlsBottom": 491,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 34,
+      "serving": "35杯目",
+      "title": "四すみのお席",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 466,
+      "controlsBottom": 510,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 48,
+      "noOverlap": true,
+      "score": 35,
+      "serving": "36杯目",
+      "title": "ひとりのお客さま",
+      "usableWidth": 320,
+      "viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 579,
+      "controlsBottom": 623,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "1杯目",
+      "title": "こごえの注文",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 558,
+      "controlsBottom": 602,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 1,
+      "serving": "2杯目",
+      "title": "まんなかのお品書き",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 570,
+      "controlsBottom": 614,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 2,
+      "serving": "3杯目",
+      "title": "穴あきのお品書き",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 548,
+      "controlsBottom": 592,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 3,
+      "serving": "4杯目",
+      "title": "しりとりの空席",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 558,
+      "controlsBottom": 602,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 4,
+      "serving": "5杯目",
+      "title": "四すみのお席",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 548,
+      "controlsBottom": 592,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 5,
+      "serving": "6杯目",
+      "title": "ふたりだけ、席替え",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 592,
+      "controlsBottom": 636,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 6,
+      "serving": "7杯目",
+      "title": "つなぎ目は、ひと口",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 548,
+      "controlsBottom": 592,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 7,
+      "serving": "8杯目",
+      "title": "左右、ぴったり",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 592,
+      "controlsBottom": 636,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 8,
+      "serving": "9杯目",
+      "title": "ひと口おきに",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 570,
+      "controlsBottom": 614,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 9,
+      "serving": "10杯目",
+      "title": "鏡の向こうの注文",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 592,
+      "controlsBottom": 636,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 10,
+      "serving": "11杯目",
+      "title": "てんてん、おやすみ",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 566,
+      "controlsBottom": 610,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 11,
+      "serving": "12杯目",
+      "title": "一本、おあずかり",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 548,
+      "controlsBottom": 592,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 12,
+      "serving": "13杯目",
+      "title": "かどのあるお客さま",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 590,
+      "controlsBottom": 634,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 13,
+      "serving": "14杯目",
+      "title": "みじかい針から",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 579,
+      "controlsBottom": 623,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 14,
+      "serving": "15杯目",
+      "title": "ひとりのお客さま",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 548,
+      "controlsBottom": 592,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 15,
+      "serving": "16杯目",
+      "title": "３つの穴は、同じ味",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 568,
+      "controlsBottom": 612,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 16,
+      "serving": "17杯目",
+      "title": "上下、ひとくちずつ",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 568,
+      "controlsBottom": 612,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 17,
+      "serving": "18杯目",
+      "title": "しりとりの給仕列",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 548,
+      "controlsBottom": 592,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 18,
+      "serving": "19杯目",
+      "title": "上下、ぴったり",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 548,
+      "controlsBottom": 592,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 19,
+      "serving": "20杯目",
+      "title": "大きなお客さまから",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 548,
+      "controlsBottom": 592,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 20,
+      "serving": "21杯目",
+      "title": "くるり、折り返し",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 592,
+      "controlsBottom": 636,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 21,
+      "serving": "22杯目",
+      "title": "てんてん、おいで",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 592,
+      "controlsBottom": 636,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 22,
+      "serving": "23杯目",
+      "title": "かえりの注文",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 574,
+      "controlsBottom": 618,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 23,
+      "serving": "24杯目",
+      "title": "しるしのお品書き",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 592,
+      "controlsBottom": 636,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 24,
+      "serving": "25杯目",
+      "title": "たぬきのおしごと",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 592,
+      "controlsBottom": 636,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 25,
+      "serving": "26杯目",
+      "title": "はしから、ぱくり",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 549,
+      "controlsBottom": 593,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 26,
+      "serving": "27杯目",
+      "title": "ふたりの共通点",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 592,
+      "controlsBottom": 636,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 27,
+      "serving": "28杯目",
+      "title": "ふたくちで、ひと文字",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 549,
+      "controlsBottom": 593,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 28,
+      "serving": "29杯目",
+      "title": "箱のむこう側",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 617,
+      "controlsBottom": 661,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 29,
+      "serving": "30杯目",
+      "title": "一歩もどって",
+      "usableWidth": 375,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 595,
+      "controlsBottom": 639,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 30,
+      "serving": "31杯目",
+      "title": "まんなか、いただきます",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 579,
+      "controlsBottom": 623,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 31,
+      "serving": "32杯目",
+      "title": "おはしの道",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 548,
+      "controlsBottom": 592,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 32,
+      "serving": "33杯目",
+      "title": "うつわの外にも",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 568,
+      "controlsBottom": 612,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 33,
+      "serving": "34杯目",
+      "title": "同じ席で、待ち合わせ",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 573,
+      "controlsBottom": 617,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 34,
+      "serving": "35杯目",
+      "title": "横入りのお客さま",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 548,
+      "controlsBottom": 592,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 54,
+      "noOverlap": true,
+      "score": 35,
+      "serving": "36杯目",
+      "title": "ふた皿の共通点",
+      "usableWidth": 390,
+      "viewport": [
+        390,
+        660
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 280,
+      "controlsBottom": 329,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 56,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "1杯目",
+      "title": "左右、ぴったり",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 314,
+      "controlsBottom": 363,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 72.59375,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "2杯目",
+      "title": "まんなかのお品書き",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 314,
+      "controlsBottom": 363,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 72.59375,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "3杯目",
+      "title": "たぬきのおしごと",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 314,
+      "controlsBottom": 363,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 72.59375,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "4杯目",
+      "title": "同じ席で、待ち合わせ",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 314,
+      "controlsBottom": 363,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 72.59375,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "5杯目",
+      "title": "大きなお客さまから",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 314,
+      "controlsBottom": 363,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 72.59375,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "6杯目",
+      "title": "うつわの外にも",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 280,
+      "controlsBottom": 329,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 56,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "7杯目",
+      "title": "ふた皿の共通点",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 314,
+      "controlsBottom": 363,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 72.59375,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "8杯目",
+      "title": "上下、ひとくちずつ",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 314,
+      "controlsBottom": 363,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 72.59375,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "9杯目",
+      "title": "かえりの注文",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 280,
+      "controlsBottom": 329,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 56,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "10杯目",
+      "title": "横入りのお客さま",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 314,
+      "controlsBottom": 363,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 72.59375,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "11杯目",
+      "title": "ひとりのお客さま",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 280,
+      "controlsBottom": 329,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 56,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "12杯目",
+      "title": "３つの穴は、同じ味",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 314,
+      "controlsBottom": 363,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 72.59375,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "13杯目",
+      "title": "一歩もどって",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 280,
+      "controlsBottom": 329,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 56,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "14杯目",
+      "title": "箱のむこう側",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 314,
+      "controlsBottom": 363,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 72.59375,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "15杯目",
+      "title": "まんなか、いただきます",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 314,
+      "controlsBottom": 363,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 72.59375,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "16杯目",
+      "title": "こごえの注文",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 314,
+      "controlsBottom": 363,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 72.59375,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "17杯目",
+      "title": "ふたりの共通点",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 314,
+      "controlsBottom": 363,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 72.59375,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "18杯目",
+      "title": "おはしの道",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 280,
+      "controlsBottom": 329,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 56,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "19杯目",
+      "title": "はしから、ぱくり",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 280,
+      "controlsBottom": 329,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 56,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "20杯目",
+      "title": "てんてん、おいで",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 314,
+      "controlsBottom": 363,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 72.59375,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "21杯目",
+      "title": "鏡の向こうの注文",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 280,
+      "controlsBottom": 329,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 56,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "22杯目",
+      "title": "一本、おあずかり",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 314,
+      "controlsBottom": 363,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 72.59375,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "23杯目",
+      "title": "くるり、折り返し",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 314,
+      "controlsBottom": 363,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 72.59375,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "24杯目",
+      "title": "てんてん、おやすみ",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 314,
+      "controlsBottom": 363,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 72.59375,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "25杯目",
+      "title": "四すみのお席",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 314,
+      "controlsBottom": 363,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 72.59375,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "26杯目",
+      "title": "かどのあるお客さま",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 314,
+      "controlsBottom": 363,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 72.59375,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "27杯目",
+      "title": "ひと口おきに",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 314,
+      "controlsBottom": 363,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 72.59375,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "28杯目",
+      "title": "穴あきのお品書き",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 314,
+      "controlsBottom": 363,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 72.59375,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "29杯目",
+      "title": "ふたくちで、ひと文字",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 314,
+      "controlsBottom": 363,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 72.59375,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "30杯目",
+      "title": "みじかい針から",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 314,
+      "controlsBottom": 363,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 72.59375,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "31杯目",
+      "title": "しりとりの空席",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 314,
+      "controlsBottom": 363,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 72.59375,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "32杯目",
+      "title": "しるしのお品書き",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 314,
+      "controlsBottom": 363,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 72.59375,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "33杯目",
+      "title": "しりとりの給仕列",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 314,
+      "controlsBottom": 363,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 72.59375,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "34杯目",
+      "title": "ふたりだけ、席替え",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 314,
+      "controlsBottom": 363,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 72.59375,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "35杯目",
+      "title": "つなぎ目は、ひと口",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 280,
+      "controlsBottom": 329,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 56,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "36杯目",
+      "title": "上下、ぴったり",
+      "usableWidth": 829,
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 672,
+      "controlsBottom": 721,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "1杯目",
+      "title": "みじかい針から",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "2杯目",
+      "title": "ふた皿の共通点",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "3杯目",
+      "title": "穴あきのお品書き",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 680,
+      "controlsBottom": 729,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "4杯目",
+      "title": "つなぎ目は、ひと口",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "5杯目",
+      "title": "うつわの外にも",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "6杯目",
+      "title": "上下、ひとくちずつ",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 680,
+      "controlsBottom": 729,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "7杯目",
+      "title": "てんてん、おやすみ",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 680,
+      "controlsBottom": 729,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "8杯目",
+      "title": "てんてん、おいで",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 634,
+      "controlsBottom": 683,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "9杯目",
+      "title": "横入りのお客さま",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 680,
+      "controlsBottom": 729,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "10杯目",
+      "title": "まんなか、いただきます",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "11杯目",
+      "title": "しりとりの給仕列",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "12杯目",
+      "title": "ふたりだけ、席替え",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "13杯目",
+      "title": "同じ席で、待ち合わせ",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 647,
+      "controlsBottom": 696,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "14杯目",
+      "title": "しるしのお品書き",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 680,
+      "controlsBottom": 729,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "15杯目",
+      "title": "はしから、ぱくり",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 699,
+      "controlsBottom": 748,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "16杯目",
+      "title": "一歩もどって",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "17杯目",
+      "title": "しりとりの空席",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "18杯目",
+      "title": "上下、ぴったり",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 680,
+      "controlsBottom": 729,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "19杯目",
+      "title": "ひと口おきに",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "20杯目",
+      "title": "大きなお客さまから",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 650,
+      "controlsBottom": 699,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "21杯目",
+      "title": "鏡の向こうの注文",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "22杯目",
+      "title": "左右、ぴったり",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "23杯目",
+      "title": "かどのあるお客さま",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 637,
+      "controlsBottom": 686,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "24杯目",
+      "title": "おはしの道",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 680,
+      "controlsBottom": 729,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "25杯目",
+      "title": "たぬきのおしごと",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "26杯目",
+      "title": "３つの穴は、同じ味",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 637,
+      "controlsBottom": 686,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "27杯目",
+      "title": "四すみのお席",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 637,
+      "controlsBottom": 686,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "28杯目",
+      "title": "ひとりのお客さま",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 637,
+      "controlsBottom": 686,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "29杯目",
+      "title": "こごえの注文",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 637,
+      "controlsBottom": 686,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "30杯目",
+      "title": "まんなかのお品書き",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 643,
+      "controlsBottom": 692,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "31杯目",
+      "title": "一本、おあずかり",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "32杯目",
+      "title": "ふたりの共通点",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 680,
+      "controlsBottom": 729,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "33杯目",
+      "title": "かえりの注文",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "34杯目",
+      "title": "箱のむこう側",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 680,
+      "controlsBottom": 729,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "35杯目",
+      "title": "ふたくちで、ひと文字",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "active": true,
+      "choiceBottom": 630,
+      "controlsBottom": 679,
+      "horizontalOverflow": false,
+      "leaks": [],
+      "minButton": 62,
+      "noOverlap": true,
+      "score": 0,
+      "serving": "36杯目",
+      "title": "くるり、折り返し",
+      "usableWidth": 1280,
+      "viewport": [
+        1280,
+        900
+      ]
+    }
+  ]
+}
