@@ -1,4 +1,13 @@
 /* Additional puzzle diagrams; existing bowls keep their approved layout. */
+.is-playing .serving-diagram { display:block; flex:none; width:250px; max-width:100%; height:auto; overflow:visible; }
+.serving-diagram text { fill:var(--ink); font-family:inherit; font-weight:700; letter-spacing:0; }
+.is-playing .comparison-diagram { width:270px; }
+.is-playing .space-diagram { width:140px; }
+.is-playing .type-missing_corner .serving-diagram { width:170px; }
+.is-playing .type-plate_turn .serving-diagram { width:205px; }
+.is-playing .type-join_marks .serving-diagram { width:200px; }
+.puzzle-station:has(.type-missing_corner) .choice-word { font:700 28px/1 monospace; }
+.puzzle-station:has(.type-plate_turn) .choice-word { font-size:26px; line-height:1; }
 .is-playing .kanji-pieces.pieces-row { flex-direction:row; gap:18px; }
 .size-letters { display:flex; align-items:center; justify-content:center; gap:28px; min-height:70px; }
 .is-playing .mirror-grid { position:relative; width:244px; max-width:100%; font-size:27px; }

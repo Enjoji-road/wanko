@@ -1,20 +1,20 @@
 {
   "result": "passed",
-  "checks": 34786,
-  "puzzles": 36,
+  "checks": 43021,
+  "puzzles": 45,
   "difficulty_counts": {
-    "1": 17,
-    "2": 13,
-    "3": 6
+    "1": 21,
+    "2": 17,
+    "3": 7
   },
   "shuffle_runs": 600,
-  "choice_states": 144,
+  "choice_states": 180,
   "answer_positions": [
     159,
-    171,
-    116,
-    154
+    144,
+    134,
+    163
   ],
   "model_deadline_ms": 60000,
-  "scope": "Authored transformations including segment intersections, ladder connections and cube folding; one valid choice, instant loss, balanced unequal groups, deadline and preserved records. Naturalness, solve times and human enjoyment require first-play testing."
+  "scope": "Authored transformations including segment intersections, ladder connections, cube folding, plate rotation, missing corners, region membership, occlusion, unfolded holes, negative space, crossing threads, matching marks and rotated pieces; one valid choice, instant loss, balanced unequal groups, deadline and preserved records. Naturalness, solve times and human enjoyment require first-play testing."
 }
