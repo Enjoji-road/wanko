@@ -1,0 +1,19 @@
+{
+  "result": "passed",
+  "checks": 4207,
+  "regularQuestions": 45,
+  "emptySequences": 4096,
+  "markPermutations": 120,
+  "acceptedMarkPermutations": 1,
+  "protectedFiles": [
+    "dist/questions.js",
+    "dist/app.js",
+    "dist/model.js",
+    "dist/config.js",
+    "dist/style.css",
+    "dist/choices.css",
+    "dist/puzzles-extra.css",
+    "dist/puzzle-view.js"
+  ],
+  "scope": "Deterministic extra-only transitions, physical stack order, existing lid and bowl asset, independent save, preserved regular source. Exhaustion of four empty options cannot clear. Guessed correct requests and developer-tools bypass remain possible; human surprise and solve time require first-play tests."
+}
