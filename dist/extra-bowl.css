@@ -1,0 +1,134 @@
+/* 店先の同じ五段。文字の実寸は小さな画面でも18px以上に保つ。 */
+#markedStack { width:68px;height:160px;transform:rotate(-4deg);left:0;bottom:0; }
+#markedStack i { width:66px;height:34px;bottom:0;border-width:2px; }
+#markedStack i:nth-child(2) {bottom:29px}
+#markedStack i:nth-child(3) {bottom:58px}
+#markedStack i:nth-child(4) {bottom:87px}
+#markedStack i:nth-child(5) {bottom:116px}
+#markedStack i span {position:absolute;inset:3px 0 0;display:grid;place-items:center;font-style:normal;font-size:19px;font-weight:800;line-height:1;color:#fff8e7;}
+.extra-entry-button {display:block;min-height:44px;width:100%;max-width:290px;margin:12px auto 0;border:1.5px solid var(--red-dark);border-radius:7px;background:#fffaf0;color:var(--red-dark);font-weight:800;font-size:13px;padding:10px 12px;}
+.extra-entry-button:hover {background:#f4e0b8}
+.extra-bowl-note {min-width:0;}
+.extra-bowl-note p {white-space:normal;}
+.extra-screen {padding:25px 0 36px;}
+.extra-topline {display:flex;justify-content:space-between;gap:15px;align-items:center;margin-bottom:15px;}
+.extra-topline .eyebrow {margin:0;font-size:11px;}
+.extra-topline button {font-size:11px;white-space:nowrap;}
+.extra-screen>h2 {font-size:clamp(28px,5vw,43px);font-family:Georgia,'Yu Mincho',serif;letter-spacing:.1em;line-height:1.5;margin:0 0 23px;}
+.extra-layout {display:grid;grid-template-columns:minmax(0,1.05fr) minmax(300px,.9fr);gap:36px;align-items:start;}
+.extra-question {border:2px solid var(--ink);border-bottom:7px solid var(--red);border-radius:12px;background:#fffaf0;padding:22px 22px 15px;box-shadow:0 4px 0 #d6c09c;}
+.extra-question-label {font-size:20px;line-height:1.6;font-weight:800;}
+.extra-observation {font-size:12px;color:var(--muted);line-height:1.7;margin-top:7px;}
+.empty-bowl-options {display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0 15px;}
+.empty-bowl-options button {position:relative;min-width:0;border:1.5px solid #ad8f68;border-radius:9px;min-height:101px;padding:12px;background:#f8eed8;color:var(--ink);}
+.empty-bowl-options button:hover,.empty-bowl-options button.is-inspected {background:#efe1c5;}
+.empty-bowl-options b {position:absolute;left:9px;top:8px;font-size:11px;border:1px solid #ac9471;border-radius:50%;width:21px;height:21px;line-height:20px;}
+.empty-bowl-drawing {position:relative;display:block;width:84px;height:48px;border:2px solid #7c3228;border-radius:0 0 42% 42%;background:#bd3d30;margin:7px auto 0;box-shadow:0 4px 0 #d9b577;}
+.empty-bowl-drawing:before {content:'';position:absolute;left:-2px;right:-2px;height:24px;top:-7px;border-radius:50%;border:2px solid #7c3228;background:#f1ddbb;box-shadow:inset 0 0 0 5px #ead0a7;}
+.empty-bowl-drawing i {position:absolute;left:32px;top:3px;width:17px;height:6px;border:1px solid #ad8c60;border-radius:50%;z-index:1;}
+.extra-feedback {font-size:13px;line-height:1.8;min-height:48px;padding-top:8px;border-top:1px dashed #cfb88e;}
+.extra-hint-area {margin-top:16px;}
+.extra-hint-area>button {font-size:12px;}
+#extraHints p {font-size:12px;line-height:1.85;padding:10px 12px;margin-top:7px;border-left:2px solid var(--gold);background:#f5e8ce;}
+.extra-scene-host {min-width:0;}
+.is-extra #counterScene {position:relative;right:auto;top:auto;width:100%;height:410px;min-height:0;pointer-events:auto;display:flex;align-items:flex-end;justify-content:center;overflow:visible;margin:8px auto 0;}
+.is-extra #counterServer {width:290px;max-width:100%;margin:0 0 30px 22px;}
+.is-extra #counterScene .art-circle {width:290px;height:290px;bottom:45px;}
+.is-extra #counterSpeech {left:5px;right:0;top:0;font-size:13px;padding:13px 8px;transform:none;z-index:3;white-space:normal;}
+.is-extra #counterScene .hanging-tag,.is-extra #counterScene .art-stamp {display:none;}
+.is-extra #markedStack {left:3px;bottom:45px;}
+.server-inspect {position:absolute;bottom:0;left:5%;width:90%;padding:10px 7px;min-height:44px;border:1px solid #987953;border-radius:7px;background:#fffaf0;color:var(--ink);font-size:12px;font-weight:800;z-index:5;}
+.server-inspect:hover {background:#f1dfbd;}
+.extra-clear {text-align:center;position:relative;border:2px solid #a87835;border-radius:12px;padding:32px 20px;background:#fff8e7;box-shadow:0 5px 0 #d9b577;scroll-margin:16px;}
+.extra-found-seal {display:grid;place-items:center;margin:0 auto 16px;width:70px;height:70px;border:4px double var(--red);border-radius:50%;color:var(--red);font-family:serif;font-size:23px;font-weight:800;transform:rotate(-9deg);}
+.extra-clear .eyebrow {font-size:11px;margin-bottom:12px;}
+.extra-clear h3 {font-size:29px;line-height:1.5;letter-spacing:.04em;margin-bottom:17px;}
+.extra-clear>p {font-size:15px;line-height:1.9;}
+.extra-clear .extra-record-note {color:var(--muted);font-size:11px;margin:18px 0;}
+.extra-clear .primary-button {width:100%;margin-top:10px;font-size:15px;padding:13px;}
+.extra-clear>.text-button {display:block;margin:12px auto 0;font-size:11px;}
+.last-bowl-found #counterServer {filter:drop-shadow(0 0 12px #e4bd69);}
+.last-bowl-dialog {width:min(410px,calc(100% - 24px));padding:22px;max-height:calc(100dvh - 24px);overflow:auto;border:2px solid var(--ink);border-radius:12px;background:#fff8e7;color:var(--ink);box-shadow:0 14px 90px #42312944;}
+.last-bowl-dialog::backdrop {background:#34291eaa;}
+.last-bowl-dialog h2 {font-size:19px;}
+.last-bowl-dialog .dialog-top {margin-bottom:0;}
+.last-bowl-dialog .dialog-top button {font-size:12px;white-space:nowrap;}
+.hand-closeup {position:relative;overflow:hidden;width:216px;height:190px;margin:8px auto 0;background:radial-gradient(ellipse,#efcd8b66 15%,transparent 68%);border-bottom:1px solid #d8c299;}
+.hand-closeup>img {position:absolute;width:720px;height:820px;max-width:none;left:-520px;top:-330px;}
+#liftedLid {position:absolute;left:32px;top:0;width:152px;height:88px;animation:lift-final-lid .7s ease-out both;}
+.hand-feedback {font-size:13px;line-height:1.8;text-align:center;min-height:24px;margin:12px 0;}
+.request-form {display:flex;flex-direction:column;gap:9px;}
+.request-form label {font-size:13px;font-weight:800;}
+.request-form p {font-size:11px;color:var(--muted);line-height:1.7;}
+.request-form input {width:100%;min-height:48px;padding:11px 12px;border:2px solid #ad8f68;background:#fffdf7;border-radius:7px;font-size:18px;color:var(--ink);}
+.request-form .primary-button,.take-lid-button {width:100%;min-height:47px;font-size:15px;padding:10px;}
+.hand-revealed {font-size:15px;text-align:center;margin-top:10px;}
+#extraScreen button:focus-visible,.last-bowl-dialog button:focus-visible,.request-form input:focus-visible {outline:3px solid #55765d;outline-offset:3px;}
+@keyframes lift-final-lid {from{transform:translateY(43px);opacity:1}to{transform:translateY(0) rotate(-8deg);opacity:1}}
+@media(max-width:760px) {
+  #markedStack {transform:rotate(-4deg);left:0;bottom:0;}
+  .extra-entry-button {font-size:12px;padding:8px;}
+  .extra-screen {padding-top:19px;}
+  .extra-layout {display:flex;flex-direction:column;gap:20px;}
+  .extra-puzzle-column {display:contents;}
+  .extra-question,.extra-clear {width:100%;order:0;}
+  .extra-scene-host {width:100%;order:1;}
+  .extra-hint-area {width:100%;order:2;}
+  .extra-topline {gap:5px;margin-bottom:12px;}
+  .extra-topline .eyebrow {font-size:10px;}
+  .extra-topline button {font-size:10px;}
+  .extra-screen>h2 {margin-bottom:15px;}
+  .extra-question {padding:17px 16px 12px;}
+  .extra-question-label {font-size:18px;}
+  .empty-bowl-options {grid-template-columns:repeat(4,minmax(0,1fr));margin:15px 0 8px;gap:6px;}
+  .empty-bowl-options button {min-height:78px;padding:8px 4px;}
+  .empty-bowl-options b {width:17px;height:17px;line-height:16px;font-size:9px;left:5px;top:5px;}
+  .empty-bowl-drawing {width:54px;height:31px;margin:14px auto 0;}
+  .empty-bowl-drawing:before {height:17px;top:-6px;box-shadow:inset 0 0 0 3px #ead0a7;}
+  .empty-bowl-drawing i {left:18px;top:0;width:13px;height:5px;}
+  .extra-feedback {font-size:12px;min-height:45px;}
+  .is-extra #counterScene {max-width:370px;height:352px;margin:0 auto;}
+  .is-extra #counterServer {width:244px;max-width:none;margin:0 0 34px 30px;}
+  .is-extra #counterScene .art-circle {width:240px;height:240px;bottom:54px;}
+  .is-extra #markedStack {left:20px;bottom:46px;}
+  .is-extra #counterSpeech {left:0;top:0;font-size:12px;}
+  .is-extra .server-inspect {left:0;width:100%;}
+  .extra-hint-area {margin-top:12px;}
+  .extra-clear {padding:25px 16px;}
+}
+@media(max-width:500px) {
+  /* 五段をスタートボタンの背後に置かない。通常プレイの配置には触れない。 */
+  .intro-screen {grid-template-columns:minmax(0,1fr) 162px;gap:12px 4px;}
+  .intro-copy {display:contents;}
+  .intro-copy>.eyebrow {grid-column:1/-1;grid-row:1;margin:0;}
+  .intro-copy>h1 {grid-column:1/-1;grid-row:2;margin:0;}
+  .intro-copy>.intro-tagline {grid-column:1;grid-row:3;align-self:end;margin:0 0 10px;}
+  .intro-copy>.intro-description {grid-column:1;grid-row:4;align-self:start;margin:0;}
+  .intro-copy>.start-button {grid-column:1/-1;grid-row:5;margin:6px 0 0;}
+  .intro-copy>.intro-best {grid-column:1/-1;grid-row:6;margin:8px 0 0;}
+  .intro-copy>.mode-caption {grid-column:1/-1;grid-row:7;margin:0;}
+  .intro-copy>.storage-notice {grid-column:1/-1;grid-row:8;}
+  body:not(.is-extra) #counterScene {position:relative;right:auto;top:auto;grid-column:2;grid-row:3/5;width:100%;height:250px;min-height:250px;margin:0;}
+  body:not(.is-extra) #counterServer {width:180px;margin-left:0;max-width:none;}
+  body:not(.is-extra) #counterSpeech {left:0;top:30px;font-size:9px;}
+  .intro-rules {grid-column:1/-1;grid-row:9;margin-top:17px;}
+  /* 入口では飾りの縮小で文字まで小さくしない。 */
+  #markedStack {width:58px;height:145px;left:1px;bottom:-7px;}
+  #markedStack i {width:56px;height:31px;}
+  #markedStack i:nth-child(2){bottom:26px}
+  #markedStack i:nth-child(3){bottom:52px}
+  #markedStack i:nth-child(4){bottom:78px}
+  #markedStack i:nth-child(5){bottom:104px}
+  #markedStack i span {font-size:18px;}
+  .last-bowl-dialog {padding:17px;}
+  .last-bowl-dialog .dialog-top h2 {font-size:17px;}
+  .hand-closeup {height:170px;}
+}
+@media(max-width:359px) {
+  .intro-screen {grid-template-columns:minmax(0,1fr) 145px;}
+  body:not(.is-extra) #counterServer {width:161px;}
+}
+@media(prefers-reduced-motion:reduce) {
+  #liftedLid {animation:none;transform:rotate(-8deg);}
+  .last-bowl-found #counterServer {filter:none;}
+}

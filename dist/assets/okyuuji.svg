@@ -26,6 +26,11 @@
     <path d="M284 214C285 234 295 247 314 247C331 247 342 234 344 214" fill="#B8372C" stroke-width="4"/>
     <ellipse cx="314" cy="214" rx="30" ry="8" fill="#FFF2CC" stroke-width="4"/>
     <path d="M297 214C304 204 312 223 319 211C324 206 329 213 332 214" stroke="#D8B77F" stroke-width="3"/>
+    <g id="serving-lid" fill="#BD3D30" stroke="#49352B" stroke-width="2.5">
+      <path d="M282 211Q314 185 346 211Z"/>
+      <ellipse cx="314" cy="211" rx="32" ry="5"/>
+      <path d="M307 197Q314 188 321 197Z" fill="#F4D6A0"/>
+    </g>
     <path d="M43 261L27 240M59 247L57 227M276 201L265 191" stroke="#E7AC5A" stroke-width="5"/>
   </g>
 </svg>

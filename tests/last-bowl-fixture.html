@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ja"><meta charset="utf-8"><title>わんこそば・４択表示検証</title>
+<style>body{font:12px sans-serif;background:#e6e6e6;margin:0}header{padding:8px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;position:sticky;top:0;background:#eee;z-index:2}iframe{display:block;border:0;margin:8px auto;background:white;box-shadow:0 0 0 1px #777}button,select{padding:6px}#status{max-width:350px;font-size:11px}</style>
+<header><label>画面 <select id="size"><option value="390,844">390×844</option><option value="390,660">390×660</option><option value="360,640">360×640</option><option value="320,568">320×568</option><option value="390,500">390×500</option><option value="844,390">844×390 横向き</option><option value="1280,900">1280×900</option></select></label>
+<label><input type="checkbox" id="motion">動きを減らす（模擬）</label>
+<button id="reload">再読込</button><button id="corrupt">保存を破損して再読込</button><button id="jump">時計＋61秒</button><button id="records">記録を確認</button><button id="stale">古い選択ボタンを再発火</button><button id="held">キー押しっぱなし</button><button id="freshExtra">特別な一杯の試験記録を初期化</button><button id="extraRecords">二つの記録を比較</button><button id="extraMeasure">特別な一杯の表示検査</button><button id="noStorage">保存不可で再読込</button><button id="ime">変換中Enterの検査</button><button id="measure">表示検査</button><output id="status">dist/qa.htmlへ一時コピーして使う、公開しない検証ページ</output></header>
+<nav style="padding:8px;display:flex;flex-wrap:wrap;gap:8px"><label>個別表示 <select id="question"></select></label><button id="seek">指定問題までパス</button><button id="sweepCorrect">一巡を正解で検査</button><button id="sweepPass">一巡をパスで検査</button></nav>
+<textarea id="results" aria-label="一巡の検証結果" readonly style="display:block;width:96%;height:55px;margin:5px auto;font:11px monospace"></textarea>
+<iframe id="game" title="検証中の４択ゲーム" src="./" width="390" height="844"></iframe>
+<script>
+const game=document.getElementById('game'), status=document.getElementById('status');
+document.getElementById('size').onchange=e=>{const[w,h]=e.target.value.split(',');game.width=w;game.height=h;};
+async function reload(){
+  const reduced=document.getElementById('motion').checked;
+  if(!reduced){game.removeAttribute('srcdoc');game.src='./';return;}
+  const html=await (await fetch('./index.html')).text();
+  const setup='<base href="'+new URL('./',location.href).href+'"><script>const nativeMatch=window.matchMedia.bind(window);window.matchMedia=q=>q==="(prefers-reduced-motion: reduce)"?{matches:true,media:q,addEventListener(){},removeEventListener(){}}:nativeMatch(q);<\/script><style>*,*:before,*:after{animation:none!important;transition:none!important}</style>';
+  game.srcdoc=html.replace('<head>','<head>'+setup);
+}
+document.getElementById('freshExtra').onclick=()=>{game.contentWindow.localStorage.removeItem('wanko-extra-bowl-v1');reload();};
+document.getElementById('extraRecords').onclick=()=>{const s=game.contentWindow.localStorage;status.textContent=JSON.stringify({normal:s.getItem('wanko-choice-suddendeath-records-v1'),extra:s.getItem('wanko-extra-bowl-v1')});};
+document.getElementById('noStorage').onclick=async()=>{
+ const html=await(await fetch('./index.html')).text();
+ game.srcdoc=html.replace('<head>','<head><base href="'+new URL('./',location.href).href+'"><script>Object.defineProperty(window,"localStorage",{get(){throw Error("test-only blocked storage");}});<\/script>');
+};
+document.getElementById('ime').onclick=()=>{
+ const win=game.contentWindow,doc=game.contentDocument,input=doc.getElementById('requestInput'),form=doc.getElementById('requestForm');
+ input.value='ふたをとれ';input.dispatchEvent(new win.CompositionEvent('compositionstart',{bubbles:true}));
+ const e=new win.KeyboardEvent('keydown',{key:'Enter',bubbles:true,cancelable:true,isComposing:true});form.dispatchEvent(e);
+ form.dispatchEvent(new win.Event('submit',{bubbles:true,cancelable:true}));
+ status.textContent=JSON.stringify({composingEnterPrevented:e.defaultPrevented,stillAsking:!form.hidden,lidHidden:doc.getElementById('takeLid').hidden});
+ input.dispatchEvent(new win.CompositionEvent('compositionend',{bubbles:true}));input.value='';
+};
+document.getElementById('extraMeasure').onclick=()=>{
+ const doc=game.contentDocument,win=game.contentWindow,visible=e=>e.getBoundingClientRect().width>0&&e.getBoundingClientRect().height>0;
+ const selectors=['#extraTitle','#extraQuestion','#counterScene','#markedStack','#serverInspect','#extraClear','#handDialog','#requestInput','#takeLid'];
+ const rows=selectors.map(s=>{const e=doc.querySelector(s),r=e.getBoundingClientRect();return {id:s,visible:visible(e),x:Math.round(r.x),y:Math.round(r.y),w:Math.round(r.width),h:Math.round(r.height)};});
+ const marks=[...doc.querySelectorAll('#markedStack span')].map(e=>{const r=e.getBoundingClientRect();return{text:e.textContent,font:win.getComputedStyle(e).fontSize,w:r.width,h:r.height,y:r.y};}).sort((a,b)=>a.y-b.y);
+ status.textContent=JSON.stringify({width:win.innerWidth,height:win.innerHeight,overflow:doc.documentElement.scrollWidth>win.innerWidth,rows,marks});
+};
+document.getElementById('reload').onclick=reload;
+document.getElementById('motion').onchange=reload;
+document.getElementById('corrupt').onclick=()=>{game.contentWindow.localStorage.setItem('wanko-choice-suddendeath-records-v1','{broken-json');reload();};
+document.getElementById('jump').onclick=()=>{const win=game.contentWindow,now=win.Date.now;win.Date.now=()=>now()+61000;status.textContent='時計を61秒進めました';};
+document.getElementById('records').onclick=()=>{status.textContent=game.contentWindow.localStorage.getItem('wanko-choice-suddendeath-records-v1')||'記録なし';};
+function current(){
+  const win=game.contentWindow,doc=game.contentDocument;
+  const q=win.WankoQuestions.find(q=>q.title===doc.getElementById('questionTitle').textContent);
+  const buttons=[...doc.querySelectorAll('.choice-button')];
+  const correct=buttons.findIndex(b=>win.WankoModel.accepts(q,b.querySelector('.choice-word').textContent));
+  return{win,doc,buttons,correct};
+}
+function startIfNeeded(){const d=game.contentDocument;if(!d.getElementById('introScreen').hidden)d.getElementById('startButton').click();else if(!d.getElementById('resultScreen').hidden)d.getElementById('retryButton').click();}
+game.addEventListener('load',()=>{const q=game.contentWindow.WankoQuestions;if(!q)return;document.getElementById('question').replaceChildren(...q.map(v=>{const o=document.createElement('option');o.value=v.id;o.textContent=v.title;return o;}));});
+document.getElementById('seek').onclick=()=>{
+  startIfNeeded();game.contentDocument.getElementById('passButton').click();startIfNeeded();
+  const wanted=document.getElementById('question').value,win=game.contentWindow;
+  for(let i=0;i<win.WankoQuestions.length;i++){
+    const{doc}=current(),q=win.WankoQuestions.find(q=>q.title===doc.getElementById('questionTitle').textContent);
+    if(q.id===wanted){status.textContent='個別表示：'+q.title;return;}
+    doc.getElementById('passButton').click();
+  }
+  status.textContent='指定問題を確認できませんでした';
+};
+function measure(){
+  const{doc,buttons,correct}=current(),win=game.contentWindow,q=doc.getElementById('questionBowl').getBoundingClientRect(),p=doc.querySelector('.puzzle-visual').getBoundingClientRect(),instruction=doc.getElementById('questionInstruction').getBoundingClientRect(),answers=doc.getElementById('choiceButtons').getBoundingClientRect();
+  const children=[...doc.querySelectorAll('.puzzle-visual *, .puzzle-examples')].map(e=>e.getBoundingClientRect()).filter(r=>r.width>0);
+  const apart=answers.top>=q.bottom-1||answers.left>=q.right-1||answers.right<=q.left+1||answers.bottom<=q.top+1;
+  return {title:doc.getElementById('questionTitle').textContent,w:win.innerWidth,h:win.innerHeight,contentInside:children.every(r=>r.top>=q.top-1&&r.bottom<=q.bottom+1&&r.left>=q.left-1&&r.right<=q.right+1),noOverlap:p.top>=instruction.bottom-1&&apart,choiceBottom:Math.ceil(answers.bottom),controlsBottom:Math.ceil(doc.getElementById('lidButton').getBoundingClientRect().bottom),scroll:doc.documentElement.scrollWidth>doc.documentElement.clientWidth,choices:buttons.map(b=>b.querySelector('.choice-word').textContent),correct};
+}
+const painted=()=>new Promise(resolve=>setTimeout(resolve,0));
+async function sweep(solve){
+  const buttonIds=['sweepCorrect','sweepPass','seek'];for(const id of buttonIds)document.getElementById(id).disabled=true;
+  try{
+    const loaded=new Promise(resolve=>game.addEventListener('load',resolve,{once:true}));await reload();await loaded;
+    startIfNeeded();await painted();const total=game.contentWindow.WankoQuestions.length,rows=[];
+    for(let i=0;i<total;i++){
+      const{doc,buttons,correct}=current();rows.push(measure());
+      if(solve)buttons[correct].click();else doc.getElementById('passButton').click();
+      if(doc.getElementById('playScreen').hidden)throw Error('一巡の途中で終了しました');
+    }
+    const report={mode:solve?'correct':'pass',count:rows.length,unique:new Set(rows.map(v=>v.title)).size,score:+game.contentDocument.getElementById('score').textContent,rows};
+    document.getElementById('results').value=JSON.stringify(report);
+    status.textContent=`${report.count}問／重複なし${report.unique}問／${report.score}杯／表示問題${rows.filter(v=>!v.contentInside||!v.noOverlap||v.scroll).length}件`;
+  }catch(e){document.getElementById('results').value=JSON.stringify({error:e.message});status.textContent=e.message;}
+  finally{for(const id of buttonIds)document.getElementById(id).disabled=false;}
+}
+document.getElementById('sweepCorrect').onclick=()=>sweep(true);
+document.getElementById('sweepPass').onclick=()=>sweep(false);
+document.getElementById('stale').onclick=()=>{
+  const{doc,buttons,correct}=current();const before=+doc.getElementById('score').textContent,old=buttons[correct];
+  old.click();old.click();status.textContent=+doc.getElementById('score').textContent===before+1&&!doc.getElementById('playScreen').hidden?'古いボタン：１杯だけ加点、終了せず':'古いボタン：要確認';
+};
+document.getElementById('held').onclick=()=>{
+  const{win,doc,correct}=current();const before=+doc.getElementById('score').textContent,key=String(correct+1);
+  doc.dispatchEvent(new win.KeyboardEvent('keydown',{key,bubbles:true}));
+  doc.dispatchEvent(new win.KeyboardEvent('keydown',{key,bubbles:true,repeat:true}));
+  status.textContent=+doc.getElementById('score').textContent===before+1&&!doc.getElementById('playScreen').hidden?'長押し：１杯だけ加点、終了せず':'長押し：要確認';
+};
+document.getElementById('measure').onclick=()=>{status.textContent=JSON.stringify(measure());};
+</script></html>

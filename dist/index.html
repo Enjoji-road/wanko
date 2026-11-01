@@ -10,11 +10,13 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="choices.css?v=2">
   <link rel="stylesheet" href="puzzles-extra.css?v=6">
+  <link rel="stylesheet" href="extra-bowl.css?v=1">
   <script src="config.js?v=4" defer></script>
   <script src="questions.js?v=6" defer></script>
   <script src="model.js?v=5" defer></script>
   <script src="puzzle-view.js?v=6" defer></script>
-  <script src="extra-bowl.js" defer></script>
+  <script src="extra-bowl-model.js?v=1" defer></script>
+  <script src="extra-bowl.js?v=2" defer></script>
   <script src="app.js?v=4" defer></script>
 </head>
 <body>
@@ -35,14 +37,15 @@
         <p class="mode-caption">４択・ドボン式</p>
         <p id="storageNotice" class="storage-notice" hidden>このブラウザでは記録を保存できません。ゲームはそのまま遊べます。</p>
       </div>
-      <div class="intro-art" aria-label="お椀を持った、元気なお給仕さん">
+      <div class="intro-art" id="counterScene" aria-label="入口にあるお椀の山と、お給仕さん">
         <div class="art-circle"></div><div class="hanging-tag">小謎、<br>おかわり自由。</div>
-        <div class="speech-bubble intro-speech">はい、じゃんじゃん！</div>
-        <img class="hero-server" src="assets/okyuuji.svg" alt="笑顔でお椀を運ぶお給仕さん" width="360" height="410">
-        <div class="hero-stack" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="speech-bubble intro-speech" id="counterSpeech">はい、じゃんじゃん！</div>
+        <img id="counterServer" class="hero-server" src="assets/okyuuji.svg" alt="蓋付きのお椀を手にしたお給仕さん" width="360" height="410">
+        <div class="hero-stack" id="markedStack" role="img" aria-label="五段のお椀の印。上から、れ、と、を、た、ふ。"><i><span>ふ</span></i><i><span>た</span></i><i><span>を</span></i><i><span>と</span></i><i><span>れ</span></i></div>
+        <button id="serverInspect" class="server-inspect" type="button" hidden>お給仕さんの手元を見る <span aria-hidden="true">↗</span></button>
         <div class="art-stamp"><span>脳の</span>満腹御礼</div>
       </div>
-      <div class="intro-rules"><span><b>01</b> ４択から選ぶ</span><i aria-hidden="true">→</i><span><b>02</b> 正解でおかわり</span><i aria-hidden="true">→</i><span><b>03</b> 誤答でドボン！</span><p>パスは何度でも。やめたいときは、お椀に蓋を。</p></div>
+      <div class="intro-rules"><span><b>01</b> ４択から選ぶ</span><i aria-hidden="true">→</i><span><b>02</b> 正解でおかわり</span><i aria-hidden="true">→</i><span><b>03</b> 誤答でドボン！</span><p>食べ終えたお椀は、上へ重ねて。<br>パスは何度でも。やめたいときは、お椀に蓋を。</p></div>
     </section>
 
     <section id="playScreen" class="play-screen" aria-label="小謎タイムアタック" hidden>
@@ -91,7 +94,39 @@
       <div class="result-art">
         <div class="speech-bubble result-speech" id="resultSpeech">いい食べっぷりでした！</div>
         <img src="assets/okyuuji.svg" alt="まだ一杯のお椀を持っているお給仕さん" width="360" height="410">
-        <div id="extraBowl" class="extra-bowl-note" hidden><span aria-hidden="true">✳</span><p>あ、まだ一杯ありますよ？</p><small>特別な一杯は、ただいま仕込み中。<br>今回の試作では、ここまでです。</small></div>
+        <div id="extraBowl" class="extra-bowl-note" hidden><span aria-hidden="true">✳</span><p>あっ、まだ一杯ありますよ？</p><button id="openExtraBowl" class="extra-entry-button" type="button">その一杯、いただきます</button><small>こちらの一杯は、時間を気にせずどうぞ。</small></div>
+      </div>
+    </section>
+
+    <section id="extraScreen" class="extra-screen" aria-labelledby="extraTitle" hidden>
+      <div class="extra-topline"><p class="eyebrow">おまけの一杯 ・ 時間制限なし</p><button id="extraBack" class="text-button" type="button">記録の画面に戻る</button></div>
+      <h2 id="extraTitle" tabindex="-1">最後の一杯</h2>
+      <div class="extra-layout">
+        <div class="extra-puzzle-column">
+          <article id="extraQuestion" class="extra-question">
+            <p class="extra-question-label">まだ食べていない一杯は、どれ？</p>
+            <p class="extra-observation">時間を気にせず、店の中を見渡して。</p>
+            <div class="empty-bowl-options" role="group" aria-label="四つのお椀">
+              <button type="button" data-empty-bowl="1" aria-label="一つ目のお椀を調べる"><b>1</b><span class="empty-bowl-drawing" aria-hidden="true"><i></i></span></button>
+              <button type="button" data-empty-bowl="2" aria-label="二つ目のお椀を調べる"><b>2</b><span class="empty-bowl-drawing" aria-hidden="true"><i></i></span></button>
+              <button type="button" data-empty-bowl="3" aria-label="三つ目のお椀を調べる"><b>3</b><span class="empty-bowl-drawing" aria-hidden="true"><i></i></span></button>
+              <button type="button" data-empty-bowl="4" aria-label="四つ目のお椀を調べる"><b>4</b><span class="empty-bowl-drawing" aria-hidden="true"><i></i></span></button>
+            </div>
+            <p id="extraFeedback" class="extra-feedback" role="status">どのお椀に、まだ一杯あるのでしょう。</p>
+          </article>
+          <div id="extraClear" class="extra-clear" hidden>
+            <span class="extra-found-seal" aria-hidden="true">発見</span>
+            <p class="eyebrow">見つかっちゃいましたね！</p>
+            <h3 id="extraClearTitle" tabindex="-1">最後の一杯、<br>いただきます！</h3>
+            <p>最後の一杯は、<br>最初からここにあったんですよ。</p>
+            <p class="extra-record-note">通常の杯数とは別の、<br>特別な一杯の発見です。</p>
+            <p id="extraStorageNotice" class="storage-notice" hidden>今回は発見を保存できませんでした。通常の記録はそのままです。</p>
+            <button id="extraToStart" class="primary-button" type="button">もう一度、入口へ <span aria-hidden="true">↗</span></button>
+            <button id="extraReplay" class="text-button" type="button">この一杯をやり直す</button>
+          </div>
+          <div id="extraHintArea" class="extra-hint-area"><button id="extraHint" class="text-button" type="button">ちょっと、ヒントをもらう <span aria-hidden="true">＋</span></button><div id="extraHints" aria-live="polite"></div></div>
+        </div>
+        <div id="extraSceneHost" class="extra-scene-host"></div>
       </div>
     </section>
   </main>
@@ -104,6 +139,19 @@
   <p>やめるときは「蓋をして終わる」を２回。<br>PCは数字の1〜4、またはTabとEnterでも選べます。</p>
   <p class="help-small">遊んでいる間も時間は進みます。記録はこのブラウザに保存されます。問題は毎回シャッフル。１巡するまで重複せず、全部出たら並べ直します。</p>
   <button id="helpOkay" class="primary-button" type="button">わかりました！</button>
+</dialog>
+<dialog id="handDialog" class="last-bowl-dialog" aria-labelledby="handTitle">
+  <div class="dialog-top"><h2 id="handTitle">お給仕さんの手元</h2><button id="closeHand" class="text-button" type="button">戻る ×</button></div>
+  <div class="hand-closeup"><img id="handImage" src="assets/okyuuji.svg" alt="同じお給仕さんが持っている、蓋付きのお椀の拡大" width="720" height="820"><svg id="liftedLid" viewBox="275 178 78 45" aria-hidden="true" hidden><g fill="#bd3d30" stroke="#49352b" stroke-width="2.5"><path d="M282 211Q314 185 346 211Z"/><ellipse cx="314" cy="211" rx="32" ry="5"/><path d="M307 197Q314 188 321 197Z" fill="#f4d6a0"/></g></svg></div>
+  <p id="handFeedback" class="hand-feedback" role="status">手には、蓋をしたお椀。</p>
+  <form id="requestForm" class="request-form">
+    <label for="requestInput">お給仕さんへのお願い</label>
+    <p>短い言葉で、どうしてほしいか伝えてください。</p>
+    <input id="requestInput" type="text" placeholder="お願いを入力" autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="64" enterkeyhint="send">
+    <button class="primary-button" type="submit">お願いする</button>
+  </form>
+  <button id="takeLid" class="primary-button take-lid-button" type="button" hidden>蓋を取る <span aria-hidden="true">↑</span></button>
+  <p id="handRevealed" class="hand-revealed" hidden>ここに、まだ一杯。</p>
 </dialog>
 <noscript>このゲームを遊ぶには、JavaScriptを有効にしてください。</noscript>
 </body>

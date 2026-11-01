@@ -1,0 +1,13 @@
+{
+  "base": "d4676da4bb0f7174ff507c70498b8e01ad72aebf",
+  "sha256": {
+    "dist/questions.js": "c033438a99aeee33d8678ad08b36f95f397498f54db821a6316fe26dd3727b4f",
+    "dist/app.js": "7b08bffda2528c09c2a02f25ecd0e3e9a102f35285125f5ff1ec9c81b5d153df",
+    "dist/model.js": "e80d67299439fb4028bfc67c3bfd403e65c6930f35e81b02f743b48673a44d9c",
+    "dist/config.js": "b97400de4d63ba8f90f80c73d2ff5b09445e6185dd18949a5b1659b77dc0d9f5",
+    "dist/style.css": "f1e258da10faa584512b15a83a4fba27e0fa15f54856e1722dc7dad3a291d90e",
+    "dist/choices.css": "7cba79c8ebfb4700018da805ec93bb33110394db2c054489b86b56e60127d7f1",
+    "dist/puzzles-extra.css": "c818b9d38ca3c7e41f4b94679a2cb65b4b648be7eb5f3c5e5423e78ee530d925",
+    "dist/puzzle-view.js": "bd0a3606aed81c0551bba68c719407fb450745f95832123ba64156e1ea058b7e"
+  }
+}

@@ -1,0 +1,4196 @@
+{
+  "date": "2026-11-01",
+  "browser": "Cloud Chromium via cua_repl",
+  "normalRecordsBefore": {
+    "normal": "{\"version\":1,\"bests\":{\"60\":1}}",
+    "extra": null
+  },
+  "normalRecordsAfter": {
+    "normal": "{\"version\":1,\"bests\":{\"60\":1}}",
+    "extra": "{\"version\":1,\"cleared\":true}"
+  },
+  "ime": {
+    "composingEnterPrevented": true,
+    "stillAsking": true,
+    "lidHidden": true
+  },
+  "reloaded": {
+    "introVisible": true,
+    "extraVisible": false,
+    "best": "1"
+  },
+  "clearFocus": true,
+  "blockedStorage": {
+    "clearVisible": true,
+    "notice": "今回は発見を保存できませんでした。通常の記録はそのままです。",
+    "noticeVisible": true
+  },
+  "reducedMotionSimulated": {
+    "clearVisible": true,
+    "clearFocused": true
+  },
+  "layouts": [
+    {
+      "width": 320,
+      "height": 568,
+      "overflow": false,
+      "rows": [
+        {
+          "id": "#extraTitle",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#extraQuestion",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#counterScene",
+          "visible": true,
+          "x": 148,
+          "y": 217,
+          "w": 145,
+          "h": 250
+        },
+        {
+          "id": "#markedStack",
+          "visible": true,
+          "x": 139,
+          "y": 325,
+          "w": 68,
+          "h": 149
+        },
+        {
+          "id": "#serverInspect",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#extraClear",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#handDialog",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#requestInput",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#takeLid",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        }
+      ],
+      "marks": [
+        {
+          "text": "れ",
+          "font": "18px",
+          "w": 53.5474853515625,
+          "h": 27.568878173828125,
+          "y": 340.2217102050781
+        },
+        {
+          "text": "と",
+          "font": "18px",
+          "w": 53.5474853515625,
+          "h": 27.56884765625,
+          "y": 366.15838623046875
+        },
+        {
+          "text": "を",
+          "font": "18px",
+          "w": 53.5474853515625,
+          "h": 27.568878173828125,
+          "y": 392.09503173828125
+        },
+        {
+          "text": "た",
+          "font": "18px",
+          "w": 53.5474853515625,
+          "h": 27.56890869140625,
+          "y": 418.03167724609375
+        },
+        {
+          "text": "ふ",
+          "font": "18px",
+          "w": 53.5474853515625,
+          "h": 27.568878173828125,
+          "y": 443.9683532714844
+        }
+      ],
+      "stage": "intro"
+    },
+    {
+      "width": 390,
+      "height": 660,
+      "overflow": false,
+      "rows": [
+        {
+          "id": "#extraTitle",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#extraQuestion",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#counterScene",
+          "visible": true,
+          "x": 195,
+          "y": 230,
+          "w": 162,
+          "h": 250
+        },
+        {
+          "id": "#markedStack",
+          "visible": true,
+          "x": 186,
+          "y": 339,
+          "w": 68,
+          "h": 149
+        },
+        {
+          "id": "#serverInspect",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#extraClear",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#handDialog",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#requestInput",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#takeLid",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        }
+      ],
+      "marks": [
+        {
+          "text": "れ",
+          "font": "18px",
+          "w": 53.5474853515625,
+          "h": 27.568878173828125,
+          "y": 353.7998352050781
+        },
+        {
+          "text": "と",
+          "font": "18px",
+          "w": 53.5474853515625,
+          "h": 27.56884765625,
+          "y": 379.73651123046875
+        },
+        {
+          "text": "を",
+          "font": "18px",
+          "w": 53.5474853515625,
+          "h": 27.568878173828125,
+          "y": 405.67315673828125
+        },
+        {
+          "text": "た",
+          "font": "18px",
+          "w": 53.5474853515625,
+          "h": 27.56890869140625,
+          "y": 431.60980224609375
+        },
+        {
+          "text": "ふ",
+          "font": "18px",
+          "w": 53.5474853515625,
+          "h": 27.568878173828125,
+          "y": 457.5464782714844
+        }
+      ],
+      "stage": "intro"
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "overflow": false,
+      "rows": [
+        {
+          "id": "#extraTitle",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#extraQuestion",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#counterScene",
+          "visible": true,
+          "x": 438,
+          "y": 152,
+          "w": 347,
+          "h": 450
+        },
+        {
+          "id": "#markedStack",
+          "visible": true,
+          "x": 433,
+          "y": 440,
+          "w": 79,
+          "h": 164
+        },
+        {
+          "id": "#serverInspect",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#extraClear",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#handDialog",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#requestInput",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#takeLid",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        }
+      ],
+      "marks": [
+        {
+          "text": "れ",
+          "font": "19px",
+          "w": 63.732391357421875,
+          "h": 31.259124755859375,
+          "y": 455.0656433105469
+        },
+        {
+          "text": "と",
+          "font": "19px",
+          "w": 63.732391357421875,
+          "h": 31.2591552734375,
+          "y": 483.9949951171875
+        },
+        {
+          "text": "を",
+          "font": "19px",
+          "w": 63.732391357421875,
+          "h": 31.2591552734375,
+          "y": 512.92431640625
+        },
+        {
+          "text": "た",
+          "font": "19px",
+          "w": 63.732391357421875,
+          "h": 31.25909423828125,
+          "y": 541.853759765625
+        },
+        {
+          "text": "ふ",
+          "font": "19px",
+          "w": 63.732391357421875,
+          "h": 31.2591552734375,
+          "y": 570.7830810546875
+        }
+      ],
+      "stage": "intro"
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "overflow": false,
+      "rows": [
+        {
+          "id": "#extraTitle",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#extraQuestion",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#counterScene",
+          "visible": true,
+          "x": 667,
+          "y": 152,
+          "w": 489,
+          "h": 450
+        },
+        {
+          "id": "#markedStack",
+          "visible": true,
+          "x": 662,
+          "y": 440,
+          "w": 79,
+          "h": 164
+        },
+        {
+          "id": "#serverInspect",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#extraClear",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#handDialog",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#requestInput",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#takeLid",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        }
+      ],
+      "marks": [
+        {
+          "text": "れ",
+          "font": "19px",
+          "w": 63.732421875,
+          "h": 31.259124755859375,
+          "y": 455.0656433105469
+        },
+        {
+          "text": "と",
+          "font": "19px",
+          "w": 63.732421875,
+          "h": 31.2591552734375,
+          "y": 483.9949951171875
+        },
+        {
+          "text": "を",
+          "font": "19px",
+          "w": 63.73236083984375,
+          "h": 31.2591552734375,
+          "y": 512.92431640625
+        },
+        {
+          "text": "た",
+          "font": "19px",
+          "w": 63.73236083984375,
+          "h": 31.25909423828125,
+          "y": 541.853759765625
+        },
+        {
+          "text": "ふ",
+          "font": "19px",
+          "w": 63.73236083984375,
+          "h": 31.2591552734375,
+          "y": 570.7830810546875
+        }
+      ],
+      "stage": "intro"
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "overflow": false,
+      "rows": [
+        {
+          "id": "#extraTitle",
+          "visible": true,
+          "x": 12,
+          "y": 147,
+          "w": 281,
+          "h": 42
+        },
+        {
+          "id": "#extraQuestion",
+          "visible": true,
+          "x": 12,
+          "y": 204,
+          "w": 281,
+          "h": 269
+        },
+        {
+          "id": "#counterScene",
+          "visible": true,
+          "x": 12,
+          "y": 493,
+          "w": 281,
+          "h": 352
+        },
+        {
+          "id": "#markedStack",
+          "visible": true,
+          "x": 22,
+          "y": 650,
+          "w": 68,
+          "h": 149
+        },
+        {
+          "id": "#serverInspect",
+          "visible": true,
+          "x": 12,
+          "y": 801,
+          "w": 281,
+          "h": 44
+        },
+        {
+          "id": "#extraClear",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#handDialog",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#requestInput",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#takeLid",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        }
+      ],
+      "marks": [
+        {
+          "text": "れ",
+          "font": "18px",
+          "w": 53.5474853515625,
+          "h": 27.56890869140625,
+          "y": 665.5341796875
+        },
+        {
+          "text": "と",
+          "font": "18px",
+          "w": 53.5474853515625,
+          "h": 27.56884765625,
+          "y": 691.4708862304688
+        },
+        {
+          "text": "を",
+          "font": "18px",
+          "w": 53.5474853515625,
+          "h": 27.56890869140625,
+          "y": 717.4075317382812
+        },
+        {
+          "text": "た",
+          "font": "18px",
+          "w": 53.5474853515625,
+          "h": 27.56890869140625,
+          "y": 743.3441772460938
+        },
+        {
+          "text": "ふ",
+          "font": "18px",
+          "w": 53.5474853515625,
+          "h": 27.56884765625,
+          "y": 769.2808837890625
+        }
+      ],
+      "stage": "extra"
+    },
+    {
+      "width": 390,
+      "height": 660,
+      "overflow": false,
+      "rows": [
+        {
+          "id": "#extraTitle",
+          "visible": true,
+          "x": 18,
+          "y": 147,
+          "w": 339,
+          "h": 42
+        },
+        {
+          "id": "#extraQuestion",
+          "visible": true,
+          "x": 18,
+          "y": 204,
+          "w": 339,
+          "h": 240
+        },
+        {
+          "id": "#counterScene",
+          "visible": true,
+          "x": 18,
+          "y": 464,
+          "w": 339,
+          "h": 352
+        },
+        {
+          "id": "#markedStack",
+          "visible": true,
+          "x": 28,
+          "y": 621,
+          "w": 68,
+          "h": 149
+        },
+        {
+          "id": "#serverInspect",
+          "visible": true,
+          "x": 18,
+          "y": 772,
+          "w": 339,
+          "h": 44
+        },
+        {
+          "id": "#extraClear",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#handDialog",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#requestInput",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#takeLid",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        }
+      ],
+      "marks": [
+        {
+          "text": "れ",
+          "font": "18px",
+          "w": 53.5474853515625,
+          "h": 27.56890869140625,
+          "y": 636.7373046875
+        },
+        {
+          "text": "と",
+          "font": "18px",
+          "w": 53.5474853515625,
+          "h": 27.56884765625,
+          "y": 662.6740112304688
+        },
+        {
+          "text": "を",
+          "font": "18px",
+          "w": 53.5474853515625,
+          "h": 27.56890869140625,
+          "y": 688.6106567382812
+        },
+        {
+          "text": "た",
+          "font": "18px",
+          "w": 53.5474853515625,
+          "h": 27.56890869140625,
+          "y": 714.5473022460938
+        },
+        {
+          "text": "ふ",
+          "font": "18px",
+          "w": 53.5474853515625,
+          "h": 27.56884765625,
+          "y": 740.4840087890625
+        }
+      ],
+      "stage": "extra"
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "overflow": false,
+      "rows": [
+        {
+          "id": "#extraTitle",
+          "visible": true,
+          "x": 44,
+          "y": 178,
+          "w": 741,
+          "h": 63
+        },
+        {
+          "id": "#extraQuestion",
+          "visible": true,
+          "x": 44,
+          "y": 264,
+          "w": 380,
+          "h": 406
+        },
+        {
+          "id": "#counterScene",
+          "visible": true,
+          "x": 460,
+          "y": 272,
+          "w": 325,
+          "h": 410
+        },
+        {
+          "id": "#markedStack",
+          "visible": true,
+          "x": 457,
+          "y": 475,
+          "w": 79,
+          "h": 164
+        },
+        {
+          "id": "#serverInspect",
+          "visible": true,
+          "x": 476,
+          "y": 638,
+          "w": 293,
+          "h": 44
+        },
+        {
+          "id": "#extraClear",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#handDialog",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#requestInput",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#takeLid",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        }
+      ],
+      "marks": [
+        {
+          "text": "れ",
+          "font": "19px",
+          "w": 63.732391357421875,
+          "h": 31.259124755859375,
+          "y": 490.3625183105469
+        },
+        {
+          "text": "と",
+          "font": "19px",
+          "w": 63.732421875,
+          "h": 31.2591552734375,
+          "y": 519.2918701171875
+        },
+        {
+          "text": "を",
+          "font": "19px",
+          "w": 63.73236083984375,
+          "h": 31.2591552734375,
+          "y": 548.22119140625
+        },
+        {
+          "text": "た",
+          "font": "19px",
+          "w": 63.732391357421875,
+          "h": 31.25909423828125,
+          "y": 577.150634765625
+        },
+        {
+          "text": "ふ",
+          "font": "19px",
+          "w": 63.732391357421875,
+          "h": 31.2591552734375,
+          "y": 606.0799560546875
+        }
+      ],
+      "stage": "extra"
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "overflow": false,
+      "rows": [
+        {
+          "id": "#extraTitle",
+          "visible": true,
+          "x": 124,
+          "y": 178,
+          "w": 1032,
+          "h": 65
+        },
+        {
+          "id": "#extraQuestion",
+          "visible": true,
+          "x": 124,
+          "y": 266,
+          "w": 536,
+          "h": 406
+        },
+        {
+          "id": "#counterScene",
+          "visible": true,
+          "x": 696,
+          "y": 274,
+          "w": 460,
+          "h": 410
+        },
+        {
+          "id": "#markedStack",
+          "visible": true,
+          "x": 694,
+          "y": 476,
+          "w": 79,
+          "h": 164
+        },
+        {
+          "id": "#serverInspect",
+          "visible": true,
+          "x": 719,
+          "y": 640,
+          "w": 414,
+          "h": 44
+        },
+        {
+          "id": "#extraClear",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#handDialog",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#requestInput",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#takeLid",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        }
+      ],
+      "marks": [
+        {
+          "text": "れ",
+          "font": "19px",
+          "w": 63.732421875,
+          "h": 31.259124755859375,
+          "y": 491.5656433105469
+        },
+        {
+          "text": "と",
+          "font": "19px",
+          "w": 63.732421875,
+          "h": 31.2591552734375,
+          "y": 520.4949951171875
+        },
+        {
+          "text": "を",
+          "font": "19px",
+          "w": 63.73236083984375,
+          "h": 31.2591552734375,
+          "y": 549.42431640625
+        },
+        {
+          "text": "た",
+          "font": "19px",
+          "w": 63.73236083984375,
+          "h": 31.25909423828125,
+          "y": 578.353759765625
+        },
+        {
+          "text": "ふ",
+          "font": "19px",
+          "w": 63.73236083984375,
+          "h": 31.2591552734375,
+          "y": 607.2830810546875
+        }
+      ],
+      "stage": "extra"
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "overflow": false,
+      "rows": [
+        {
+          "id": "#extraTitle",
+          "visible": true,
+          "x": 12,
+          "y": -290,
+          "w": 281,
+          "h": 42
+        },
+        {
+          "id": "#extraQuestion",
+          "visible": true,
+          "x": 12,
+          "y": -233,
+          "w": 281,
+          "h": 269
+        },
+        {
+          "id": "#counterScene",
+          "visible": true,
+          "x": 12,
+          "y": 56,
+          "w": 281,
+          "h": 352
+        },
+        {
+          "id": "#markedStack",
+          "visible": true,
+          "x": 22,
+          "y": 213,
+          "w": 68,
+          "h": 149
+        },
+        {
+          "id": "#serverInspect",
+          "visible": true,
+          "x": 12,
+          "y": 364,
+          "w": 281,
+          "h": 44
+        },
+        {
+          "id": "#extraClear",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#handDialog",
+          "visible": true,
+          "x": 19,
+          "y": 107,
+          "w": 267,
+          "h": 355
+        },
+        {
+          "id": "#requestInput",
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        {
+          "id": "#takeLid",
+          "visible": true,
+          "x": 38,
+          "y": 396,
+          "w": 229,
+          "h": 47
+        }
+      ],
+      "marks": [
+        {
+          "text": "れ",
+          "font": "18px",
+          "w": 53.5474853515625,
+          "h": 27.568893432617188,
+          "y": 228.53419494628906
+        },
+        {
+          "text": "と",
+          "font": "18px",
+          "w": 53.5474853515625,
+          "h": 27.568862915039062,
+          "y": 254.4708709716797
+        },
+        {
+          "text": "を",
+          "font": "18px",
+          "w": 53.5474853515625,
+          "h": 27.568878173828125,
+          "y": 280.40753173828125
+        },
+        {
+          "text": "た",
+          "font": "18px",
+          "w": 53.5474853515625,
+          "h": 27.568878173828125,
+          "y": 306.34417724609375
+        },
+        {
+          "text": "ふ",
+          "font": "18px",
+          "w": 53.5474853515625,
+          "h": 27.568878173828125,
+          "y": 332.2808532714844
+        }
+      ],
+      "stage": "ready-dialog-320"
+    }
+  ],
+  "regularSweeps": [
+    {
+      "mode": "correct",
+      "count": 45,
+      "unique": 45,
+      "score": 45,
+      "rows": [
+        {
+          "title": "しるしを、ひと結び",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 503,
+          "controlsBottom": 546,
+          "scroll": false,
+          "choices": [
+            "ニ",
+            "エ",
+            "コ",
+            "キ"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "ふた皿の共通点",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 451,
+          "controlsBottom": 494,
+          "scroll": false,
+          "choices": [
+            "◇",
+            "□",
+            "×",
+            "＋"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "ふたりの共通点",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 446,
+          "controlsBottom": 489,
+          "scroll": false,
+          "choices": [
+            "きつね",
+            "こつぶ",
+            "きのこ",
+            "きなこ"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "しりとりの空席",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 433,
+          "controlsBottom": 476,
+          "scroll": false,
+          "choices": [
+            "ぱんだ",
+            "らっこ",
+            "らくだ",
+            "こあら"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "鏡の向こうの注文",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 482,
+          "controlsBottom": 525,
+          "scroll": false,
+          "choices": [
+            "はがき",
+            "つみき",
+            "てがみ",
+            "てすり"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "左右、ぴったり",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 433,
+          "controlsBottom": 476,
+          "scroll": false,
+          "choices": [
+            "明",
+            "朋",
+            "暗",
+            "時"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "交差する、おそば",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 490,
+          "controlsBottom": 533,
+          "scroll": false,
+          "choices": [
+            "はる",
+            "ふゆ",
+            "あき",
+            "なつ"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "切れたふちを、ひとつなぎ",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 472,
+          "controlsBottom": 515,
+          "scroll": false,
+          "choices": [
+            "┐",
+            "┘",
+            "└",
+            "┌"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "くるり、折り返し",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 433,
+          "controlsBottom": 476,
+          "scroll": false,
+          "choices": [
+            "ともしび",
+            "ともだち",
+            "とびだし",
+            "としこし"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "かどのあるお客さま",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 433,
+          "controlsBottom": 476,
+          "scroll": false,
+          "choices": [
+            "がいか",
+            "かいが",
+            "いかが",
+            "かがい"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "回して、同じ一片",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 497,
+          "controlsBottom": 540,
+          "scroll": false,
+          "choices": [
+            "ア",
+            "ウ",
+            "エ",
+            "イ"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "上下、ぴったり",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 440,
+          "controlsBottom": 483,
+          "scroll": false,
+          "choices": [
+            "音",
+            "里",
+            "星",
+            "早"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "手前の一枚",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 498,
+          "controlsBottom": 541,
+          "scroll": false,
+          "choices": [
+            "き",
+            "ほ",
+            "つ",
+            "し"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "たぬきのおしごと",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 477,
+          "controlsBottom": 520,
+          "scroll": false,
+          "choices": [
+            "さくら",
+            "さかな",
+            "たぬき",
+            "たから"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "つなぎ目は、ひと口",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 477,
+          "controlsBottom": 520,
+          "scroll": false,
+          "choices": [
+            "さかずき",
+            "さかだち",
+            "さかみち",
+            "たちまち"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "ひとりのお客さま",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 466,
+          "controlsBottom": 509,
+          "scroll": false,
+          "choices": [
+            "こしつ",
+            "まつり",
+            "こねこ",
+            "しまり"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "ふたりだけ、席替え",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 433,
+          "controlsBottom": 476,
+          "scroll": false,
+          "choices": [
+            "かるい",
+            "いるか",
+            "かたい",
+            "わるい"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "開いたあとの穴",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 500,
+          "controlsBottom": 543,
+          "scroll": false,
+          "choices": [
+            "ア",
+            "エ",
+            "イ",
+            "ウ"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "かえりの注文",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 477,
+          "controlsBottom": 520,
+          "scroll": false,
+          "choices": [
+            "ほたる",
+            "てほん",
+            "ほてる",
+            "てがみ"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "ひと口おきに",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 477,
+          "controlsBottom": 520,
+          "scroll": false,
+          "choices": [
+            "かしのみ",
+            "たのしみ",
+            "かなしみ",
+            "たしなみ"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "ふたくちで、ひと文字",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 477,
+          "controlsBottom": 520,
+          "scroll": false,
+          "choices": [
+            "こだま",
+            "こたつ",
+            "こころ",
+            "こつぶ"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "３つの穴は、同じ味",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 448,
+          "controlsBottom": 491,
+          "scroll": false,
+          "choices": [
+            "こ",
+            "か",
+            "き",
+            "く"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "しるしのお品書き",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 482,
+          "controlsBottom": 525,
+          "scroll": false,
+          "choices": [
+            "ひみつ",
+            "みかん",
+            "おやつ",
+            "あひる"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "上下、ひとくちずつ",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 452,
+          "controlsBottom": 495,
+          "scroll": false,
+          "choices": [
+            "とりにく",
+            "ひとこと",
+            "にわとり",
+            "にわさき"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "うつわの外にも",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 433,
+          "controlsBottom": 476,
+          "scroll": false,
+          "choices": [
+            "うどんや",
+            "わりかん",
+            "おかわり",
+            "かりうど"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "穴あきのお品書き",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 473,
+          "controlsBottom": 516,
+          "scroll": false,
+          "choices": [
+            "おみあい",
+            "おりがみ",
+            "つきあい",
+            "あさがお"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "みじかい針から",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 478,
+          "controlsBottom": 521,
+          "scroll": false,
+          "choices": [
+            "こねこ",
+            "しこみ",
+            "はらみ",
+            "はしら"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "一本、おあずかり",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 477,
+          "controlsBottom": 520,
+          "scroll": false,
+          "choices": [
+            "田",
+            "口",
+            "目",
+            "日"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "箱のむこう側",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 450,
+          "controlsBottom": 493,
+          "scroll": false,
+          "choices": [
+            "♡",
+            "☆",
+            "△",
+            "□"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "てんてん、おいで",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 477,
+          "controlsBottom": 520,
+          "scroll": false,
+          "choices": [
+            "ばれ",
+            "はら",
+            "はれ",
+            "ばら"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "四すみのお席",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 447,
+          "controlsBottom": 490,
+          "scroll": false,
+          "choices": [
+            "たいくつ",
+            "たいせつ",
+            "たいてい",
+            "たちまち"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "はしから、ぱくり",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 477,
+          "controlsBottom": 520,
+          "scroll": false,
+          "choices": [
+            "から",
+            "たか",
+            "たら",
+            "さら"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "横入りのお客さま",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 478,
+          "controlsBottom": 521,
+          "scroll": false,
+          "choices": [
+            "とり",
+            "いぬ",
+            "うし",
+            "ねこ"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "お皿を、くるり",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 488,
+          "controlsBottom": 531,
+          "scroll": false,
+          "choices": [
+            "◎",
+            "□",
+            "△",
+            "◇"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "大きなお客さまから",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 433,
+          "controlsBottom": 476,
+          "scroll": false,
+          "choices": [
+            "せいかん",
+            "かんせい",
+            "かいせん",
+            "せんかい"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "白いすきまの注文",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 473,
+          "controlsBottom": 516,
+          "scroll": false,
+          "choices": [
+            "エ",
+            "ニ",
+            "コ",
+            "ロ"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "同じ席で、待ち合わせ",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 463,
+          "controlsBottom": 506,
+          "scroll": false,
+          "choices": [
+            "あさひ",
+            "さくら",
+            "あひる",
+            "あらし"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "ふたつの囲い",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 494,
+          "controlsBottom": 537,
+          "scroll": false,
+          "choices": [
+            "そら",
+            "にわ",
+            "もり",
+            "たに"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "一歩もどって",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 498,
+          "controlsBottom": 541,
+          "scroll": false,
+          "choices": [
+            "くるま",
+            "けむり",
+            "くるみ",
+            "からみ"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "まんなか、いただきます",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 490,
+          "controlsBottom": 533,
+          "scroll": false,
+          "choices": [
+            "ことば",
+            "たから",
+            "こたえ",
+            "ひかり"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "てんてん、おやすみ",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 477,
+          "controlsBottom": 520,
+          "scroll": false,
+          "choices": [
+            "からす",
+            "かかし",
+            "からし",
+            "がらす"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "まんなかのお品書き",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 466,
+          "controlsBottom": 509,
+          "scroll": false,
+          "choices": [
+            "したく",
+            "しずく",
+            "たぬき",
+            "さくら"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "おはしの道",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 466,
+          "controlsBottom": 509,
+          "scroll": false,
+          "choices": [
+            "すいか",
+            "さくら",
+            "こいし",
+            "すみれ"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "しりとりの給仕列",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 452,
+          "controlsBottom": 495,
+          "scroll": false,
+          "choices": [
+            "めがね",
+            "ねずみ",
+            "あみめ",
+            "めがみ"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "こごえの注文",
+          "w": 320,
+          "h": 568,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 466,
+          "controlsBottom": 509,
+          "scroll": false,
+          "choices": [
+            "おやつ",
+            "あやめ",
+            "およぎ",
+            "あゆみ"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "mode": "correct",
+      "count": 45,
+      "unique": 45,
+      "score": 45,
+      "rows": [
+        {
+          "title": "ふたりだけ、席替え",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 548,
+          "controlsBottom": 591,
+          "scroll": false,
+          "choices": [
+            "いるか",
+            "わるい",
+            "かるい",
+            "かたい"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "しるしを、ひと結び",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 577,
+          "controlsBottom": 620,
+          "scroll": false,
+          "choices": [
+            "ニ",
+            "エ",
+            "コ",
+            "キ"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "しりとりの給仕列",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 568,
+          "controlsBottom": 611,
+          "scroll": false,
+          "choices": [
+            "めがね",
+            "あみめ",
+            "ねずみ",
+            "めがみ"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "まんなかのお品書き",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 558,
+          "controlsBottom": 601,
+          "scroll": false,
+          "choices": [
+            "たぬき",
+            "したく",
+            "さくら",
+            "しずく"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "お皿を、くるり",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 581,
+          "controlsBottom": 624,
+          "scroll": false,
+          "choices": [
+            "△",
+            "◇",
+            "◎",
+            "□"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "３つの穴は、同じ味",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 548,
+          "controlsBottom": 591,
+          "scroll": false,
+          "choices": [
+            "か",
+            "く",
+            "こ",
+            "き"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "大きなお客さまから",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 548,
+          "controlsBottom": 591,
+          "scroll": false,
+          "choices": [
+            "かんせい",
+            "かいせん",
+            "せんかい",
+            "せいかん"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "一本、おあずかり",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 566,
+          "controlsBottom": 609,
+          "scroll": false,
+          "choices": [
+            "口",
+            "目",
+            "日",
+            "田"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "ひとりのお客さま",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 579,
+          "controlsBottom": 622,
+          "scroll": false,
+          "choices": [
+            "こしつ",
+            "こねこ",
+            "しまり",
+            "まつり"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "四すみのお席",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 558,
+          "controlsBottom": 601,
+          "scroll": false,
+          "choices": [
+            "たちまち",
+            "たいくつ",
+            "たいせつ",
+            "たいてい"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "かどのあるお客さま",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 548,
+          "controlsBottom": 591,
+          "scroll": false,
+          "choices": [
+            "かいが",
+            "いかが",
+            "かがい",
+            "がいか"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "ふたりの共通点",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 549,
+          "controlsBottom": 592,
+          "scroll": false,
+          "choices": [
+            "きなこ",
+            "こつぶ",
+            "きつね",
+            "きのこ"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "かえりの注文",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 592,
+          "controlsBottom": 635,
+          "scroll": false,
+          "choices": [
+            "ほてる",
+            "てほん",
+            "ほたる",
+            "てがみ"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "ふたつの囲い",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 587,
+          "controlsBottom": 630,
+          "scroll": false,
+          "choices": [
+            "たに",
+            "にわ",
+            "もり",
+            "そら"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "上下、ひとくちずつ",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 568,
+          "controlsBottom": 611,
+          "scroll": false,
+          "choices": [
+            "ひとこと",
+            "とりにく",
+            "にわとり",
+            "にわさき"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "上下、ぴったり",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 548,
+          "controlsBottom": 591,
+          "scroll": false,
+          "choices": [
+            "里",
+            "星",
+            "早",
+            "音"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "回して、同じ一片",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 592,
+          "controlsBottom": 635,
+          "scroll": false,
+          "choices": [
+            "ア",
+            "イ",
+            "ウ",
+            "エ"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "交差する、おそば",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 583,
+          "controlsBottom": 626,
+          "scroll": false,
+          "choices": [
+            "はる",
+            "ふゆ",
+            "なつ",
+            "あき"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "はしから、ぱくり",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 592,
+          "controlsBottom": 635,
+          "scroll": false,
+          "choices": [
+            "から",
+            "たら",
+            "さら",
+            "たか"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "横入りのお客さま",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 573,
+          "controlsBottom": 616,
+          "scroll": false,
+          "choices": [
+            "とり",
+            "ねこ",
+            "うし",
+            "いぬ"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "まんなか、いただきます",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 595,
+          "controlsBottom": 638,
+          "scroll": false,
+          "choices": [
+            "ひかり",
+            "たから",
+            "ことば",
+            "こたえ"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "開いたあとの穴",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 595,
+          "controlsBottom": 638,
+          "scroll": false,
+          "choices": [
+            "イ",
+            "ウ",
+            "エ",
+            "ア"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "たぬきのおしごと",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 592,
+          "controlsBottom": 635,
+          "scroll": false,
+          "choices": [
+            "さかな",
+            "たから",
+            "さくら",
+            "たぬき"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "白いすきまの注文",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 566,
+          "controlsBottom": 609,
+          "scroll": false,
+          "choices": [
+            "コ",
+            "エ",
+            "ニ",
+            "ロ"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "箱のむこう側",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 549,
+          "controlsBottom": 592,
+          "scroll": false,
+          "choices": [
+            "△",
+            "♡",
+            "□",
+            "☆"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "てんてん、おいで",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 592,
+          "controlsBottom": 635,
+          "scroll": false,
+          "choices": [
+            "ばら",
+            "ばれ",
+            "はら",
+            "はれ"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "みじかい針から",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 590,
+          "controlsBottom": 633,
+          "scroll": false,
+          "choices": [
+            "はらみ",
+            "はしら",
+            "しこみ",
+            "こねこ"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "つなぎ目は、ひと口",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 592,
+          "controlsBottom": 635,
+          "scroll": false,
+          "choices": [
+            "さかみち",
+            "たちまち",
+            "さかだち",
+            "さかずき"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "鏡の向こうの注文",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 570,
+          "controlsBottom": 613,
+          "scroll": false,
+          "choices": [
+            "つみき",
+            "てがみ",
+            "はがき",
+            "てすり"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "しりとりの空席",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 548,
+          "controlsBottom": 591,
+          "scroll": false,
+          "choices": [
+            "ぱんだ",
+            "らくだ",
+            "らっこ",
+            "こあら"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "くるり、折り返し",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 548,
+          "controlsBottom": 591,
+          "scroll": false,
+          "choices": [
+            "ともだち",
+            "ともしび",
+            "とびだし",
+            "としこし"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "うつわの外にも",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 548,
+          "controlsBottom": 591,
+          "scroll": false,
+          "choices": [
+            "かりうど",
+            "おかわり",
+            "うどんや",
+            "わりかん"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "ふた皿の共通点",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 548,
+          "controlsBottom": 591,
+          "scroll": false,
+          "choices": [
+            "□",
+            "＋",
+            "×",
+            "◇"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "おはしの道",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 579,
+          "controlsBottom": 622,
+          "scroll": false,
+          "choices": [
+            "すいか",
+            "すみれ",
+            "こいし",
+            "さくら"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "ふたくちで、ひと文字",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 592,
+          "controlsBottom": 635,
+          "scroll": false,
+          "choices": [
+            "こころ",
+            "こだま",
+            "こたつ",
+            "こつぶ"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "一歩もどって",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 617,
+          "controlsBottom": 660,
+          "scroll": false,
+          "choices": [
+            "けむり",
+            "くるみ",
+            "からみ",
+            "くるま"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "左右、ぴったり",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 548,
+          "controlsBottom": 591,
+          "scroll": false,
+          "choices": [
+            "朋",
+            "暗",
+            "明",
+            "時"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "同じ席で、待ち合わせ",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 568,
+          "controlsBottom": 611,
+          "scroll": false,
+          "choices": [
+            "あさひ",
+            "さくら",
+            "あらし",
+            "あひる"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "しるしのお品書き",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 574,
+          "controlsBottom": 617,
+          "scroll": false,
+          "choices": [
+            "ひみつ",
+            "おやつ",
+            "あひる",
+            "みかん"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "切れたふちを、ひとつなぎ",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 565,
+          "controlsBottom": 608,
+          "scroll": false,
+          "choices": [
+            "┌",
+            "┐",
+            "┘",
+            "└"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "手前の一枚",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 591,
+          "controlsBottom": 634,
+          "scroll": false,
+          "choices": [
+            "つ",
+            "ほ",
+            "き",
+            "し"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "てんてん、おやすみ",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 592,
+          "controlsBottom": 635,
+          "scroll": false,
+          "choices": [
+            "からす",
+            "かかし",
+            "からし",
+            "がらす"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "ひと口おきに",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 592,
+          "controlsBottom": 635,
+          "scroll": false,
+          "choices": [
+            "かしのみ",
+            "かなしみ",
+            "たのしみ",
+            "たしなみ"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "こごえの注文",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 579,
+          "controlsBottom": 622,
+          "scroll": false,
+          "choices": [
+            "およぎ",
+            "おやつ",
+            "あゆみ",
+            "あやめ"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "穴あきのお品書き",
+          "w": 390,
+          "h": 660,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 570,
+          "controlsBottom": 613,
+          "scroll": false,
+          "choices": [
+            "おりがみ",
+            "おみあい",
+            "つきあい",
+            "あさがお"
+          ],
+          "correct": 3
+        }
+      ]
+    },
+    {
+      "mode": "pass",
+      "count": 45,
+      "unique": 45,
+      "score": 0,
+      "rows": [
+        {
+          "title": "ふた皿の共通点",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 280,
+          "controlsBottom": 329,
+          "scroll": false,
+          "choices": [
+            "□",
+            "＋",
+            "◇",
+            "×"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "四すみのお席",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 314,
+          "controlsBottom": 363,
+          "scroll": false,
+          "choices": [
+            "たちまち",
+            "たいくつ",
+            "たいせつ",
+            "たいてい"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "ふたくちで、ひと文字",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 314,
+          "controlsBottom": 363,
+          "scroll": false,
+          "choices": [
+            "こつぶ",
+            "こだま",
+            "こたつ",
+            "こころ"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "ひと口おきに",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 314,
+          "controlsBottom": 363,
+          "scroll": false,
+          "choices": [
+            "たのしみ",
+            "たしなみ",
+            "かなしみ",
+            "かしのみ"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "同じ席で、待ち合わせ",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 314,
+          "controlsBottom": 363,
+          "scroll": false,
+          "choices": [
+            "あさひ",
+            "さくら",
+            "あらし",
+            "あひる"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "てんてん、おやすみ",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 314,
+          "controlsBottom": 363,
+          "scroll": false,
+          "choices": [
+            "からす",
+            "かかし",
+            "がらす",
+            "からし"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "かどのあるお客さま",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 314,
+          "controlsBottom": 363,
+          "scroll": false,
+          "choices": [
+            "がいか",
+            "かいが",
+            "いかが",
+            "かがい"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "開いたあとの穴",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 280,
+          "controlsBottom": 329,
+          "scroll": false,
+          "choices": [
+            "ウ",
+            "ア",
+            "イ",
+            "エ"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "鏡の向こうの注文",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 314,
+          "controlsBottom": 363,
+          "scroll": false,
+          "choices": [
+            "てがみ",
+            "はがき",
+            "てすり",
+            "つみき"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "切れたふちを、ひとつなぎ",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 280,
+          "controlsBottom": 329,
+          "scroll": false,
+          "choices": [
+            "┌",
+            "└",
+            "┐",
+            "┘"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "くるり、折り返し",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 314,
+          "controlsBottom": 363,
+          "scroll": false,
+          "choices": [
+            "ともしび",
+            "としこし",
+            "ともだち",
+            "とびだし"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "うつわの外にも",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 314,
+          "controlsBottom": 363,
+          "scroll": false,
+          "choices": [
+            "おかわり",
+            "かりうど",
+            "うどんや",
+            "わりかん"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "大きなお客さまから",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 314,
+          "controlsBottom": 363,
+          "scroll": false,
+          "choices": [
+            "せいかん",
+            "かんせい",
+            "せんかい",
+            "かいせん"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "しりとりの給仕列",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 314,
+          "controlsBottom": 363,
+          "scroll": false,
+          "choices": [
+            "めがみ",
+            "あみめ",
+            "ねずみ",
+            "めがね"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "左右、ぴったり",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 280,
+          "controlsBottom": 329,
+          "scroll": false,
+          "choices": [
+            "朋",
+            "明",
+            "暗",
+            "時"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "しるしを、ひと結び",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 280,
+          "controlsBottom": 329,
+          "scroll": false,
+          "choices": [
+            "コ",
+            "ニ",
+            "キ",
+            "エ"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "てんてん、おいで",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 280,
+          "controlsBottom": 329,
+          "scroll": false,
+          "choices": [
+            "ばら",
+            "ばれ",
+            "はれ",
+            "はら"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "まんなかのお品書き",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 314,
+          "controlsBottom": 363,
+          "scroll": false,
+          "choices": [
+            "しずく",
+            "たぬき",
+            "さくら",
+            "したく"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "しりとりの空席",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 314,
+          "controlsBottom": 363,
+          "scroll": false,
+          "choices": [
+            "ぱんだ",
+            "らっこ",
+            "らくだ",
+            "こあら"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "上下、ひとくちずつ",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 314,
+          "controlsBottom": 363,
+          "scroll": false,
+          "choices": [
+            "にわさき",
+            "にわとり",
+            "ひとこと",
+            "とりにく"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "はしから、ぱくり",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 280,
+          "controlsBottom": 329,
+          "scroll": false,
+          "choices": [
+            "さら",
+            "たか",
+            "たら",
+            "から"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "白いすきまの注文",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 280,
+          "controlsBottom": 329,
+          "scroll": false,
+          "choices": [
+            "コ",
+            "ロ",
+            "ニ",
+            "エ"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "一歩もどって",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 314,
+          "controlsBottom": 363,
+          "scroll": false,
+          "choices": [
+            "けむり",
+            "からみ",
+            "くるみ",
+            "くるま"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "ひとりのお客さま",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 314,
+          "controlsBottom": 363,
+          "scroll": false,
+          "choices": [
+            "まつり",
+            "こねこ",
+            "こしつ",
+            "しまり"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "３つの穴は、同じ味",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 280,
+          "controlsBottom": 329,
+          "scroll": false,
+          "choices": [
+            "き",
+            "く",
+            "か",
+            "こ"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "おはしの道",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 314,
+          "controlsBottom": 363,
+          "scroll": false,
+          "choices": [
+            "こいし",
+            "すいか",
+            "すみれ",
+            "さくら"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "まんなか、いただきます",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 314,
+          "controlsBottom": 363,
+          "scroll": false,
+          "choices": [
+            "ひかり",
+            "ことば",
+            "こたえ",
+            "たから"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "みじかい針から",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 314,
+          "controlsBottom": 363,
+          "scroll": false,
+          "choices": [
+            "しこみ",
+            "こねこ",
+            "はらみ",
+            "はしら"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "ふたりだけ、席替え",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 314,
+          "controlsBottom": 363,
+          "scroll": false,
+          "choices": [
+            "いるか",
+            "わるい",
+            "かるい",
+            "かたい"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "穴あきのお品書き",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 314,
+          "controlsBottom": 363,
+          "scroll": false,
+          "choices": [
+            "おみあい",
+            "あさがお",
+            "おりがみ",
+            "つきあい"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "こごえの注文",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 314,
+          "controlsBottom": 363,
+          "scroll": false,
+          "choices": [
+            "あやめ",
+            "おやつ",
+            "あゆみ",
+            "およぎ"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "交差する、おそば",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 280,
+          "controlsBottom": 329,
+          "scroll": false,
+          "choices": [
+            "なつ",
+            "はる",
+            "あき",
+            "ふゆ"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "かえりの注文",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 314,
+          "controlsBottom": 363,
+          "scroll": false,
+          "choices": [
+            "ほてる",
+            "てがみ",
+            "ほたる",
+            "てほん"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "ふたりの共通点",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 314,
+          "controlsBottom": 363,
+          "scroll": false,
+          "choices": [
+            "きつね",
+            "こつぶ",
+            "きなこ",
+            "きのこ"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "回して、同じ一片",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 280,
+          "controlsBottom": 329,
+          "scroll": false,
+          "choices": [
+            "ア",
+            "エ",
+            "ウ",
+            "イ"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "つなぎ目は、ひと口",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 314,
+          "controlsBottom": 363,
+          "scroll": false,
+          "choices": [
+            "たちまち",
+            "さかだち",
+            "さかみち",
+            "さかずき"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "一本、おあずかり",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 280,
+          "controlsBottom": 329,
+          "scroll": false,
+          "choices": [
+            "田",
+            "目",
+            "口",
+            "日"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "ふたつの囲い",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 280,
+          "controlsBottom": 329,
+          "scroll": false,
+          "choices": [
+            "もり",
+            "にわ",
+            "そら",
+            "たに"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "手前の一枚",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 280,
+          "controlsBottom": 329,
+          "scroll": false,
+          "choices": [
+            "ほ",
+            "し",
+            "き",
+            "つ"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "上下、ぴったり",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 280,
+          "controlsBottom": 329,
+          "scroll": false,
+          "choices": [
+            "星",
+            "早",
+            "音",
+            "里"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "お皿を、くるり",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 280,
+          "controlsBottom": 329,
+          "scroll": false,
+          "choices": [
+            "□",
+            "△",
+            "◎",
+            "◇"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "横入りのお客さま",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 280,
+          "controlsBottom": 329,
+          "scroll": false,
+          "choices": [
+            "とり",
+            "うし",
+            "いぬ",
+            "ねこ"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "たぬきのおしごと",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 314,
+          "controlsBottom": 363,
+          "scroll": false,
+          "choices": [
+            "さくら",
+            "さかな",
+            "たから",
+            "たぬき"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "箱のむこう側",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 280,
+          "controlsBottom": 329,
+          "scroll": false,
+          "choices": [
+            "□",
+            "☆",
+            "♡",
+            "△"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "しるしのお品書き",
+          "w": 844,
+          "h": 390,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 314,
+          "controlsBottom": 363,
+          "scroll": false,
+          "choices": [
+            "あひる",
+            "おやつ",
+            "みかん",
+            "ひみつ"
+          ],
+          "correct": 3
+        }
+      ]
+    },
+    {
+      "mode": "pass",
+      "count": 45,
+      "unique": 45,
+      "score": 0,
+      "rows": [
+        {
+          "title": "しりとりの給仕列",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 630,
+          "controlsBottom": 679,
+          "scroll": false,
+          "choices": [
+            "ねずみ",
+            "めがね",
+            "めがみ",
+            "あみめ"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "上下、ひとくちずつ",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 630,
+          "controlsBottom": 679,
+          "scroll": false,
+          "choices": [
+            "ひとこと",
+            "とりにく",
+            "にわさき",
+            "にわとり"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "たぬきのおしごと",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 680,
+          "controlsBottom": 729,
+          "scroll": false,
+          "choices": [
+            "たから",
+            "さかな",
+            "さくら",
+            "たぬき"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "てんてん、おいで",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 680,
+          "controlsBottom": 729,
+          "scroll": false,
+          "choices": [
+            "ばれ",
+            "ばら",
+            "はら",
+            "はれ"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "一歩もどって",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 699,
+          "controlsBottom": 748,
+          "scroll": false,
+          "choices": [
+            "くるま",
+            "からみ",
+            "くるみ",
+            "けむり"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "かえりの注文",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 680,
+          "controlsBottom": 729,
+          "scroll": false,
+          "choices": [
+            "ほたる",
+            "てほん",
+            "てがみ",
+            "ほてる"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "おはしの道",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 637,
+          "controlsBottom": 686,
+          "scroll": false,
+          "choices": [
+            "こいし",
+            "すいか",
+            "すみれ",
+            "さくら"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "ふたくちで、ひと文字",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 680,
+          "controlsBottom": 729,
+          "scroll": false,
+          "choices": [
+            "こだま",
+            "こつぶ",
+            "こたつ",
+            "こころ"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "左右、ぴったり",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 630,
+          "controlsBottom": 679,
+          "scroll": false,
+          "choices": [
+            "朋",
+            "時",
+            "明",
+            "暗"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "くるり、折り返し",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 630,
+          "controlsBottom": 679,
+          "scroll": false,
+          "choices": [
+            "ともだち",
+            "としこし",
+            "とびだし",
+            "ともしび"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "穴あきのお品書き",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 630,
+          "controlsBottom": 679,
+          "scroll": false,
+          "choices": [
+            "つきあい",
+            "あさがお",
+            "おりがみ",
+            "おみあい"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "みじかい針から",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 672,
+          "controlsBottom": 721,
+          "scroll": false,
+          "choices": [
+            "こねこ",
+            "はらみ",
+            "しこみ",
+            "はしら"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "お皿を、くるり",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 641,
+          "controlsBottom": 690,
+          "scroll": false,
+          "choices": [
+            "□",
+            "◎",
+            "◇",
+            "△"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "しりとりの空席",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 630,
+          "controlsBottom": 679,
+          "scroll": false,
+          "choices": [
+            "らくだ",
+            "らっこ",
+            "こあら",
+            "ぱんだ"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "鏡の向こうの注文",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 650,
+          "controlsBottom": 699,
+          "scroll": false,
+          "choices": [
+            "はがき",
+            "つみき",
+            "てがみ",
+            "てすり"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "四すみのお席",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 637,
+          "controlsBottom": 686,
+          "scroll": false,
+          "choices": [
+            "たいせつ",
+            "たいくつ",
+            "たいてい",
+            "たちまち"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "はしから、ぱくり",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 680,
+          "controlsBottom": 729,
+          "scroll": false,
+          "choices": [
+            "たら",
+            "さら",
+            "から",
+            "たか"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "つなぎ目は、ひと口",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 680,
+          "controlsBottom": 729,
+          "scroll": false,
+          "choices": [
+            "さかずき",
+            "さかみち",
+            "たちまち",
+            "さかだち"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "上下、ぴったり",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 630,
+          "controlsBottom": 679,
+          "scroll": false,
+          "choices": [
+            "里",
+            "音",
+            "星",
+            "早"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "白いすきまの注文",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 630,
+          "controlsBottom": 679,
+          "scroll": false,
+          "choices": [
+            "エ",
+            "ニ",
+            "コ",
+            "ロ"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "開いたあとの穴",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 656,
+          "controlsBottom": 705,
+          "scroll": false,
+          "choices": [
+            "エ",
+            "イ",
+            "ア",
+            "ウ"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "同じ席で、待ち合わせ",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 630,
+          "controlsBottom": 679,
+          "scroll": false,
+          "choices": [
+            "あらし",
+            "あひる",
+            "さくら",
+            "あさひ"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "かどのあるお客さま",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 630,
+          "controlsBottom": 679,
+          "scroll": false,
+          "choices": [
+            "かいが",
+            "いかが",
+            "かがい",
+            "がいか"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "大きなお客さまから",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 630,
+          "controlsBottom": 679,
+          "scroll": false,
+          "choices": [
+            "せいかん",
+            "せんかい",
+            "かいせん",
+            "かんせい"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "横入りのお客さま",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 634,
+          "controlsBottom": 683,
+          "scroll": false,
+          "choices": [
+            "ねこ",
+            "とり",
+            "うし",
+            "いぬ"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "一本、おあずかり",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 643,
+          "controlsBottom": 692,
+          "scroll": false,
+          "choices": [
+            "口",
+            "目",
+            "田",
+            "日"
+          ],
+          "correct": 0
+        },
+        {
+          "title": "ふた皿の共通点",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 630,
+          "controlsBottom": 679,
+          "scroll": false,
+          "choices": [
+            "◇",
+            "×",
+            "＋",
+            "□"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "交差する、おそば",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 643,
+          "controlsBottom": 692,
+          "scroll": false,
+          "choices": [
+            "なつ",
+            "ふゆ",
+            "あき",
+            "はる"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "てんてん、おやすみ",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 680,
+          "controlsBottom": 729,
+          "scroll": false,
+          "choices": [
+            "かかし",
+            "からす",
+            "がらす",
+            "からし"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "しるしを、ひと結び",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 637,
+          "controlsBottom": 686,
+          "scroll": false,
+          "choices": [
+            "ニ",
+            "コ",
+            "エ",
+            "キ"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "ひとりのお客さま",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 637,
+          "controlsBottom": 686,
+          "scroll": false,
+          "choices": [
+            "こねこ",
+            "まつり",
+            "しまり",
+            "こしつ"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "切れたふちを、ひとつなぎ",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 630,
+          "controlsBottom": 679,
+          "scroll": false,
+          "choices": [
+            "┐",
+            "└",
+            "┌",
+            "┘"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "箱のむこう側",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 630,
+          "controlsBottom": 679,
+          "scroll": false,
+          "choices": [
+            "△",
+            "□",
+            "☆",
+            "♡"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "ひと口おきに",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 680,
+          "controlsBottom": 729,
+          "scroll": false,
+          "choices": [
+            "かしのみ",
+            "たしなみ",
+            "たのしみ",
+            "かなしみ"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "こごえの注文",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 637,
+          "controlsBottom": 686,
+          "scroll": false,
+          "choices": [
+            "あやめ",
+            "おやつ",
+            "あゆみ",
+            "およぎ"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "まんなかのお品書き",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 637,
+          "controlsBottom": 686,
+          "scroll": false,
+          "choices": [
+            "しずく",
+            "さくら",
+            "たぬき",
+            "したく"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "うつわの外にも",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 630,
+          "controlsBottom": 679,
+          "scroll": false,
+          "choices": [
+            "うどんや",
+            "わりかん",
+            "かりうど",
+            "おかわり"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "しるしのお品書き",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 647,
+          "controlsBottom": 696,
+          "scroll": false,
+          "choices": [
+            "みかん",
+            "ひみつ",
+            "おやつ",
+            "あひる"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "３つの穴は、同じ味",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 630,
+          "controlsBottom": 679,
+          "scroll": false,
+          "choices": [
+            "く",
+            "か",
+            "こ",
+            "き"
+          ],
+          "correct": 1
+        },
+        {
+          "title": "ふたりだけ、席替え",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 630,
+          "controlsBottom": 679,
+          "scroll": false,
+          "choices": [
+            "わるい",
+            "いるか",
+            "かるい",
+            "かたい"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "回して、同じ一片",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 653,
+          "controlsBottom": 702,
+          "scroll": false,
+          "choices": [
+            "ア",
+            "エ",
+            "ウ",
+            "イ"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "ふたりの共通点",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 630,
+          "controlsBottom": 679,
+          "scroll": false,
+          "choices": [
+            "きつね",
+            "こつぶ",
+            "きなこ",
+            "きのこ"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "まんなか、いただきます",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 680,
+          "controlsBottom": 729,
+          "scroll": false,
+          "choices": [
+            "ひかり",
+            "ことば",
+            "こたえ",
+            "たから"
+          ],
+          "correct": 2
+        },
+        {
+          "title": "手前の一枚",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 652,
+          "controlsBottom": 701,
+          "scroll": false,
+          "choices": [
+            "ほ",
+            "し",
+            "つ",
+            "き"
+          ],
+          "correct": 3
+        },
+        {
+          "title": "ふたつの囲い",
+          "w": 1280,
+          "h": 900,
+          "contentInside": true,
+          "noOverlap": true,
+          "choiceBottom": 647,
+          "controlsBottom": 696,
+          "scroll": false,
+          "choices": [
+            "たに",
+            "にわ",
+            "そら",
+            "もり"
+          ],
+          "correct": 2
+        }
+      ]
+    }
+  ],
+  "resultWidth320": {
+    "before": {
+      "client": 305,
+      "scroll": 316
+    },
+    "after": {
+      "client": 305,
+      "scroll": 305
+    }
+  },
+  "limits": [
+    "Cloud Chromiumのiframe。実機iOS/Safariと実際のソフトウェアキーボードは未確認。",
+    "動きを減らす設定、保存拒否、日本語変換中Enterは開発用UIから模擬した。",
+    "通常45問の一巡は実DOMとクリックハンドラの検査であり、180回の人手による初見解答ではない。"
+  ]
+}
