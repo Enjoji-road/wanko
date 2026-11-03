@@ -1,10 +1,9 @@
 {
   "result": "passed",
-  "checks": 4207,
+  "checks": 4142,
   "regularQuestions": 45,
   "emptySequences": 4096,
   "markPermutations": 120,
-  "acceptedMarkPermutations": 1,
   "protectedFiles": [
     "dist/questions.js",
     "dist/app.js",
@@ -15,5 +14,5 @@
     "dist/puzzles-extra.css",
     "dist/puzzle-view.js"
   ],
-  "scope": "Deterministic extra-only transitions, physical stack order, existing lid and bowl asset, independent save, preserved regular source. Exhaustion of four empty options cannot clear. Guessed correct requests and developer-tools bypass remain possible; human surprise and solve time require first-play tests."
+  "scope": "Deterministic extra-only transitions, physical stack order, direct scene and lid controls, existing lid and bowl asset, independent save, preserved regular source. Empty choices cannot clear; intentional direct lid operation can. Human surprise and accidental-tap likelihood require first-play tests."
 }

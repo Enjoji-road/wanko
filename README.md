@@ -70,8 +70,10 @@ node tests/verify.cjs
 
 45問版の測定結果は `tests/45-browser-verification.json` と `tests/45-layout-measurements.json` を参照してください。以前の36問版の検証記録は履歴として保持しています。
 
-## 最後の一杯（試作）
+## 最後の一杯（第2次試作）
 
 通常プレイを終えた後、お給仕さんの誘いから挑戦できます。時間制限やドボンはなく、通常45問・杯数・自己ベストには含めません。特別な一杯の発見は別のキーに保存します。完成仕様の確定ではなく、発見の面白さを試す版です。mainと本番公開は更新していません。
 
-[全体設計・想定解法・比較案・弱点・検証結果（ネタバレあり）](docs/last-bowl-prototype/DESIGN_SPOILERS.md)を参照してください。追加の自動検証は `node tests/verify-extra-bowl.cjs`。スマホ・PCの確認は `tests/last-bowl-browser-evidence.json` に記録しています。
+第2次試作では文字入力を廃止し、同じ店先のお給仕さんの手元を直接調べ、拡大した蓋をタップまたはキーボードで開く方式へ変更しました。五段のお椀の印も新しい場所の手掛かりへ差し替えています。初期画面で操作対象を説明するボタンは表示せず、最後の段階ヒントだけが手元を示します。
+
+[第2次の設計・想定解法・弱点・検証結果（ネタバレあり）](docs/last-bowl-v2/DESIGN_SPOILERS.md)を参照してください。第1次の判断記録は[こちら](docs/last-bowl-prototype/DESIGN_SPOILERS.md)に残しています。追加の自動検証は `node tests/verify-extra-bowl.cjs`。第2次のスマホ・PC確認は `tests/last-bowl-v2-browser-evidence.json` に記録しています。

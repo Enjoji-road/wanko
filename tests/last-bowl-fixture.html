@@ -3,7 +3,7 @@
 <style>body{font:12px sans-serif;background:#e6e6e6;margin:0}header{padding:8px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;position:sticky;top:0;background:#eee;z-index:2}iframe{display:block;border:0;margin:8px auto;background:white;box-shadow:0 0 0 1px #777}button,select{padding:6px}#status{max-width:350px;font-size:11px}</style>
 <header><label>画面 <select id="size"><option value="390,844">390×844</option><option value="390,660">390×660</option><option value="360,640">360×640</option><option value="320,568">320×568</option><option value="390,500">390×500</option><option value="844,390">844×390 横向き</option><option value="1280,900">1280×900</option></select></label>
 <label><input type="checkbox" id="motion">動きを減らす（模擬）</label>
-<button id="reload">再読込</button><button id="corrupt">保存を破損して再読込</button><button id="jump">時計＋61秒</button><button id="records">記録を確認</button><button id="stale">古い選択ボタンを再発火</button><button id="held">キー押しっぱなし</button><button id="freshExtra">特別な一杯の試験記録を初期化</button><button id="extraRecords">二つの記録を比較</button><button id="extraMeasure">特別な一杯の表示検査</button><button id="noStorage">保存不可で再読込</button><button id="ime">変換中Enterの検査</button><button id="measure">表示検査</button><output id="status">dist/qa.htmlへ一時コピーして使う、公開しない検証ページ</output></header>
+<button id="reload">再読込</button><button id="corrupt">保存を破損して再読込</button><button id="jump">時計＋61秒</button><button id="records">記録を確認</button><button id="stale">古い選択ボタンを再発火</button><button id="held">キー押しっぱなし</button><button id="freshExtra">特別な一杯の試験記録を初期化</button><button id="extraRecords">二つの記録を比較</button><button id="extraMeasure">特別な一杯の表示検査</button><button id="noStorage">保存不可で再読込</button><button id="measure">表示検査</button><output id="status">dist/qa.htmlへ一時コピーして使う、公開しない検証ページ</output></header>
 <nav style="padding:8px;display:flex;flex-wrap:wrap;gap:8px"><label>個別表示 <select id="question"></select></label><button id="seek">指定問題までパス</button><button id="sweepCorrect">一巡を正解で検査</button><button id="sweepPass">一巡をパスで検査</button></nav>
 <textarea id="results" aria-label="一巡の検証結果" readonly style="display:block;width:96%;height:55px;margin:5px auto;font:11px monospace"></textarea>
 <iframe id="game" title="検証中の４択ゲーム" src="./" width="390" height="844"></iframe>
@@ -23,17 +23,9 @@ document.getElementById('noStorage').onclick=async()=>{
  const html=await(await fetch('./index.html')).text();
  game.srcdoc=html.replace('<head>','<head><base href="'+new URL('./',location.href).href+'"><script>Object.defineProperty(window,"localStorage",{get(){throw Error("test-only blocked storage");}});<\/script>');
 };
-document.getElementById('ime').onclick=()=>{
- const win=game.contentWindow,doc=game.contentDocument,input=doc.getElementById('requestInput'),form=doc.getElementById('requestForm');
- input.value='ふたをとれ';input.dispatchEvent(new win.CompositionEvent('compositionstart',{bubbles:true}));
- const e=new win.KeyboardEvent('keydown',{key:'Enter',bubbles:true,cancelable:true,isComposing:true});form.dispatchEvent(e);
- form.dispatchEvent(new win.Event('submit',{bubbles:true,cancelable:true}));
- status.textContent=JSON.stringify({composingEnterPrevented:e.defaultPrevented,stillAsking:!form.hidden,lidHidden:doc.getElementById('takeLid').hidden});
- input.dispatchEvent(new win.CompositionEvent('compositionend',{bubbles:true}));input.value='';
-};
 document.getElementById('extraMeasure').onclick=()=>{
  const doc=game.contentDocument,win=game.contentWindow,visible=e=>e.getBoundingClientRect().width>0&&e.getBoundingClientRect().height>0;
- const selectors=['#extraTitle','#extraQuestion','#counterScene','#markedStack','#serverInspect','#extraClear','#handDialog','#requestInput','#takeLid'];
+ const selectors=['#extraTitle','#extraQuestion','#counterScene','#markedStack','#serverBowlTarget','#extraClear','#handDialog','#takeLid'];
  const rows=selectors.map(s=>{const e=doc.querySelector(s),r=e.getBoundingClientRect();return {id:s,visible:visible(e),x:Math.round(r.x),y:Math.round(r.y),w:Math.round(r.width),h:Math.round(r.height)};});
  const marks=[...doc.querySelectorAll('#markedStack span')].map(e=>{const r=e.getBoundingClientRect();return{text:e.textContent,font:win.getComputedStyle(e).fontSize,w:r.width,h:r.height,y:r.y};}).sort((a,b)=>a.y-b.y);
  status.textContent=JSON.stringify({width:win.innerWidth,height:win.innerHeight,overflow:doc.documentElement.scrollWidth>win.innerWidth,rows,marks});
