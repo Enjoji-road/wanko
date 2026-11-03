@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-03",
+  "browser": "Cloud Chromium",
+  "result": "passed_with_human_test_limits",
+  "viewports": [
+    {
+      "width": 1363,
+      "height": 936,
+      "horizontalOverflow": false,
+      "sceneTarget": {"x": 1042.64, "y": 441.5, "width": 92, "height": 78},
+      "expectedSvgBowlCenter": {"x": 1086.59, "y": 493.2},
+      "notes": "Four empty bowls, original five-bowl stack, capped server bowl, direct hand dialog and clear were operated."
+    },
+    {
+      "width": 320,
+      "effectiveClientWidth": 305,
+      "height": 568,
+      "horizontalOverflow": false,
+      "pageScrollHeight": 978,
+      "sceneTarget": {"x": 218.5, "y": 616.59, "width": 82, "height": 72},
+      "serverImage": {"x": 45.5, "y": 505.72, "width": 244, "height": 277.88},
+      "expectedSvgBowlCenter": {"x": 258.32, "y": 648.72},
+      "notes": "Vertical scrolling is required. Target center aligns with the drawn bowl. Full lid control is 216 by 170 CSS pixels."
+    },
+    {
+      "width": 390,
+      "effectiveClientWidth": 375,
+      "height": 660,
+      "horizontalOverflow": false,
+      "pageScrollHeight": 949,
+      "sceneTarget": {"x": 253.5, "y": 587.8, "width": 82, "height": 72},
+      "serverImage": {"x": 80.5, "y": 476.92, "width": 244, "height": 277.88},
+      "expectedSvgBowlCenter": {"x": 293.32, "y": 619.93},
+      "notes": "Direct target opened the hand dialog. Enter on the 216 by 170 lid control cleared and focused the success heading."
+    }
+  ],
+  "flows": {
+    "regularFinishReasons": ["manual lid checked in this pass", "wrong answer and time expiration retained from the unchanged regular suite"],
+    "emptyBowls": "All four can be inspected without loss or clear. The fourth changes feedback and recalls the first bowl.",
+    "hints": "Four progressive hints. Only the fourth adds the visible target ring.",
+    "textInputRemoved": true,
+    "keyboard": "Tab-reachable native buttons; Enter on enlarged lid verified.",
+    "recordSeparation": {
+      "normal": "{\"version\":1,\"bests\":{\"60\":0}}",
+      "extra": "{\"version\":1,\"cleared\":true}"
+    },
+    "reload": "Returns to intro; explicit post-result entry can show the saved discovery.",
+    "replay": "Returns to the unsolved extra screen without erasing the past discovery record.",
+    "reducedMotionSimulation": "Dialog closed immediately and success heading was visible and focused.",
+    "storageDeniedSimulation": "Clear completed and a truthful unsaved notice was visible."
+  },
+  "limits": [
+    "The mobile sizes are Chromium iframe viewports, not a physical iPhone or Safari.",
+    "The storage-denied and reduced-motion cases are deterministic harness simulations.",
+    "Human surprise, clue interpretation, accidental-tap rate and solve time were not established.",
+    "A random two-step tap on the server bowl and enlarged bowl can still clear; no artificial reading-history gate is used."
+  ]
+}
